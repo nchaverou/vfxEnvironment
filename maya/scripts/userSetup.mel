@@ -1,0 +1,163 @@
+/***************************************************************************
+*                                                                          *
+*  Copyright (C) Golaem S.A.- All Rights Reserved.                         *
+*                                                                          *
+***************************************************************************/
+
+//**************************************************************************
+/*! \file User Setup File
+	\brief
+*/ //***********************************************************************
+
+// Includes
+source "ncMayaUtils.mel";
+
+//************************************************************
+/*! @name Plugin Environment
+*/ //*********************************************************
+//@{
+//------------------------------------------------------------
+//! Load Crowd
+/*! \param
+*/ //---------------------------------------------------------
+global proc loadGolaem()
+{
+	if (ncLoadPlugin("glmCrowd") == 0)
+		ncLoadPlugin("glmCrowd_d");
+}
+
+//------------------------------------------------------------
+//! Load Dependencies
+/*! \param
+*/ //---------------------------------------------------------
+global proc loadDependencies()
+{
+	ncLoadPlugin("fbxmaya");
+	ncLoadPlugin("CharcoalEditor");
+	
+	ncLoadPlugin("mtoa");
+	evalDeferred("setCurrentRenderer arnold;");
+}
+
+//------------------------------------------------------------
+//! Add a dev version icon if required
+/*! \param
+*/ //---------------------------------------------------------
+global proc addPluginInfoIcon()
+{
+	string $shelfName = (`getenv "GLMCROWD_VERSION"` == "5.0") ? "Golaem" : "Crowd";
+	string $iconName = (`getenv "GLMCROWD_DEV"` == 1) ? "devVersion" : "relVersion";
+	$iconName += (`getenv "GLMCROWD_MODE"` == "Debug") ? "_debug.png" : "_release.png";
+	string $pluginVersion = getGolaemPluginVersion();
+
+	shelfButton -image1 $iconName -style "iconAndTextVertical" -imageOverlayLabel $pluginVersion -ann $pluginVersion  -parent   $shelfName "pluginInfo";
+}
+
+//------------------------------------------------------------
+//! setHotkeys
+//------------------------------------------------------------
+global proc setHotkeys()
+{
+	// Alt + o => Outliner
+	nameCommand -annotation "Outliner" -command "tearOffPanel \"Outliner\" \"outlinerPanel\" false;" glmOutlinerWindow;
+	hotkey -alt -k "o" -name "glmOutlinerWindow";
+	// Alt + n => NodeEditor
+	nameCommand -annotation "NodeEditor" -command "nodeEditorWindow" glmNodeEditorWindow;
+	hotkey -alt -k "n" -name "glmNodeEditorWindow";
+	// Alt + h => Hypershade
+    nameCommand -annotation "HypershadeWindow" -command "tearOffPanel \"Hypershade\" \"hyperShadePanel\" true;" glmHypershadeWindow;
+	hotkey -alt -k "h" -name "glmHypershadeWindow";
+	// Alt + p => Plugin manager
+	nameCommand -annotation "PluginWindow" -command "pluginWin" glmPluginWindow;
+	hotkey -alt -k "p" -name "glmPluginWindow";
+	// Alt + d => Open project dir
+	nameCommand -annotation "OpenProjectDir" -command "openProjectDir" glmOpenProjectDir;
+	hotkey -alt -k "d" -name "glmOpenProjectDir";
+	// Alt + c => Open scene dir
+	nameCommand -annotation "OpenSceneDir" -command "openSceneDir" glmOpenSceneDir;
+	hotkey -alt -k "c" -name "glmOpenSceneDir";
+	// Alt + r => Render
+	nameCommand -annotation "glmBehaviorEditor" -command "glmCrowdBehaviorEditor;" glmBehaviorEditor;
+	hotkey -alt -k "b" -name "glmBehaviorEditor";
+	// Alt + r => Render
+	nameCommand -annotation "RenderIntoNewWindow" -command "renderIntoNewWindow render" glmRender;
+	hotkey -alt -k "r" -name "glmRender";
+	// Alt + s => Script Editor
+	nameCommand -annotation "CharcoalEditor" -command "charcoalEditor;" glmScriptEditor;
+	hotkey -alt -k "s" -name "glmScriptEditor";
+	// Alf + f => Fast Access
+	nameCommand -annotation "nFastAccess" -command "openNFastAccess;" glmFastAccess;
+	hotkey -alt -k "f" -name "glmFastAccess";
+	// Alt + x => Spark
+	nameCommand -annotation "spark" -command "runSpark;" glmSpark;
+	hotkey -alt -k "x" -name "glmSpark";
+}
+//@}
+
+//************************************************************
+/*! @name Setup Main Functions
+*/ //*********************************************************
+//@{
+//------------------------------------------------------------
+//! Set the default dirs
+/*! \param
+*/ //---------------------------------------------------------
+global proc setMayaOptionVars()
+{
+	string $mayaProject = `getenv "MAYA_PROJECT"`;
+	string $characterPack = findCharacterPack(($mayaProject+"/crowd/;N:/assets/"), "N:/assets/GolaemCharacterPack-5.0.2");
+
+	optionVar -stringValue "browserLocationCharacters" ($characterPack + "/golaem/characters");
+	optionVar -stringValue "browserLocationMotions" ( $characterPack + "/golaem/motions");
+	optionVar -stringValue "browserLocationEnvironments" ($mayaProject + "/golaem/environments");
+	optionVar -stringValue "browserLocationShaders" ($characterPack + "/golaem/shaders");
+	optionVar -stringValue "browserLocationSimulationCache" ($mayaProject + "/export");
+	optionVar -stringValue "browserLocationSimulationLayout" ($mayaProject + "/layout");
+	optionVar -stringValue "browserLocationSimulationLibrary" ($mayaProject + "/library");
+	optionVar -stringValue "browserLocationGolaem" ($mayaProject);
+
+	optionVar -stringValue "glmCrowdLogDirectory" ("C:/temp");
+	optionVar -stringValue "glmCrowdCrashReportDirectory" ("C:/temp");
+}
+
+//------------------------------------------------------------
+//! Main function
+/*! \param
+*/ //---------------------------------------------------------
+global proc setMayaEnvironment()
+{
+	// set playback
+	setPlaybackRange(1, 150);
+	// open Outliner
+	OutlinerWindow;
+	// open port for mel & python
+	catch(openCommandPort(7001, 7002));
+	// shaded
+	evalDeferred("setShadedDisplay()");
+	// disable color management
+	scriptJob -e SceneOpened disableColorManagement;
+	// run spark
+	runSpark();
+}
+//@}
+
+//************************************************************
+/*! @name Main
+*/ //*********************************************************
+//@{
+print "///////////////////////////////////////\n";
+print "Nicolas User Setup Script\n";
+print "///////////////////////////////////////\n";
+
+// set Maya
+setMayaEnvironment();
+setMayaOptionVars();
+
+// load Plugins
+loadGolaem();
+loadDependencies();
+
+// More
+evalDeferred("addPluginInfoIcon()");
+evalDeferred("setHotkeys()");
+//@}

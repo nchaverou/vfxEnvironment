@@ -1,0 +1,318 @@
+/***************************************************************************
+*                                                                          *
+*  Copyright (C) Golaem S.A. & Mikros Image - All Rights Reserved.         *
+*                                                                          *
+***************************************************************************/
+
+//**************************************************************************
+/*! \file Maya Utils
+	\brief Maya Related Functions
+*/ //***********************************************************************
+
+//************************************************************
+/*! @name Maya Utils
+*/ //*********************************************************
+//@{
+//------------------------------------------------------------
+//! reate Camera From Viewpoint
+//------------------------------------------------------------
+global proc createCameraFromViewpoint()
+{
+	string $camera;
+
+	// First get the panel that currently has focus
+	string $panel = `getPanel -wf`;
+
+	// Compare the panel's type to confirm it is a "modelPanel"
+	if ( "modelPanel" == `getPanel -to $panel` )
+	{
+		// Get the name of the camera using the ‘modelEditor’ command
+		$camera = `modelEditor -q -camera $panel`;
+	}
+
+	// creates camera from the selected view i.e current focus
+	duplicate -st $camera;
+
+	$strAll=`ls`;
+	$szLast=`size($strAll)`;
+	string $strLast=$strAll[$szLast-2];
+	pickWalk -d up;
+	int $mods = `getModifiers`;
+	$strAll=`ls`;
+	$szLast=`size($strAll)`;
+	string $strLast=$strAll[$szLast-2];
+	select $strLast;
+	ShowSelectedObjects;
+	if ($mods == 8)
+	{
+		FrameSelected;
+	}
+}
+
+//------------------------------------------------------------
+//! Lock transform of selected objects
+//------------------------------------------------------------
+global proc lockSelectedTransform()
+{
+	string $selection[] = `ls -sl`;
+	for ($item in $selection)
+	{
+		setAttr -l true ($item+".t");
+		setAttr -l true ($item+".r");
+		setAttr -l true ($item+".s");
+	}
+}
+
+//------------------------------------------------------------
+//! Freeze transform of selected objects
+//------------------------------------------------------------
+global proc freezeSelectedTransform()
+{
+	makeIdentity -apply true -t 1 -r 1 -s 1 -n 0;
+}
+
+//------------------------------------------------------------
+//! Hide/Show Normals
+//------------------------------------------------------------
+global proc hideShowNormals()
+{
+	int $hidden[] = `polyOptions -q -dn`;
+	polyOptions -dn (!$hidden[0]);
+}
+
+//------------------------------------------------------------
+//! Delete unknown nodes
+//------------------------------------------------------------
+global proc ncDeleteUnknownNodes()
+{
+	delete `ls -type unknown -type unknownDag -type unknownTransform`;
+}
+
+//------------------------------------------------------------
+//! setShadedDisplay
+//------------------------------------------------------------
+global proc setShadedDisplay()
+{
+	string $currentPanel = `getPanel -withFocus`;
+    if ("" != $currentPanel)
+    {
+        string $panelType = `getPanel -typeOf $currentPanel`;
+        if ($panelType ==  "modelPanel")
+            modelEditor -edit -displayAppearance "smoothShaded" -displayTextures off -displayLights "default" $currentPanel;
+    }
+}
+
+//------------------------------------------------------------
+//! Set Maya Playback Range
+//------------------------------------------------------------
+global proc setPlaybackRange(int $playbackMin, int $playbackMax)
+{
+	optionVar -fv "playbackMin" $playbackMin -fv "playbackMinDefault" $playbackMin -fv "playbackMinRange" $playbackMin -fv "playbackMinRangeDefault" $playbackMin;
+	optionVar -fv "playbackMax" $playbackMax -fv "playbackMaxDefault" $playbackMax -fv "playbackMaxRange" $playbackMax -fv "playbackMaxRangeDefault" $playbackMax;
+}
+
+//------------------------------------------------------------
+//! Disable Color Management
+//------------------------------------------------------------
+global proc disableColorManagement()
+{
+	colorManagementPrefs -edit -cmEnabled 0;
+}
+//@}
+
+//************************************************************
+/*! @name Project / Files Utils
+*/ //*********************************************************
+//@{
+//------------------------------------------------------------
+//! Freeze transform of selected objects
+//------------------------------------------------------------
+global proc openMayaRenderLog()
+{
+	string $mayaApp = `getenv "MAYA_APP_DIR"`;
+	exec ("notepad "+$mayaApp+"/MayaRenderLog.txt");
+}
+
+//------------------------------------------------------------
+//! Freeze transform of selected objects
+//------------------------------------------------------------
+global proc openUserSetup()
+{
+	string $maya_script_path = `getenv "MAYA_SCRIPT_PATH"`;
+	string $maya_script_paths[];
+	tokenize( $maya_script_path, ";", $maya_script_paths );
+
+	for ($item in $maya_script_paths)
+	{
+		string $userScriptFilePath = ($item + "/userSetup.mel");
+		if (`filetest -r $userScriptFilePath`)
+		{
+			exec ("notepad "+$userScriptFilePath);
+			break;
+		}
+	}
+}
+
+//------------------------------------------------------------
+//! Open the project directory
+//------------------------------------------------------------
+global proc openProjectDir()
+{
+	/*string $maya_project = `getenv "MAYA_PROJECT"`;*/
+	string $maya_project = `workspace -q -rd`;
+	$maya_project = substituteAllString($maya_project, "/", "\\");
+	exec ("explorer.exe \""+$maya_project + "\"");
+}
+
+//------------------------------------------------------------
+//! Open the scene directory
+//------------------------------------------------------------
+global proc openSceneDir()
+{
+	string $dirName = dirname(`file -q -sn -wcn`);
+	$dirName = substituteAllString($dirName, "/", "\\");
+	exec ("explorer.exe \""+$dirName + "\"");
+}
+
+//------------------------------------------------------------
+//! Open the last opened file
+//------------------------------------------------------------
+global proc openLastOpenedFile()
+{
+	string $recentFiles[] = `optionVar -q RecentFilesList`;
+	int $nbFiles = size($recentFiles)-1;
+	file -f -options "v=0" -o $recentFiles[$nbFiles];
+}
+
+//------------------------------------------------------------
+//! Open the nFastAccess
+//------------------------------------------------------------
+global proc openNFastAccess()
+{
+	python("import nc.tools.nFastAccess as fastAccess");
+	python("fastAccess.main()");
+}
+
+//------------------------------------------------------------
+//! Open the nFastAccess
+//------------------------------------------------------------
+global proc runSpark()
+{
+	python("from fxpt.fx_spark import fx_spark");
+	python("fx_spark.run()");
+}
+
+//------------------------------------------------------------
+//! reloadGlmPython
+//------------------------------------------------------------
+global proc reloadGlmPython()
+{
+	string $scriptDir = (getGolaemPluginDir() + "scripts/");
+	python("nmutils.reloadPythonDir('"+ $scriptDir +"')");
+}
+
+//------------------------------------------------------------
+//! Set/Change Maya project
+//------------------------------------------------------------
+global proc setMayaProject()
+{
+	string $result[] = `fileDialog2 -fileMode 3 -cap "Select Project Directory"`;
+	if (size($result))
+	{
+		setProject $result[0];
+	}
+}
+
+//------------------------------------------------------------
+//! Delete Unused Nodes
+//------------------------------------------------------------
+global proc deleteUnusedNodes()
+{
+	hyperShadePanelMenuCommand("hyperShadePanel1", "deleteUnusedNodes");
+}
+
+//------------------------------------------------------------
+//! Plugin Loader
+/*! \param
+*/ //---------------------------------------------------------
+global proc int ncLoadPlugin(string $pluginName)
+{
+	if (`pluginInfo -q -loaded $pluginName` == 0)
+	{
+		if (catch(`loadPlugin -qt $pluginName`) == 0)
+		{
+			print ($pluginName+" plugin correctly loaded\n");
+			return 1;
+		}
+
+		warning ($pluginName+" not found");
+		return 0;
+	}
+	else
+	{
+		warning ($pluginName+" is already loaded dumb-ass !!");
+		return 0;
+	}
+}
+
+//------------------------------------------------------------
+//! openCommandPort
+//------------------------------------------------------------
+global proc openCommandPort(int $melPort, int $pythonPort)
+{
+	if (`about -batch` == 1) return;
+	python("import maya.cmds as cmds");
+	python("if not cmds.commandPort(\":"+$melPort+"\", q=True):\n\tcmds.commandPort(name=\":"+ $melPort +"\", sourceType=\"mel\")");
+	python("if not cmds.commandPort(\":"+$pythonPort+"\", q=True):\n\tcmds.commandPort(name=\":"+ $pythonPort +"\", sourceType=\"python\")");
+}
+//@}
+
+//************************************************************
+/*! @name Crowd Functions
+*/ //*********************************************************
+//@{
+//------------------------------------------------------------
+//! Find the Character Pack
+//------------------------------------------------------------
+global proc string findCharacterPack(string $preferredLocations, string $defaultLocation)
+{
+	string $locations[] = stringToStringArray($preferredLocations, ";");
+	for ($location in $locations)
+	{
+		string $packDirs[] = sort(`getFileList -folder $location -filespec "*GolaemCharacterPack-*"`);
+		if (size($packDirs)) return ($location + "/" + $packDirs[size($packDirs)-1]);
+	}
+	return $defaultLocation;
+}
+
+//------------------------------------------------------------
+//! Return the golaem plugin Name
+//------------------------------------------------------------
+global proc string getGolaemPluginName()
+{
+	if (`pluginInfo -q -loaded "glmCrowd"`) return "glmCrowd";
+	else if (`pluginInfo -q -loaded "glmCrowd_d"`) return "glmCrowd_d";
+	else return "";
+}
+
+//------------------------------------------------------------
+//! Return the plugin version
+//------------------------------------------------------------
+global proc string getGolaemPluginVersion()
+{
+	string $pluginName = getGolaemPluginName();
+	if ($pluginName != "") return `pluginInfo -q -v $pluginName`;
+	else return "0.0";
+}
+
+//------------------------------------------------------------
+//! Return the plugin dir
+//------------------------------------------------------------
+global proc string getGolaemPluginDir()
+{
+	string $pluginName = getGolaemPluginName();
+	string $pluginPath = `pluginInfo -q -path $pluginName`;
+	return substituteAllString(dirname($pluginPath), "plug-ins", "");
+}
+//@}
+
