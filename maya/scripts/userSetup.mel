@@ -33,7 +33,7 @@ global proc loadGolaem()
 global proc loadDependencies()
 {
 	ncLoadPlugin("fbxmaya");
-	ncLoadPlugin("CharcoalEditor");
+	//ncLoadPlugin("CharcoalEditor");
 	
 	ncLoadPlugin("mtoa");
 	evalDeferred("setCurrentRenderer arnold;");
@@ -127,7 +127,9 @@ global proc setMayaOptionVars()
 global proc setMayaEnvironment()
 {
 	// set playback
-	setPlaybackRange(1, 150);
+	ncSetPlaybackRange(1, 150);
+	// gradient background
+	displayPref -displayGradient 1;
 	// open Outliner
 	OutlinerWindow;
 	// open port for mel & python

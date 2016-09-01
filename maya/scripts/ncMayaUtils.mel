@@ -105,7 +105,7 @@ global proc setShadedDisplay()
 //------------------------------------------------------------
 //! Set Maya Playback Range
 //------------------------------------------------------------
-global proc setPlaybackRange(int $playbackMin, int $playbackMax)
+global proc ncSetPlaybackRange(int $playbackMin, int $playbackMax)
 {
 	optionVar -fv "playbackMin" $playbackMin -fv "playbackMinDefault" $playbackMin -fv "playbackMinRange" $playbackMin -fv "playbackMinRangeDefault" $playbackMin;
 	optionVar -fv "playbackMax" $playbackMax -fv "playbackMaxDefault" $playbackMax -fv "playbackMaxRange" $playbackMax -fv "playbackMaxRangeDefault" $playbackMax;
