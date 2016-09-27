@@ -33,7 +33,7 @@ global proc loadGolaem()
 global proc loadDependencies()
 {
 	ncLoadPlugin("fbxmaya");
-	//ncLoadPlugin("CharcoalEditor");
+	ncLoadPlugin("CharcoalEditor");
 	
 	ncLoadPlugin("mtoa");
 	evalDeferred("setCurrentRenderer arnold;");

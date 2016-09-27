@@ -8,7 +8,7 @@
 :: CROWD VARIABLES
 ::***************************************************************************/
 
-set MAX_VERSION=2015
+set MAX_VERSION=2016
 set MAYA_VERSION=2016
 set GLMCROWD_MODE=Release
 ::set GLM_INSTALL_PREFIX=C:\Users\chaverou\My Developments\Golaem v5\install%MAYA_VERSION%\GolaemCrowd
