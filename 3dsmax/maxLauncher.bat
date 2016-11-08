@@ -14,7 +14,7 @@ set GLMCROWD_MODE=Release
 ::set GLM_INSTALL_PREFIX=C:\Users\chaverou\My Developments\Golaem v5\install%MAYA_VERSION%\GolaemCrowd
 ::set GLM_INSTALL_PREFIX=C:\Users\chaverou\My Developments\Golaem Crowd v4\install%MAYA_VERSION%\%GLMCROWD_MODE%
 ::set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\GolaemCrowd-4.3.2-Maya%MAYA_VERSION%
-set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-5.2.2-Maya%MAYA_VERSION%
+set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-5.3.1-Maya%MAYA_VERSION%
 set GLM_CROWD_BIN=%GLM_INSTALL_PREFIX%\bin
 set GLM_VRAY_PLUGINS_PATH=%GLM_INSTALL_PREFIX%\procedurals
 
@@ -30,6 +30,7 @@ set PATH=%GLM_CROWD_BIN%;%PATH%;%SystemRoot%;%SystemRoot%\system;
 set VRAY30_RT_FOR_3DSMAX2014_PLUGINS_x64=%GLM_VRAY_PLUGINS_PATH%;%VRAY30_RT_FOR_3DSMAX2014_PLUGINS_x64%;
 set VRAY30_RT_FOR_3DSMAX2015_PLUGINS_x64=%GLM_VRAY_PLUGINS_PATH%;%VRAY30_RT_FOR_3DSMAX2015_PLUGINS_x64%;
 set VRAY30_RT_FOR_3DSMAX2016_PLUGINS_x64=%GLM_VRAY_PLUGINS_PATH%;%VRAY30_RT_FOR_3DSMAX2016_PLUGINS_x64%;
+set VRAY30_RT_FOR_3DSMAX2017_PLUGINS_x64=%GLM_VRAY_PLUGINS_PATH%;%VRAY30_RT_FOR_3DSMAX2017_PLUGINS_x64%;
 
 ::/***************************************************************************
 :: Launch Max with the right configuration
