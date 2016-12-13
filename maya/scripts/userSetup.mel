@@ -85,9 +85,6 @@ global proc setHotkeys()
 	// Alt + s => Script Editor
 	nameCommand -annotation "CharcoalEditor" -command "charcoalEditor;" glmScriptEditor;
 	hotkey -alt -k "s" -name "glmScriptEditor";
-	// Alf + f => Fast Access
-	nameCommand -annotation "nFastAccess" -command "openNFastAccess;" glmFastAccess;
-	hotkey -alt -k "f" -name "glmFastAccess";
 	// Alt + x => Spark
 	nameCommand -annotation "spark" -command "runSpark;" glmSpark;
 	hotkey -alt -k "x" -name "glmSpark";
@@ -126,6 +123,8 @@ global proc setMayaOptionVars()
 */ //---------------------------------------------------------
 global proc setMayaEnvironment()
 {
+	// log in file
+	cmdFileOutput -o "C:/mayaLog.txt";
 	// set playback
 	ncSetPlaybackRange(1, 150);
 	// gradient background

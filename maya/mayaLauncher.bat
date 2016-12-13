@@ -35,17 +35,17 @@ set peregrinel_LICENSE=3033@gitem
 
 :: Fonctional
 ::set MAYA_PROJECT=N:\tests\functionalTests\crowd%GLMCROWD_VERSION%\
-::set MAYA_PROJECT=N:\demos\scenesDemos\crowd%GLMCROWD_VERSION%
+set MAYA_PROJECT=N:\demos\scenesDemos\crowd%GLMCROWD_VERSION%
 
 :: Customers
-::set MAYA_PROJECT=N:\tests\customers\riotGames\083016_charController
+::set MAYA_PROJECT=N:\tests\customers\goldtooth\120516_rendering\200_30CrowdTest
 ::set MAYA_PROJECT=N:\tests\customers\flux\waldo_stopPlay\job\C16032_01_NEC_animachi\maya2016
 
 :: Divers
 set MAYA_PROJECT=N:\tests\nicolas
 ::set MAYA_PROJECT=N:\bugs
 ::set MAYA_PROJECT=C:\renderScene
-::set MAYA_PROJECT=N:\demos\wings
+::set MAYA_PROJECT=N:\demos\digitalTech
 ::set MAYA_PROJECT=N:\demos\zScan
 
 ::/***************************************************************************
@@ -68,12 +68,11 @@ IF %GLMCROWD_VERSION% == 5.0 IF %GLMCROWD_DEV% == 1 IF %GLMCROWD_MODE% == Debug 
 	set GLM_INSTALL_PREFIX=C:\Users\chaverou\Developments\Golaem 5\install%MAYA_VERSION%\GolaemCrowdDBG
 )
 IF %GLMCROWD_VERSION% == 5.0 IF %GLMCROWD_DEV% == 0 (
-	set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-5.3.1-Maya%MAYA_VERSION%
+	set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-5.3.2.1-Maya%MAYA_VERSION%
 )
-:: set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-5.3.0.1-Maya%MAYA_VERSION%
-:: Golaem-5.3.1-2016.10.20-PR685-Maya2016
-:: Golaem-5.3.1-2016.10.04-PR642-Maya%MAYA_VERSION%
 
+::GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-5.3.1-Maya%MAYA_VERSION%
+::GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-5.3.2.1-2016.11.17-PR737-Maya%MAYA_VERSION%
 set GLMCROWD_ANL_ENABLE=0
 
 
@@ -120,9 +119,6 @@ set PYTHONPATH=%MY_ENVIRONMENT%\scripts;%FXPT_PATH%;%PYTHONPATH%
 set MAYA_SHELF_PATH=%MY_ENVIRONMENT%\shelves
 set XBMLANGPATH=%MY_ENVIRONMENT%\icons; 
 
-:: Yeti
-::set MTOA_EXTENSIONS_PATH=%YETI_MODULE_PATH%\plug-ins;%MTOA_EXTENSIONS_PATH%
-
 
 ::/***************************************************************************
 :: LAUNCH MAYA
@@ -134,7 +130,6 @@ set MAYA_EXE=bin\maya.exe
 if %MAYA_BATCH% == 0 (
 	"%MAYA_LOCATION%\%MAYA_EXE%"
 ) ELSE (
-	::set GLMCROWD_BATCH_ENABLE=1
-	"%MAYA_LOCATION%\%MAYA_EXE%" -batch -script "N:/tests/nicolas/export/untitled/cache/untitled.batch.mel" -log "C:/mayabatch.txt"
+	"%MAYA_LOCATION%\%MAYA_EXE%" -batch -script "N:/tests/nicolas/export/testPLELicenseTODELETE/cache/testPLELicenseTODELETE.batch.mel" -log "C:/Users/chaverou/mayabatch.txt"
 )
 
