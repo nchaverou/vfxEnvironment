@@ -1,0 +1,29 @@
+
+// Main Template
+global proc AEDummyNodeTemplate(string $nodeName)
+{
+	editorTemplate -beginScrollLayout;
+	editorTemplate -beginLayout "Dummy Attributes" -collapse 0;
+		editorTemplate -callCustom "DummyNode_buildQT" "DummyNode_updateQT" $nodeName;
+		editorTemplate -addControl "x";
+		editorTemplate -addControl "y";
+		editorTemplate -addControl "z";
+	editorTemplate -endLayout;
+	editorTemplate -addExtraControls;
+	editorTemplate -endScrollLayout;
+}
+
+// Build the QT Widget
+global proc DummyNode_buildQT( string $nodeName )
+{
+    string $parent = `setParent -q`;
+    python("import DummyNodeUI");
+    python("DummyNodeUI.buildQT('" + $parent + "', '" + $nodeName + "')");
+}
+
+// Update the QT Widget
+global proc DummyNode_updateQT( string $nodeName )
+{
+    string $parent = `setParent -q`;
+    python("DummyNodeUI.updateQT('" + $parent + "', '" + $nodeName + "')");
+}

@@ -10,8 +10,8 @@
 
 set MAX_VERSION=2016
 set MAYA_VERSION=2016
-set GLM_INSTALL_PREFIX=C:\Users\chaverou\Developments\Golaem 5\install%MAYA_VERSION%\GolaemCrowdDBG
-::set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-5.3.2.1-Maya%MAYA_VERSION%
+::set GLM_INSTALL_PREFIX=C:\Users\chaverou\Developments\Golaem 5\install%MAYA_VERSION%\GolaemCrowdDBG
+set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-5.3.3-Maya%MAYA_VERSION%
 set GLM_CROWD_BIN=%GLM_INSTALL_PREFIX%\bin
 set GLM_VRAY_PLUGINS_PATH=%GLM_INSTALL_PREFIX%\procedurals
 
@@ -27,6 +27,7 @@ set VRAY30_RT_FOR_3DSMAX2014_PLUGINS_x64=%GLM_VRAY_PLUGINS_PATH%;%VRAY30_RT_FOR_
 set VRAY30_RT_FOR_3DSMAX2015_PLUGINS_x64=%GLM_VRAY_PLUGINS_PATH%;%VRAY30_RT_FOR_3DSMAX2015_PLUGINS_x64%;
 set VRAY30_RT_FOR_3DSMAX2016_PLUGINS_x64=%GLM_VRAY_PLUGINS_PATH%;%VRAY30_RT_FOR_3DSMAX2016_PLUGINS_x64%;
 set VRAY30_RT_FOR_3DSMAX2017_PLUGINS_x64=%GLM_VRAY_PLUGINS_PATH%;%VRAY30_RT_FOR_3DSMAX2017_PLUGINS_x64%;
+set VRAY30_RT_FOR_3DSMAX2018_PLUGINS_x64=%GLM_VRAY_PLUGINS_PATH%;%VRAY30_RT_FOR_3DSMAX2018_PLUGINS_x64%;
 
 ::/***************************************************************************
 :: Launch Max with the right configuration
@@ -39,5 +40,5 @@ set MAX_EXE=3dsmax.exe
 
 :: Set Visual Studio
 ::PATH=C:\Users\chaverou\My Developments\Golaem Crowd v4\install2014\Debug\bin;%PATH%
-::VRAY30_RT_FOR_3DSMAX2014_PLUGINS_x64=C:\Users\chaverou\My Developments\Golaem Crowd v4\install2014\Debug\procedurals;%VRAY30_RT_FOR_3DSMAX2014_PLUGINS_x64%
-::C:\Program Files\Autodesk\3ds Max 2014\3dsmax.exe
+::VRAY30_RT_FOR_3DSMAX2017_PLUGINS_x64=C:\Users\chaverou\My Developments\Golaem Crowd v4\install2014\Debug\procedurals;%VRAY30_RT_FOR_3DSMAX2017_PLUGINS_x64%
+::C:\Program Files\Autodesk\3ds Max 2017\3dsmax.exe
