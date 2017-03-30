@@ -1,0 +1,32 @@
+/***************************************************************************
+*                                                                          *
+*  Copyright (C) Golaem S.A.- All Rights Reserved.                         *
+*                                                                          *
+***************************************************************************/
+
+//**************************************************************************
+/*! \file User Setup File
+	\brief
+*/ //***********************************************************************
+
+// Includes
+source "ncUserUtils.mel";
+
+//************************************************************
+/*! @name Main
+*/ //*********************************************************
+//@{
+print "///////////////////////////////////////\n";
+print "Nicolas User Setup Script\n";
+print "///////////////////////////////////////\n";
+
+// set Maya
+ncLoadDependencies();
+ncSetMayaEnvironment();
+evalDeferred("ncSetHotkeys()");
+
+// Set Golaem
+loadGolaem();
+ncSetGolaemOptionVars();
+evalDeferred("ncAddGolaemInfoIcon()");
+//@}
