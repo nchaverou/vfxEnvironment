@@ -1,0 +1,203 @@
+/***************************************************************************
+*                                                                          *
+*  Copyright (C) Golaem S.A. - All Rights Reserved.                        *
+*                                                                          *
+***************************************************************************/
+
+//**************************************************************************
+/*! \file User Utils
+	\brief User Related Functions
+*/ //***********************************************************************
+
+// Includes
+source "ncMayaUtils.mel";
+
+//************************************************************
+/*! @name Maya Env Functions
+*/ //*********************************************************
+//@{
+//------------------------------------------------------------
+//! setHotkeys
+//------------------------------------------------------------
+global proc ncSetHotkeys()
+{
+	catchQuiet(`hotkeySet -e -current Custom`);
+
+	// Alt + o => Outliner
+	nameCommand -annotation "Outliner" -command "tearOffPanel \"Outliner\" \"outlinerPanel\" false;" glmOutlinerWindow;
+	hotkey -alt -k "o" -name "glmOutlinerWindow";
+	// Alt + n => NodeEditor
+	nameCommand -annotation "NodeEditor" -command "nodeEditorWindow" glmNodeEditorWindow;
+	hotkey -alt -k "n" -name "glmNodeEditorWindow";
+	// Alt + h => Hypershade
+    nameCommand -annotation "HypershadeWindow" -command "tearOffPanel \"Hypershade\" \"hyperShadePanel\" true;" glmHypershadeWindow;
+	hotkey -alt -k "h" -name "glmHypershadeWindow";
+	// Alt + p => Plugin manager
+	nameCommand -annotation "PluginWindow" -command "pluginWin" glmPluginWindow;
+	hotkey -alt -k "p" -name "glmPluginWindow";
+	// Alt + d => Open project dir
+	nameCommand -annotation "OpenProjectDir" -command "openProjectDir" glmOpenProjectDir;
+	hotkey -alt -k "d" -name "glmOpenProjectDir";
+	// Alt + c => Open scene dir
+	nameCommand -annotation "OpenSceneDir" -command "openSceneDir" glmOpenSceneDir;
+	hotkey -alt -k "c" -name "glmOpenSceneDir";
+	// Alt + r => Render
+	nameCommand -annotation "glmBehaviorEditor" -command "glmCrowdBehaviorEditor;" glmBehaviorEditor;
+	hotkey -alt -k "b" -name "glmBehaviorEditor";
+	// Alt + r => Render
+	nameCommand -annotation "RenderIntoNewWindow" -command "renderIntoNewWindow render" glmRender;
+	hotkey -alt -k "r" -name "glmRender";
+	// Alt + s => Script Editor
+	nameCommand -annotation "CharcoalEditor" -command "charcoalEditor;" glmScriptEditor;
+	hotkey -alt -k "s" -name "glmScriptEditor";
+	// Alt + x => Spark
+	nameCommand -annotation "spark" -command "ncLoadSpark;" glmSpark;
+	hotkey -alt -k "x" -name "glmSpark";
+}
+
+//------------------------------------------------------------
+//! Main function
+/*! \param
+*/ //---------------------------------------------------------
+global proc ncSetMayaEnvironment()
+{
+	// log in file
+	cmdFileOutput -o "C:/mayaLog.txt";
+	// set playback
+	ncSetPlaybackRange(1, 151);
+	// gradient background and grid
+	ncSetViewportAndGridDisplay(1, 3, 1, 21);
+	// open Outliner
+	OutlinerWindow;
+	// open port for mel & python
+	catch(ncOpenCommandPort(7001, 7002));
+	// shaded
+	evalDeferred("setShadedDisplay();");
+	// disable color management
+	scriptJob -e SceneOpened ncDisableColorManagement;
+}
+//@}
+
+//************************************************************
+/*! @name Golaem Specifics Functions
+*/ //*********************************************************
+//@{
+//------------------------------------------------------------
+//! Load Crowd
+/*! \param
+*/ //---------------------------------------------------------
+global proc ncLoadGolaem()
+{
+	if (ncLoadPlugin("glmCrowd") == 0)
+		ncLoadPlugin("glmCrowd_d");
+}
+
+//------------------------------------------------------------
+//! Load Dependencies
+/*! \param
+*/ //---------------------------------------------------------
+global proc ncLoadDependencies()
+{
+	ncLoadPlugin("fbxmaya");
+	ncLoadPlugin("CharcoalEditor");
+	
+	ncLoadPlugin("mtoa");
+	evalDeferred("setCurrentRenderer arnold;");
+
+	ncLoadSpark();
+}
+
+//------------------------------------------------------------
+//! Load and open spark
+//------------------------------------------------------------
+global proc ncLoadSpark()
+{
+	python("from fxpt.fx_spark import fx_spark");
+	python("fx_spark.run()");
+}
+//@}
+
+//************************************************************
+/*! @name Golaem Specifics Functions
+*/ //*********************************************************
+//@{
+//------------------------------------------------------------
+//! Set the default dirs
+/*! \param
+*/ //---------------------------------------------------------
+global proc ncSetGolaemOptionVars()
+{
+	string $mayaProject = `getenv "MAYA_PROJECT"`;
+	string $characterPack = ncFindCharacterPack(($mayaProject+"/crowd/;N:/assets/"), "N:/assets/GolaemCharacterPack-5.0.2");
+
+	optionVar -stringValue "browserLocationCharacters" ($characterPack + "/golaem/characters");
+	optionVar -stringValue "browserLocationMotions" ( $characterPack + "/golaem/motions");
+	optionVar -stringValue "browserLocationEnvironments" ($mayaProject + "/golaem/environments");
+	optionVar -stringValue "browserLocationShaders" ($characterPack + "/golaem/shaders");
+	optionVar -stringValue "browserLocationSimulationCache" ($mayaProject + "/export");
+	optionVar -stringValue "browserLocationSimulationLayout" ($mayaProject + "/layout");
+	optionVar -stringValue "browserLocationSimulationLibrary" ($mayaProject + "/library");
+	optionVar -stringValue "browserLocationGolaem" ($mayaProject);
+
+	optionVar -stringValue "glmCrowdLogDirectory" ("C:/temp");
+	optionVar -stringValue "glmCrowdCrashReportDirectory" ("C:/temp");
+}
+
+//------------------------------------------------------------
+//! Add a dev version icon if required
+/*! \param
+*/ //---------------------------------------------------------
+global proc ncAddGolaemInfoIcon()
+{
+	string $shelfName = (`getenv "GLMCROWD_VERSION"` == "5.0") ? "Golaem" : "Crowd";
+	string $iconName = (`getenv "GLMCROWD_DEV"` == 1) ? "devVersion" : "relVersion";
+	$iconName += (`getenv "GLMCROWD_MODE"` == "Debug") ? "_debug.png" : "_release.png";
+	string $pluginVersion = ncGetGolaemPluginVersion();
+
+	shelfButton -image1 $iconName -style "iconAndTextVertical" -imageOverlayLabel $pluginVersion -ann $pluginVersion  -parent   $shelfName "pluginInfo";
+}
+
+//------------------------------------------------------------
+//! Find the Character Pack
+//------------------------------------------------------------
+global proc string ncFindCharacterPack(string $preferredLocations, string $defaultLocation)
+{
+	string $locations[] = stringToStringArray($preferredLocations, ";");
+	for ($location in $locations)
+	{
+		string $packDirs[] = sort(`getFileList -folder $location -filespec "*GolaemCharacterPack-*"`);
+		if (size($packDirs)) return ($location + "/" + $packDirs[size($packDirs)-1]);
+	}
+	return $defaultLocation;
+}
+
+//------------------------------------------------------------
+//! Return the golaem plugin Name
+//------------------------------------------------------------
+global proc string ncGetGolaemPluginName()
+{
+	if (`pluginInfo -q -loaded "glmCrowd"`) return "glmCrowd";
+	else if (`pluginInfo -q -loaded "glmCrowd_d"`) return "glmCrowd_d";
+	else return "";
+}
+
+//------------------------------------------------------------
+//! Return the plugin version
+//------------------------------------------------------------
+global proc string ncGetGolaemPluginVersion()
+{
+	string $pluginName = ncGetGolaemPluginName();
+	if ($pluginName != "") return `pluginInfo -q -v $pluginName`;
+	else return "0.0";
+}
+
+//------------------------------------------------------------
+//! Return the plugin dir
+//------------------------------------------------------------
+global proc string ncGetGolaemPluginDir()
+{
+	string $pluginName = ncGetGolaemPluginName();
+	string $pluginPath = `pluginInfo -q -path $pluginName`;
+	return substituteAllString(dirname($pluginPath), "plug-ins", "");
+}
+//@}

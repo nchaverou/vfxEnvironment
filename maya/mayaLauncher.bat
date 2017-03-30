@@ -42,7 +42,7 @@ set MAYA_PROJECT=N:\tests\functionalTests\crowd%GLMCROWD_VERSION%\
 set MAYA_PROJECT=N:\tests\customers\mackevision\20170329_arrows
 
 :: Divers
-::set MAYA_PROJECT=N:\tests\nicolas
+set MAYA_PROJECT=N:\tests\nicolas
 ::set MAYA_PROJECT=N:\bugs
 
 
@@ -66,7 +66,7 @@ IF %GLMCROWD_VERSION% == 5.0 IF %GLMCROWD_DEV% == 1 IF %GLMCROWD_MODE% == Debug 
 	set GLM_INSTALL_PREFIX=C:\Users\chaverou\Developments\Golaem 5\install%MAYA_VERSION%\GolaemCrowdDBG
 )
 IF %GLMCROWD_VERSION% == 5.0 IF %GLMCROWD_DEV% == 0 (
-	set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-5.3.4.1-Maya%MAYA_VERSION%
+	set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-6-2017.03.29-PR905-Maya%MAYA_VERSION%
 )
 
 ::GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-6-2017.02.28-e00b5a5967-Maya2016%MAYA_VERSION%
@@ -106,19 +106,19 @@ set SKINW_PATH=C:\Users\chaverou\Developments\skinWrangler
 ::***************************************************************************/
 
 :: Copy and rename the source shelf file
-copy "%MY_ENVIRONMENT%\shelves\shelf_Nicolas.original" "%MY_ENVIRONMENT%\shelves\shelf_Nicolas.mel"
+::copy "%MY_ENVIRONMENT%\shelves\shelf_Nicolas.original" "%MY_ENVIRONMENT%\shelves\shelf_Nicolas.mel"
 
 :: Copy maya config file
-copy "%MY_ENVIRONMENT%\prefs\MayaInterfaceScalingConfig" "%USERPROFILE%\Documents\maya\%MAYA_VERSION%\prefs\MayaInterfaceScalingConfig"
+::copy "%MY_ENVIRONMENT%\prefs\MayaInterfaceScalingConfig" "%USERPROFILE%\Documents\maya\%MAYA_VERSION%\prefs\MayaInterfaceScalingConfig"
 
 :: Maya
 ::set PATH=%SystemRoot%;%SystemRoot%\system;%PATH%
 set MAYA_MODULE_PATH=%GLM_CROWD_MODULE_PATH%;%MTOA_MODULE_PATH%;%MAYA_MODULE_PATH%
 set MAYA_PLUG_IN_PATH=%MY_ENVIRONMENT%\plugins\%MAYA_VERSION%
-set MAYA_SCRIPT_PATH=%MY_ENVIRONMENT%\scripts
+set MAYA_SCRIPT_PATH=%MY_ENVIRONMENT%\scripts;%MAYA_SCRIPT_PATH%
 set PYTHONPATH=%MY_ENVIRONMENT%\scripts;%FXPT_PATH%;%SKINW_PATH%;%PYTHONPATH%
-set MAYA_SHELF_PATH=%MY_ENVIRONMENT%\shelves
-set XBMLANGPATH=%MY_ENVIRONMENT%\icons;
+set XBMLANGPATH=%MY_ENVIRONMENT%\icons;%XBMLANGPATH%
+::set MAYA_SHELF_PATH=%MY_ENVIRONMENT%\shelves
 ::set MAYA_RENDER_DESC_PATH=C:\solidangle\mtoadeploy\%MAYA_VERSION%\arnoldRenderer.xml
 
 
