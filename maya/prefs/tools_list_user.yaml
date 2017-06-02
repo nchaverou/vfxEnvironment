@@ -1,0 +1,33 @@
+
+- name: Print Maya.env Location
+  mel: print(`about -environmentFile`)
+  annotation: Print maya.env location
+
+- name: Print MAYA_APP_DIR
+  python: import os; print os.environ.get('MAYA_APP_DIR', None)
+  annotation: Print MAYA_APP_DIR environment variable
+
+- name: Plugin Load VRay
+  mel: ncLoadPlugin("vrayformaya")
+  annotation: Load VRay For Maya Plugin
+  
+- name: Plugin Load Arnold
+  mel: ncLoadPlugin("mtoa")
+  annotation: Load Arnold For Maya Plugin
+  
+- name: Set Maya Project
+  mel: ncSetMayaProject()
+  annotation: Set Current Maya Project
+
+- name: Reload Golaem Python Directory
+  mel: reloadGlmPython()
+  annotation: Reload Golaem Python Directory
+
+- name: Delete Unused Nodes
+  mel: ncDeleteUnusedNodes()
+  annotation: Delete Unused Nodes
+
+- name: Cycle Background Color
+  mel: cycleBackgroundColor()
+  annotation: Cycle Background Color
+  
