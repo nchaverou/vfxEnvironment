@@ -12,7 +12,7 @@ set KATANA_TOOLS=C:\Users\chaverou\Developments\vfxEnvironment\katana\tools
 set KTOA_PATH=C:\solidangle\ktoadeploy\KtoA-1.1.3.1-kat2.5-windows
 ::set GOLAEM_PATH=C:\Users\chaverou\Developments\katanaGolaem\install
 ::set KATANA_SAMPLES=C:\Users\chaverou\Developments\katanaGolaem\installOriginal
-set GOLAEM_PATH=C:\Users\chaverou\Developments\katanaGolaem\install
+set GOLAEM_PATH=C:\Users\chaverou\Developments\Golaem For Katana\install
 
 ::/***************************************************************************
 :: MISC

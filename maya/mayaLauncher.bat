@@ -39,7 +39,7 @@ set MAYA_PROJECT=N:\demos\scenesDemos\crowd5.0
 
 :: Customers
 ::set MAYA_PROJECT=N:\tests\customers\blackbird
-set MAYA_PROJECT=N:\tests\customers\mikros\170517_convertToAnim
+set MAYA_PROJECT=N:\tests\customers\spinvfx\20170606_slidingfeet\scenes\tests
 
 :: Divers
 set MAYA_PROJECT=N:\tests\nicolas
@@ -58,12 +58,13 @@ IF %GLMCROWD_DEV% == 1 IF %GLMCROWD_MODE% == Debug (
 	set GLM_INSTALL_PREFIX=C:\Users\chaverou\Developments\Golaem 5\install%MAYA_VERSION%\GolaemCrowdDBG
 )
 IF %GLMCROWD_DEV% == 0 (
-	set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-6-Maya%MAYA_VERSION%
+	set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-6.0.1-2017.06.02-PR999-Maya%MAYA_VERSION%
 )
 
 ::GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-6-2017.04.27-ba3c937b4-Maya%MAYA_VERSION% # Command d'import de Yann
 ::GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-6-2017.01.27-db93af0-Maya%MAYA_VERSION%
 ::GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-5.4-2017.01.06-889baf8-Maya%MAYA_VERSION%
+::GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-6.0.1-2017.06.02-PR999-Maya%MAYA_VERSION%
 set GLMCROWD_ANL_ENABLE=0
 set GLMCROWD_UNIT=3
 
@@ -87,7 +88,8 @@ set MY_ENVIRONMENT=C:\Users\chaverou\Developments\vfxEnvironment\maya
 set MTOA_MODULE_PATH=C:\solidangle\mtoadeploy\%MAYA_VERSION%
 
 :: Renderman
-set RMANTREE=C:\Program Files\Pixar\RenderManProServer-21.3\
+set RMANTREE=C:\Program Files\Pixar\RenderManProServer-21.1\
+set RMSTREE=C:\Program Files\Pixar\RenderManForMaya-21.1-maya2016\
 
 :: Tools
 set FXPT_PATH=C:\Users\chaverou\Developments\fxpt
@@ -114,7 +116,7 @@ copy "%MY_ENVIRONMENT%\prefs\tools_list_user.yaml" "%APPDATA%\Damage Inc\fxpt\fx
 
 :: Maya
 ::set PATH=%SystemRoot%;%SystemRoot%\system;%PATH%
-set MAYA_MODULE_PATH=%GLM_CROWD_MODULE_PATH%;%MTOA_MODULE_PATH%;%MAYA_MODULE_PATH%
+set MAYA_MODULE_PATH=%GLM_CROWD_MODULE_PATH%;%MTOA_MODULE_PATH%;%RMSTREE%\etc;%MAYA_MODULE_PATH%
 set MAYA_PLUG_IN_PATH=%MY_ENVIRONMENT%\plugins\%MAYA_VERSION%
 set MAYA_SCRIPT_PATH=%MY_ENVIRONMENT%\scripts;%MAYA_SCRIPT_PATH%
 set PYTHONPATH=%MY_ENVIRONMENT%\scripts;%FXPT_PATH%;%SKINW_PATH%;%SWIGBINDING%;%PYTHONPATH%

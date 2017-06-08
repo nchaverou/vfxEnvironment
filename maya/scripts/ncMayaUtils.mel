@@ -124,6 +124,7 @@ global proc ncSetPlaybackRange(int $playbackMin, int $playbackMax)
 global proc ncDisableColorManagement()
 {
 	colorManagementPrefs -edit -cmEnabled 0;
+	file -modified false;
 }
 
 //------------------------------------------------------------
