@@ -9,8 +9,8 @@
 ::***************************************************************************/
 
 set GLMCROWD_VERSION=5.0
-set GLMCROWD_MODE=Debug
-set GLMCROWD_DEV=1
+set GLMCROWD_MODE=Release
+set GLMCROWD_DEV=0
 set MAYA_VERSION=2016
 set MAYA_BATCH_RENDER=0
 
@@ -39,10 +39,10 @@ set MAYA_PROJECT=N:\demos\scenesDemos\crowd5.0
 
 :: Customers
 ::set MAYA_PROJECT=N:\tests\customers\blackbird
-set MAYA_PROJECT=N:\tests\customers\spinvfx\20170606_slidingfeet\scenes\tests
+set MAYA_PROJECT=N:\tests\customers\blueBolt\20170614_endTrigger
 
 :: Divers
-set MAYA_PROJECT=N:\tests\nicolas
+::set MAYA_PROJECT=N:\tests\nicolas
 ::set MAYA_PROJECT=N:\bugs
 ::set MAYA_PROJECT=P:\
 
@@ -58,7 +58,7 @@ IF %GLMCROWD_DEV% == 1 IF %GLMCROWD_MODE% == Debug (
 	set GLM_INSTALL_PREFIX=C:\Users\chaverou\Developments\Golaem 5\install%MAYA_VERSION%\GolaemCrowdDBG
 )
 IF %GLMCROWD_DEV% == 0 (
-	set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-6.0.1-2017.06.02-PR999-Maya%MAYA_VERSION%
+	set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-5.3.4.2-Maya%MAYA_VERSION%
 )
 
 ::GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-6-2017.04.27-ba3c937b4-Maya%MAYA_VERSION% # Command d'import de Yann

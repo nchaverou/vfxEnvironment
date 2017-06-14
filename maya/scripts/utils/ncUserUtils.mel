@@ -10,7 +10,7 @@
 */ //***********************************************************************
 
 // Includes
-source "ncMayaUtils.mel";
+source "utils/ncMayaUtils.mel";
 
 //************************************************************
 /*! @name Maya Env Functions
