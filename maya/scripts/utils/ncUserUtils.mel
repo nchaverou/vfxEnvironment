@@ -22,7 +22,7 @@ source "utils/ncMayaUtils.mel";
 global proc ncSetHotkeys()
 {
 	catchQuiet(`hotkeySet -e -current Custom`);
-
+	print ("SET HOTKEYS");
 	// Alt + o => Outliner
 	nameCommand -annotation "Outliner" -command "tearOffPanel \"Outliner\" \"outlinerPanel\" false;" glmOutlinerWindow;
 	hotkey -alt -k "o" -name "glmOutlinerWindow";
@@ -75,6 +75,8 @@ global proc ncSetMayaEnvironment()
 	evalDeferred("ncSetShadedDisplay();");
 	// disable color management
 	scriptJob -e SceneOpened ncDisableColorManagement;
+	// hotkeys
+	//evalDeferred("ncSetHotkeys()");
 }
 //@}
 
@@ -101,6 +103,7 @@ global proc ncLoadDependencies()
 	ncLoadPlugin("fbxmaya");
 	ncLoadPlugin("CharcoalEditor");
 	
+	ncLoadPlugin("Mayatomr");
 	ncLoadPlugin("mtoa");
 	evalDeferred("setCurrentRenderer arnold;");
 

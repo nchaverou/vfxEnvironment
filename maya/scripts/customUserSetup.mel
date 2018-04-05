@@ -17,7 +17,7 @@ source "utils/ncUserUtils.mel";
 */ //*********************************************************
 //@{
 print "///////////////////////////////////////\n";
-print "Nicolas User Setup Script\n";
+print "Nicolas Super User Setup Script\n";
 print "///////////////////////////////////////\n";
 
 // set Maya

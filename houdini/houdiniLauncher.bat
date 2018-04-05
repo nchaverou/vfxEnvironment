@@ -8,7 +8,7 @@
 :: CROWD VARIABLES
 ::***************************************************************************/
 
-set HOUDINI_VERSION=15.5.632
+set HOUDINI_VERSION=16.0.671
 set GLMCROWD_MODE=Release
 ::set HOUDINI_DSO_PATH=C:\Users\chaverou\My Developments\golaemMantra\install
 
