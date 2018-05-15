@@ -9,7 +9,7 @@
 ::***************************************************************************/
 
 set GLMCROWD_VERSION=5.0
-set GLMCROWD_MODE=Debug
+set GLMCROWD_MODE=Release
 set GLMCROWD_DEV=0
 set MAYA_VERSION=2016
 set MAYA_BATCH_RENDER=0
@@ -41,10 +41,10 @@ set RLM_DIAGNOSTICS=C:\Temp\RLMDiag.txt
 ::set MAYA_PROJECT=N:\demos\scenesDemos\crowd5.0
 
 :: Customers
-set MAYA_PROJECT=N:\demos\stadium
-::set MAYA_PROJECT=N:\tests\customers\imageEngine\20180329_crashInit
+::set MAYA_PROJECT=N:\demos\2033
+::set MAYA_PROJECT=N:\demos\digiPro2018
 ::set MAYA_PROJECT=N:\assets\GolaemCharacterPack-6.2.4
-::set MAYA_PROJECT=N:\tests\nicolas
+set MAYA_PROJECT=N:\tests\nicolas
 
 :: DiversglmRefreshChOpEditor
 ::set MAYA_PROJECT=C:\renderScene

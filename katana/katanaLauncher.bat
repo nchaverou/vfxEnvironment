@@ -11,12 +11,16 @@
 set KATANA_TOOLS=C:\Users\chaverou\Developments\vfxEnvironment\katana\tools
 set "KATANA_TAGLINE=With KtoA 2.0.4.0 and Arnold 5.0.1.4 and Renderman 21.4"
 ::set DEFAULT_RENDERER=prman
-::set DEFAULT_RENDERER=arnold
+set DEFAULT_RENDERER=arnold
 set GLMKATANA_MODE=Official
+set foundry_LICENSE=C:\foundry.lic
 
 ::/***************************************************************************
 :: GOLAEM
 ::***************************************************************************/
+
+::set GLM_INSTALL_PREFIX=C:\Users\chaverou\Developments\Golaem 5\install2016\GolaemCrowd
+set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-6.3-2018.04.26-PR1373-Maya2018
 
 IF %GLMKATANA_MODE% == Release (
 	set KTOG_PATH=C:\Users\chaverou\Developments\Golaem For Katana\install\GolaemKatana\
@@ -25,11 +29,9 @@ IF %GLMKATANA_MODE% == Debug (
 	set KTOG_PATH=C:\Users\chaverou\Developments\Golaem For Katana\install\GolaemKatanaDBG\
 )
 IF %GLMKATANA_MODE% == Official (
-	set KTOG_PATH=C:\Program Files\Golaem\Golaem-6.2.4-2018.03.01-PR1327-Maya2018\procedurals\katana\
+	set KTOG_PATH=%GLM_INSTALL_PREFIX%\procedurals\katana\
 )
 
-::set GLM_INSTALL_PREFIX=C:\Users\chaverou\Developments\Golaem 5\install2016\GolaemCrowd
-set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-6.2.4-2018.03.01-PR1327-Maya2018
 set GLM_PROCEDURAL_PATH=%GLM_INSTALL_PREFIX%\procedurals
 set GLM_SHADER_PATH=%GLM_INSTALL_PREFIX%\shaders
 set GLM_CROWD_BIN=%GLM_INSTALL_PREFIX%\bin
