@@ -9,10 +9,11 @@
 ::***************************************************************************/
 
 set GLMCROWD_VERSION=5.0
-set GLMCROWD_MODE=Release
+set GLMCROWD_MODE=Debug
 set GLMCROWD_DEV=0
-set MAYA_VERSION=2016
+set MAYA_VERSION=2018
 set MAYA_BATCH_RENDER=0
+set RMAN_VERSION=21.7
 
 ::/***************************************************************************
 :: LICENSE
@@ -42,15 +43,14 @@ set RLM_DIAGNOSTICS=C:\Temp\RLMDiag.txt
 
 :: Customers
 ::set MAYA_PROJECT=N:\demos\2033
-::set MAYA_PROJECT=N:\demos\digiPro2018
-::set MAYA_PROJECT=N:\assets\GolaemCharacterPack-6.2.4
-set MAYA_PROJECT=N:\tests\nicolas
+::set MAYA_PROJECT=N:\demos\xgen
+set MAYA_PROJECT=N:\tests\customers\coffeeandtv\20181019_render
+::set MAYA_PROJECT=N:\tests\nicolas
 
-:: DiversglmRefreshChOpEditor
+:: Divers
 ::set MAYA_PROJECT=C:\renderScene
 ::set MAYA_PROJECT=N:\bugs
 ::set MAYA_PROJECT=P:\
-::set MAYA_PROJECT=N:\demos\autodeskParis
 
 
 ::/***************************************************************************
@@ -64,13 +64,9 @@ IF %GLMCROWD_DEV% == 1 IF %GLMCROWD_MODE% == Debug (
 	set GLM_INSTALL_PREFIX=C:\Users\chaverou\Developments\Golaem 5\install%MAYA_VERSION%\GolaemCrowdDBG
 )
 IF %GLMCROWD_DEV% == 0 (
-	set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-6.2.4-Maya%MAYA_VERSION%
+	set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-6.3.5-Maya%MAYA_VERSION%
 )
 
-::GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-6.2.3-2018.01.31-PR1291-Maya%MAYA_VERSION%
-::GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-6-2017.01.27-db93af0-Maya%MAYA_VERSION%
-::GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-5.4-2017.01.06-889baf8-Maya%MAYA_VERSION%
-::GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-6.0.1-2017.06.02-PR999-Maya%MAYA_VERSION%
 set GLMCROWD_ANL_ENABLE=0
 set GLMCROWD_UNIT=3
 set MAYA_DISABLE_CLIC_IPM=1
@@ -91,21 +87,34 @@ set GLM_CROWD_MODULE_PATH=%GLM_INSTALL_PREFIX%
 :: My Environment
 set MY_ENVIRONMENT=C:\Users\chaverou\Developments\vfxEnvironment\maya
 
+:: Maya
+set MAYA_LOCATION=C:\Program Files\Autodesk\Maya%MAYA_VERSION%
+
 :: MTOA_VERSION
 set MTOA_MODULE_PATH=C:\solidangle\mtoadeploy\%MAYA_VERSION%
 
 :: Renderman
-set RMANTREE=C:\Program Files\Pixar\RenderManProServer-21.3\
-set RMSTREE=C:\Program Files\Pixar\RenderManForMaya-21.3-maya2016\
+::set RFM_SHOW_PATH=%GLM_INSTALL_PREFIX%\shaders\
+set RMANTREE=C:\Program Files\Pixar\RenderManProServer-%RMAN_VERSION%\
+set RMSTREE=C:\Program Files\Pixar\RenderManForMaya-%RMAN_VERSION%-maya%MAYA_VERSION%\
+IF %RMAN_VERSION% == 22.1 (
+	set RMSTREE=C:\Program Files\Pixar\RenderManForMaya-%RMAN_VERSION%\
+)
+set RFMTREE=%RMSTREE%
+set RFM_DO_NOT_CREATE_MODULE_FILE=0
+
+set RENDERMAN_MODULE_PATH=%RMSTREE%\etc
+IF %RMAN_VERSION% == 22.1 (
+	set RENDERMAN_MODULE_PATH=%RMSTREE%
+)
+
+:: Xgen
+set PATH=%MAYA_LOCATION%/bin;%MAYA_LOCATION%/lib;%MAYA_LOCATION%/plug-ins/xgen/bin;%MAYA_LOCATION%/plug-ins/xgen/lib;%RMANTREE%/lib;%PATH%
 
 :: Tools
 set FXPT_PATH=C:\Users\chaverou\Developments\fxpt
 set SKINW_PATH=C:\Users\chaverou\Developments\skinWrangler
 set PYTHONBINDINGS=C:\Users\chaverou\Developments\Golaem Binding\install
-set MGEAR_PATH=%MY_ENVIRONMENT%\plugins\mgear_2.0.4
-
-:: Yeti
-::set YETI_MODULE_PATH=%MY_ENVIRONMENT%\plugins\Yeti-v2.0.19_Maya%MAYA_VERSION%-windows64
 
 
 ::/***************************************************************************
@@ -115,22 +124,18 @@ set MGEAR_PATH=%MY_ENVIRONMENT%\plugins\mgear_2.0.4
 :: Copy and rename the source shelf file
 ::copy "%MY_ENVIRONMENT%\shelves\shelf_Nicolas.original" "%MY_ENVIRONMENT%\shelves\shelf_Nicolas.mel"
 
-:: Copy maya config file
-::copy "%MY_ENVIRONMENT%\prefs\MayaInterfaceScalingConfig" "%USERPROFILE%\Documents\maya\%MAYA_VERSION%\prefs\MayaInterfaceScalingConfig"
-
 :: Copy Sparx presets
 copy "%MY_ENVIRONMENT%\prefs\tools_list_user.yaml" "%APPDATA%\Damage Inc\fxpt\fx_spark\tools_list_user.yaml"
 
+set VRAY_FOR_MAYA2016_PLUGINS_x64=C:\Users\chaverou\Developments\vrayTestPlugin\vrayTestPlugin\x64\Release;%VRAY_FOR_MAYA2016_PLUGINS_x64%
 
 :: Maya
 ::set PATH=%SystemRoot%;%SystemRoot%\system;%PATH%
-set MAYA_MODULE_PATH=%GLM_CROWD_MODULE_PATH%;%MTOA_MODULE_PATH%;%RMSTREE%\etc;%MGEAR_PATH%;%MAYA_MODULE_PATH%
+set MAYA_MODULE_PATH=%GLM_CROWD_MODULE_PATH%;%MTOA_MODULE_PATH%;%RENDERMAN_MODULE_PATH%;%MAYA_MODULE_PATH%
 set MAYA_PLUG_IN_PATH=%MY_ENVIRONMENT%\plugins\%MAYA_VERSION%
 set MAYA_SCRIPT_PATH=%MY_ENVIRONMENT%\scripts;%MAYA_SCRIPT_PATH%
 set PYTHONPATH=%MY_ENVIRONMENT%\scripts;%FXPT_PATH%;%SKINW_PATH%;%PYTHONBINDINGS%;%PYTHONPATH%
 set XBMLANGPATH=%MY_ENVIRONMENT%\icons;%XBMLANGPATH%
-::set MAYA_SHELF_PATH=%MY_ENVIRONMENT%\shelves
-::set MAYA_RENDER_DESC_PATH=C:\solidangle\mtoadeploy\%MAYA_VERSION%\arnoldRenderer.xml
 
 
 ::/***************************************************************************
@@ -138,7 +143,6 @@ set XBMLANGPATH=%MY_ENVIRONMENT%\icons;%XBMLANGPATH%
 ::***************************************************************************/
 
 ::set MAYA_IGNORE_DIALOGS=1
-set MAYA_LOCATION=C:\Program Files\Autodesk\Maya%MAYA_VERSION%
 set MAYA_EXE=bin\maya.exe
 set RENDER_EXE=bin\Render.exe
 
@@ -154,4 +158,3 @@ if %MAYA_BATCH_RENDER% == 2 (
 ) 
 
 ::pause
-

@@ -11,7 +11,7 @@
 set MAX_VERSION=2016
 set MAYA_VERSION=2016
 ::set GLM_INSTALL_PREFIX=C:\Users\chaverou\Developments\Golaem 5\install%MAYA_VERSION%\GolaemCrowd
-set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-6.3-2018.04.26-PR1373-Maya%MAYA_VERSION%
+set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-6.3.5-2018.10.01-PR1493-Maya%MAYA_VERSION%
 set GLM_CROWD_BIN=%GLM_INSTALL_PREFIX%\bin
 set GLM_VRAY_PLUGINS_PATH=%GLM_INSTALL_PREFIX%\procedurals
 

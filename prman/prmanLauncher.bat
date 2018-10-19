@@ -8,14 +8,15 @@
 :: GLOBAL VARS
 ::***************************************************************************/
 
-set ASS_FILE=C:\Users\chaverou\Desktop\hair.ass
+set RIB_FILE=N:\tests\nicolas\renderman\xgenTestRman\rib\0011\perspShape_Final.0011_n.rib
+set OUT_RIB_FILE=C:\xgenScene\capture.rib
 
 ::/***************************************************************************
 :: GOLAEM
 ::***************************************************************************/
 
 set MAYA_VERSION=2016
-set GLM_INSTALL_PREFIX=C:
+set GLM_INSTALL_PREFIX=C:/Users/chaverou/Developments/Golaem 5/install%MAYA_VERSION%/GolaemCrowdDBG
 
 ::/***************************************************************************
 :: MAYA 
@@ -28,22 +29,24 @@ set XGEN_LOCATION=%MAYA_LOCATION%\plug-ins\xgen
 :: LICENSE
 ::***************************************************************************/
 
-set solidangle_LICENSE=C:\arnold.lic
+::set solidangle_LICENSE=C:\arnold.lic
 
 ::/***************************************************************************
-:: ARNOLD
+:: PRMAN
 ::***************************************************************************/
 
-set ARNOLD_LOCATION=C:\solidangle\mtoadeploy\%MAYA_VERSION%
-set PATH=%GLM_INSTALL_PREFIX%\bin;%ARNOLD_LOCATION%\bin\;%MAYA_LOCATION%\bin;%XGEN_LOCATION%\bin;%PATH%
-set ARNOLD_PROCEDURAL_PATH=%ARNOLD_LOCATION%\procedurals;%GLM_INSTALL_PREFIX%\procedurals;%ARNOLD_PROCEDURAL_PATH%
-set ARNOLD_PLUGIN_PATH=%ARNOLD_LOCATION%\procedurals;%ARNOLD_PLUGIN_PATH%
+set RMS_PROCEDURAL_PATH=%GLM_INSTALL_PREFIX%\procedurals
+set RMANTREE=C:\Program Files\Pixar\RenderManProServer-21.3\
+set RMSTREE=C:\Program Files\Pixar\RenderManForMaya-21.3-maya2016\
+set PATH=%GLM_INSTALL_PREFIX%\bin;%RMANTREE%\bin\;%MAYA_LOCATION%\bin;%XGEN_LOCATION%\bin;%PATH%
 
 ::/***************************************************************************
-:: LAUNCH KICK
+:: LAUNCH PRMAN
 ::***************************************************************************/
 
-set KICK_EXE=bin\kick.exe
-"%ARNOLD_LOCATION%\%KICK_EXE%" -i "%ASS_FILE%"
+set PRMAN_EXE=bin\prman.exe
+::"%RMANTREE%\%PRMAN_EXE%" -capture "%OUT_RIB_FILE%" "%RIB_FILE%"
+::"%RMANTREE%\%PRMAN_EXE%" "%RIB_FILE%"
+"%RMANTREE%\%PRMAN_EXE%" %OUT_RIB_FILE%
 
 pause

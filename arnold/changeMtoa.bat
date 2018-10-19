@@ -1,10 +1,10 @@
-set MAYA_VERSION=2016
+set MAYA_VERSION=2018
 ::set MTOA_VERSION=2.1.0.1
-set MTOA_VERSION=3.0.0.1
+set MTOA_VERSION=3.0.1.1
 ::set MTOA_VERSION=2.0.2.3
 
 :: remove Uninstall registry entry
-reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Uninstall\MtoA2016" /f
+reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Uninstall\MtoA%MAYA_VERSION%" /f
 
 :: Remove current simlink
 rmdir C:\solidangle\mtoadeploy\%MAYA_VERSION%
