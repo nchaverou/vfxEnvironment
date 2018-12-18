@@ -9,13 +9,12 @@
 ::***************************************************************************/
 
 set UNREAL_VERSION=4.20
-set GLM_VERSION=6.3.5
-
 
 ::/***************************************************************************
 :: GOLAEM
 ::***************************************************************************/
 
+set GLM_INSTALL_PREFIX=C:\Users\chaverou\Developments\Golaem For Unreal
 set GLM_INSTALL_PREFIX=C:\Users\chaverou\Developments\Golaem For Unreal
 set GLM_PROJECT=GolaemForUnreal.uproject
 

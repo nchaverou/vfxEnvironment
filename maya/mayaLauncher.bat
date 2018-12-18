@@ -8,12 +8,12 @@
 :: GLOBAL VARS
 ::***************************************************************************/
 
-set GLMCROWD_VERSION=5.0
+set GLMCROWD_VERSION=5
 set GLMCROWD_MODE=Debug
-set GLMCROWD_DEV=0
+set GLMCROWD_DEV=1
 set MAYA_VERSION=2018
 set MAYA_BATCH_RENDER=0
-set RMAN_VERSION=21.7
+set RMAN_VERSION=22.1
 
 ::/***************************************************************************
 :: LICENSE
@@ -31,6 +31,7 @@ set solidangle_LICENSE=C:\arnold.lic
 set peregrinel_LICENSE=3033@gitem
 ::set redshift_LICENSE=5052@gitem
 set RLM_DIAGNOSTICS=C:\Temp\RLMDiag.txt
+set GLMCROWD_LAYOUTSAVE_ENABLE=1
 
 
 ::/***************************************************************************
@@ -42,10 +43,10 @@ set RLM_DIAGNOSTICS=C:\Temp\RLMDiag.txt
 ::set MAYA_PROJECT=N:\demos\scenesDemos\crowd5.0
 
 :: Customers
-::set MAYA_PROJECT=N:\demos\2033
 ::set MAYA_PROJECT=N:\demos\xgen
-set MAYA_PROJECT=N:\tests\customers\coffeeandtv\20181019_render
+::set MAYA_PROJECT=N:\tests\customers\circus\20181211_vector
 ::set MAYA_PROJECT=N:\tests\nicolas
+set MAYA_PROJECT=N:\assets\GolaemCharacterPack-6.4.1
 
 :: Divers
 ::set MAYA_PROJECT=C:\renderScene
@@ -58,13 +59,13 @@ set MAYA_PROJECT=N:\tests\customers\coffeeandtv\20181019_render
 ::***************************************************************************/
 
 IF %GLMCROWD_DEV% == 1 IF %GLMCROWD_MODE% == Release (
-	set GLM_INSTALL_PREFIX=C:\Users\chaverou\Developments\Golaem 5\install%MAYA_VERSION%\GolaemCrowd
+	set GLM_INSTALL_PREFIX=C:\Users\chaverou\Developments\Golaem %GLMCROWD_VERSION%\install%MAYA_VERSION%\GolaemCrowd
 )
 IF %GLMCROWD_DEV% == 1 IF %GLMCROWD_MODE% == Debug (
-	set GLM_INSTALL_PREFIX=C:\Users\chaverou\Developments\Golaem 5\install%MAYA_VERSION%\GolaemCrowdDBG
+	set GLM_INSTALL_PREFIX=C:\Users\chaverou\Developments\Golaem %GLMCROWD_VERSION%\install%MAYA_VERSION%\GolaemCrowdDBG
 )
 IF %GLMCROWD_DEV% == 0 (
-	set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-6.3.5-Maya%MAYA_VERSION%
+	set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-6.4.1-2018.12.11-PR1610-Maya%MAYA_VERSION%
 )
 
 set GLMCROWD_ANL_ENABLE=0
@@ -101,7 +102,7 @@ IF %RMAN_VERSION% == 22.1 (
 	set RMSTREE=C:\Program Files\Pixar\RenderManForMaya-%RMAN_VERSION%\
 )
 set RFMTREE=%RMSTREE%
-set RFM_DO_NOT_CREATE_MODULE_FILE=0
+::set RFM_DO_NOT_CREATE_MODULE_FILE=0
 
 set RENDERMAN_MODULE_PATH=%RMSTREE%\etc
 IF %RMAN_VERSION% == 22.1 (
@@ -110,6 +111,11 @@ IF %RMAN_VERSION% == 22.1 (
 
 :: Xgen
 set PATH=%MAYA_LOCATION%/bin;%MAYA_LOCATION%/lib;%MAYA_LOCATION%/plug-ins/xgen/bin;%MAYA_LOCATION%/plug-ins/xgen/lib;%RMANTREE%/lib;%PATH%
+
+:: YETI
+set YETI_MODULE_PATH=C:\Users\chaverou\Developments\vfxEnvironment\maya\plugins\2018\Yeti-v3.1.2_Maya%MAYA_VERSION%-windows
+set MTOA_EXTENSIONS_PATH=%YETI_MODULE_PATH%\plug-ins;%MTOA_EXTENSIONS_PATH%
+set ARNOLD_PLUGIN_PATH=%YETI_MODULE_PATH%\bin;%ARNOLD_PLUGIN_PATH%
 
 :: Tools
 set FXPT_PATH=C:\Users\chaverou\Developments\fxpt
@@ -127,11 +133,11 @@ set PYTHONBINDINGS=C:\Users\chaverou\Developments\Golaem Binding\install
 :: Copy Sparx presets
 copy "%MY_ENVIRONMENT%\prefs\tools_list_user.yaml" "%APPDATA%\Damage Inc\fxpt\fx_spark\tools_list_user.yaml"
 
-set VRAY_FOR_MAYA2016_PLUGINS_x64=C:\Users\chaverou\Developments\vrayTestPlugin\vrayTestPlugin\x64\Release;%VRAY_FOR_MAYA2016_PLUGINS_x64%
+::set VRAY_FOR_MAYA2016_PLUGINS_x64=C:\Users\chaverou\Developments\vrayTestPlugin\vrayTestPlugin\x64\Release;%VRAY_FOR_MAYA2016_PLUGINS_x64%
 
 :: Maya
 ::set PATH=%SystemRoot%;%SystemRoot%\system;%PATH%
-set MAYA_MODULE_PATH=%GLM_CROWD_MODULE_PATH%;%MTOA_MODULE_PATH%;%RENDERMAN_MODULE_PATH%;%MAYA_MODULE_PATH%
+set MAYA_MODULE_PATH=%GLM_CROWD_MODULE_PATH%;%MTOA_MODULE_PATH%;%RENDERMAN_MODULE_PATH%;%YETI_MODULE_PATH%;%MAYA_MODULE_PATH%
 set MAYA_PLUG_IN_PATH=%MY_ENVIRONMENT%\plugins\%MAYA_VERSION%
 set MAYA_SCRIPT_PATH=%MY_ENVIRONMENT%\scripts;%MAYA_SCRIPT_PATH%
 set PYTHONPATH=%MY_ENVIRONMENT%\scripts;%FXPT_PATH%;%SKINW_PATH%;%PYTHONBINDINGS%;%PYTHONPATH%
@@ -142,7 +148,6 @@ set XBMLANGPATH=%MY_ENVIRONMENT%\icons;%XBMLANGPATH%
 :: LAUNCH MAYA
 ::***************************************************************************/
 
-::set MAYA_IGNORE_DIALOGS=1
 set MAYA_EXE=bin\maya.exe
 set RENDER_EXE=bin\Render.exe
 
