@@ -40,7 +40,7 @@ global proc ncCreateCameraFromViewpoint()
 	int $mods = `getModifiers`;
 	$strAll=`ls`;
 	$szLast=`size($strAll)`;
-	string $strLast=$strAll[$szLast-2];
+	$strLast=$strAll[$szLast-2];
 	select $strLast;
 	ShowSelectedObjects;
 	if ($mods == 8)

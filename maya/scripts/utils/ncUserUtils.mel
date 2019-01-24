@@ -61,8 +61,6 @@ global proc ncSetHotkeys()
 */ //---------------------------------------------------------
 global proc ncSetMayaEnvironment()
 {
-	// log in file
-	cmdFileOutput -o "C:/mayaLog.txt";
 	// set playback
 	ncSetPlaybackRange(1, 151);
 	// gradient background and grid
@@ -70,13 +68,13 @@ global proc ncSetMayaEnvironment()
 	// open Outliner
 	OutlinerWindow;
 	// open port for mel & python
-	catch(ncOpenCommandPort(7001, 7002));
+	//catch(ncOpenCommandPort(7001, 7002));
 	// shaded
 	evalDeferred("ncSetShadedDisplay();");
 	// disable color management
 	scriptJob -e SceneOpened ncDisableColorManagement;
 	// hotkeys
-	//evalDeferred("ncSetHotkeys()");
+	evalDeferred("ncSetHotkeys()");
 }
 //@}
 
@@ -142,8 +140,8 @@ global proc ncSetGolaemOptionVars()
 	optionVar -stringValue "browserLocationSimulationLibrary" ($mayaProject + "/library");
 	optionVar -stringValue "browserLocationGolaem" ($mayaProject);
 
-	optionVar -stringValue "glmCrowdLogDirectory" ("C:/temp");
-	optionVar -stringValue "glmCrowdCrashReportDirectory" ("C:/temp");
+	optionVar -stringValue "glmCrowdLogDirectory" ("D:/temp");
+	optionVar -stringValue "glmCrowdCrashReportDirectory" ("D:/temp");
 }
 
 //------------------------------------------------------------
