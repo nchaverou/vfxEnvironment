@@ -5,23 +5,36 @@
 ::***************************************************************************/
 
 ::/***************************************************************************
-:: CROWD VARIABLES
+:: GLOBAL VARS
 ::***************************************************************************/
 
-set HOUDINI_VERSION=16.0.671
-set GLMCROWD_MODE=Release
-::set HOUDINI_DSO_PATH=C:\Users\chaverou\My Developments\golaemMantra\install
+set GLM_MODE=Debug
+set GLM_OFFICIAL_VERSION=6.4.2
+set HOUDINI_VERSION=17.5.258
 
 
 ::/***************************************************************************
-:: ENVIRONMENT
+:: HOUDINI PROJECT
 ::***************************************************************************/
 
 :: Houdini environment 
 set HIP=N:/tests/nicolas
 
+::/***************************************************************************
+:: ENVIRONMENT
+::***************************************************************************/
+
+:: Golaem For Houdini
+set GLM_FOR_HOUDINI=D:\Users\chaverou\Developments\GolaemForHoudini-Method\build17.5\Release
+
+:: Golaem Official Package
+set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-%GLM_OFFICIAL_VERSION%-Maya2018
+
 :: Globals
-set PATH=%GLM_CROWD_BIN%;%PATH%;%SystemRoot%;%SystemRoot%\system;
+set PATH=%GLM_INSTALL_PREFIX%\bin;%PATH%;%SystemRoot%;%SystemRoot%\system;
+
+:: Houdini Custom plugins
+::set HOUDINI_DSO_PATH=D:\Users\chaverou\Developments\GolaemForHoudini-Method\build17.5\Release
 
 
 ::/***************************************************************************

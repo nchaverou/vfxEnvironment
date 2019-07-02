@@ -8,22 +8,24 @@
 :: GLOBAL VARS
 ::***************************************************************************/
 
-set RIB_FILE=N:\tests\nicolas\renderman\xgenTestRman\rib\0011\perspShape_Final.0011_n.rib
-set OUT_RIB_FILE=C:\xgenScene\capture.rib
+set RIB_FILE=C:\Temp\out.rib
+set OUT_RIB_FILE=C:\Temp\outExpand.rib
 
 ::/***************************************************************************
 :: GOLAEM
 ::***************************************************************************/
 
-set MAYA_VERSION=2016
-set GLM_INSTALL_PREFIX=C:/Users/chaverou/Developments/Golaem 5/install%MAYA_VERSION%/GolaemCrowdDBG
+set RMAN_VERSION=22.5
+set MAYA_VERSION=2018
+set GLM_MAIN_VERSION=7
+set GLM_INSTALL_PREFIX=D:\Users\chaverou\Developments\Golaem%GLM_MAIN_VERSION%\install%MAYA_VERSION%\GolaemCrowd
 
 ::/***************************************************************************
 :: MAYA 
 ::***************************************************************************/
 
-set MAYA_LOCATION=C:\Program Files\Autodesk\Maya%MAYA_VERSION%
-set XGEN_LOCATION=%MAYA_LOCATION%\plug-ins\xgen
+::set MAYA_LOCATION=C:\Program Files\Autodesk\Maya%MAYA_VERSION%
+::set XGEN_LOCATION=%MAYA_LOCATION%\plug-ins\xgen
 
 ::/***************************************************************************
 :: LICENSE
@@ -36,8 +38,8 @@ set XGEN_LOCATION=%MAYA_LOCATION%\plug-ins\xgen
 ::***************************************************************************/
 
 set RMS_PROCEDURAL_PATH=%GLM_INSTALL_PREFIX%\procedurals
-set RMANTREE=C:\Program Files\Pixar\RenderManProServer-21.3\
-set RMSTREE=C:\Program Files\Pixar\RenderManForMaya-21.3-maya2016\
+set RMANTREE=C:\Program Files\Pixar\RenderManProServer-%RMAN_VERSION%\
+set RMSTREE=C:\Program Files\Pixar\RenderManForMaya-%RMAN_VERSION%-maya%MAYA_VERSION%\
 set PATH=%GLM_INSTALL_PREFIX%\bin;%RMANTREE%\bin\;%MAYA_LOCATION%\bin;%XGEN_LOCATION%\bin;%PATH%
 
 ::/***************************************************************************
@@ -45,8 +47,8 @@ set PATH=%GLM_INSTALL_PREFIX%\bin;%RMANTREE%\bin\;%MAYA_LOCATION%\bin;%XGEN_LOCA
 ::***************************************************************************/
 
 set PRMAN_EXE=bin\prman.exe
-::"%RMANTREE%\%PRMAN_EXE%" -capture "%OUT_RIB_FILE%" "%RIB_FILE%"
+"%RMANTREE%\%PRMAN_EXE%" -capture "%OUT_RIB_FILE%" "%RIB_FILE%"
 ::"%RMANTREE%\%PRMAN_EXE%" "%RIB_FILE%"
-"%RMANTREE%\%PRMAN_EXE%" %OUT_RIB_FILE%
+::"%RMANTREE%\%PRMAN_EXE%" %OUT_RIB_FILE%
 
 pause

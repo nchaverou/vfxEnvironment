@@ -8,15 +8,19 @@
 :: UNREAL VARS
 ::***************************************************************************/
 
+set GLM_MAIN_VERSION=7
 set UNREAL_VERSION=4.20
 
 ::/***************************************************************************
 :: GOLAEM
 ::***************************************************************************/
 
-set GLM_INSTALL_PREFIX=C:\Users\chaverou\Developments\Golaem For Unreal
-set GLM_INSTALL_PREFIX=C:\Users\chaverou\Developments\Golaem For Unreal
+set golaem_LICENSE=D:\golaemFull.lic
+set GLM_INSTALL_PREFIX=D:\Users\chaverou\Developments\GolaemForUE%GLM_MAIN_VERSION%
+::set GLM_INSTALL_PREFIX=D:\Users\chaverou\Documents\UnrealProjects\GolaemPluginTest
 set GLM_PROJECT=GolaemForUnreal.uproject
+::set GLM_PROJECT=GolaemPluginTest.uproject
+set GLMCROWD_UNIT=4
 
 ::/***************************************************************************
 :: LAUNCH UNREAL
