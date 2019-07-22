@@ -8,10 +8,10 @@
 :: GLOBAL VARS
 ::***************************************************************************/
 
-set GLM_MODE=Debug
+set GLM_MODE=Release
 set GLM_MAIN_VERSION=7
 ::set GLM_OFFICIAL_VERSION=7.0.1
-set GLM_OFFICIAL_VERSION=6.4.4
+set GLM_OFFICIAL_VERSION=7.0.1
 set MAYA_VERSION=2018
 set RMAN_VERSION=22.5
 
