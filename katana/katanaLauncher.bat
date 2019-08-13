@@ -10,12 +10,12 @@
 
 set GLM_MODE=Release
 set GLM_MAIN_VERSION=7
-set GLM_OFFICIAL_VERSION=6.4.4
+set GLM_OFFICIAL_VERSION=7.0.3
 
 set KATANA_VERSION=3.1v2
 set RMAN_VERSION=22.3
 set DEFAULT_RENDERER=prman
-set foundry_LICENSE=C:\foundry.lic
+set foundry_LICENSE=D:\foundry.lic
 
 ::/***************************************************************************
 :: GOLAEM

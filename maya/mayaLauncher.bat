@@ -8,10 +8,9 @@
 :: GLOBAL VARS
 ::***************************************************************************/
 
-set GLM_MODE=Release
+set GLM_MODE=Official
 set GLM_MAIN_VERSION=7
-::set GLM_OFFICIAL_VERSION=7.0.1
-set GLM_OFFICIAL_VERSION=7.0.1
+set GLM_OFFICIAL_VERSION=7.0.3
 set MAYA_VERSION=2018
 set RMAN_VERSION=22.5
 
@@ -38,6 +37,7 @@ set MAYA_LICENSE_METHOD=network
 :: Customers
 ::set MAYA_PROJECT=N:\tests\customers\methodStudios\20190118_furMap
 set MAYA_PROJECT=N:\tests\nicolas
+set MAYA_PROJECT=N:\demos\studiosDemos
 ::set MAYA_PROJECT=N:\assets\GolaemCharacterPack-6.4.1.1
 ::set MAYA_PROJECT=N:\tests\customers\ilion\20190514_groundAdaptation
 
