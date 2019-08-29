@@ -10,7 +10,7 @@
 
 set GLM_MODE=Official
 set GLM_MAIN_VERSION=7
-set GLM_OFFICIAL_VERSION=7.0.3
+set GLM_OFFICIAL_VERSION=7.0.2
 set MAYA_VERSION=2018
 set RMAN_VERSION=22.5
 
@@ -37,7 +37,7 @@ set MAYA_LICENSE_METHOD=network
 :: Customers
 ::set MAYA_PROJECT=N:\tests\customers\methodStudios\20190118_furMap
 set MAYA_PROJECT=N:\tests\nicolas
-set MAYA_PROJECT=N:\demos\studiosDemos
+::set MAYA_PROJECT=N:\demos\studiosDemos
 ::set MAYA_PROJECT=N:\assets\GolaemCharacterPack-6.4.1.1
 ::set MAYA_PROJECT=N:\tests\customers\ilion\20190514_groundAdaptation
 
@@ -71,13 +71,13 @@ set RFM_DO_NOT_CREATE_MODULE_FILE=1
 set RMANTREE=C:\Program Files\Pixar\RenderManProServer-%RMAN_VERSION%\
 set RMSTREE=C:\Program Files\Pixar\RenderManForMaya-%RMAN_VERSION%-maya%MAYA_VERSION%\
 set RENDERMAN_MODULE_PATH=%RMSTREE%\etc
-IF %RMAN_VERSION% == 22.4 (
+IF %RMAN_VERSION% == 22.5 (
 	set RFMTREE=C:\Program Files\Pixar\RenderManForMaya-%RMAN_VERSION%\
 	set RENDERMAN_MODULE_PATH=C:\Program Files\Pixar\RenderManForMaya-%RMAN_VERSION%
 )
 
 :: RLM
-set RLM_DIAGNOSTICS=D:\Temp\RLMDiag.txt
+::set RLM_DIAGNOSTICS=D:\Temp\RLMDiag.txt
 
 :: Xgen
 ::set PATH=%MAYA_LOCATION%/bin;%MAYA_LOCATION%/lib;%MAYA_LOCATION%/plug-ins/xgen/bin;%MAYA_LOCATION%/plug-ins/xgen/lib;%RMANTREE%/lib;%PATH%

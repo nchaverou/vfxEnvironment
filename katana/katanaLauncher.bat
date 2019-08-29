@@ -8,12 +8,12 @@
 :: KATANA VARS
 ::***************************************************************************/
 
-set GLM_MODE=Release
+set GLM_MODE=Debug
 set GLM_MAIN_VERSION=7
 set GLM_OFFICIAL_VERSION=7.0.3
 
 set KATANA_VERSION=3.1v2
-set RMAN_VERSION=22.3
+set RMAN_VERSION=22.5
 set DEFAULT_RENDERER=prman
 set foundry_LICENSE=D:\foundry.lic
 
@@ -40,7 +40,7 @@ set GLM_CROWD_BIN=%GLM_INSTALL_PREFIX%\bin
 ::***************************************************************************/
 
 set RMANTREE=C:\Program Files\Pixar\RenderManProServer-%RMAN_VERSION%
-set KTOR_PATH=C:\Program Files\Pixar\RenderManForKatana-%RMAN_VERSION%-katana3.0\plugins\Resources\PRMan22
+set KTOR_PATH=C:\Program Files\Pixar\RenderManForKatana-%RMAN_VERSION%-katana3.1\plugins\Resources\PRMan22
 ::set RFK_REDIRECT_OUTPUT="C:/katanaLog.txt"
 set RMAN_DSOPATH=%GLM_PROCEDURAL_PATH%
 set RMAN_RIXPLUGINPATH=%GLM_SHADER_PATH%;%RMANTREE%\lib\plugins
@@ -53,6 +53,13 @@ set RMAN_RIXPLUGINPATH=%GLM_SHADER_PATH%;%RMANTREE%\lib\plugins
 ::set KTOA_PATH=C:\solidangle\ktoadeploy\KtoA-2.0.4.0-kat2.5-windows
 set KTOA_PATH=C:\solidangle\ktoadeploy\KtoA-2.2.2.1-kat3.1-windows
 set ARNOLD_PLUGIN_PATH=%GLM_PROCEDURAL_PATH%;%GLM_SHADER_PATH%
+
+::/***************************************************************************
+:: REDSHIFT
+::***************************************************************************/
+
+set KTORS_PATH=C:\ProgramData\Redshift\Plugins\Katana\3.0v1
+set REDSHIFT_BIN=C:\ProgramData\Redshift\bin
 
 
 ::/***************************************************************************
@@ -70,8 +77,8 @@ set KATANA_TOOLS=%MY_ENVIRONMENT%\katana\tools
 
 set "KATANA_TAGLINE=With Katana %KATANA_VERSION% and Arnold 5.0.1.4 and Renderman %RMAN_VERSION%"
 set KATANA_POST_PYTHONPATH=%KTOG_PATH%/Python
-set KATANA_RESOURCES=%KTOA_PATH%;%KTOR_PATH%;%KTOG_PATH%;%KATANA_TOOLS%
-set PATH=%KTOA_PATH%\bin;%GLM_CROWD_BIN%;%PATH%
+set KATANA_RESOURCES=%KTOA_PATH%;%KTOR_PATH%;%KTORS_PATH%;%KTOG_PATH%;%KATANA_TOOLS%
+set PATH=%KTOA_PATH%\bin;%REDSHIFT_BIN%;%GLM_CROWD_BIN%;%PATH%
 
 set KATANA_LOCATION=C:\Program Files\Foundry\Katana%KATANA_VERSION%
 set KATANA_EXE=bin\katanaBin.exe
