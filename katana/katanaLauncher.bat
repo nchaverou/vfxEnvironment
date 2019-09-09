@@ -8,9 +8,9 @@
 :: KATANA VARS
 ::***************************************************************************/
 
-set GLM_MODE=Debug
+set GLM_MODE=Release
 set GLM_MAIN_VERSION=7
-set GLM_OFFICIAL_VERSION=7.0.3
+set GLM_OFFICIAL_VERSION=7.1-2019.09.05-PR1878
 
 set KATANA_VERSION=3.1v2
 set RMAN_VERSION=22.5
@@ -30,6 +30,7 @@ IF %GLM_MODE% == Official (
 )
 
 set KTOG_PATH=%GLM_INSTALL_PREFIX%\procedurals\katana
+::set KTOG_PATH=D:\Users\chaverou\Developments\GolaemForKatana7\
 set GLM_PROCEDURAL_PATH=%GLM_INSTALL_PREFIX%\procedurals
 set GLM_SHADER_PATH=%GLM_INSTALL_PREFIX%\shaders
 set GLM_CROWD_BIN=%GLM_INSTALL_PREFIX%\bin
@@ -51,7 +52,7 @@ set RMAN_RIXPLUGINPATH=%GLM_SHADER_PATH%;%RMANTREE%\lib\plugins
 ::***************************************************************************/
 
 ::set KTOA_PATH=C:\solidangle\ktoadeploy\KtoA-2.0.4.0-kat2.5-windows
-set KTOA_PATH=C:\solidangle\ktoadeploy\KtoA-2.2.2.1-kat3.1-windows
+set KTOA_PATH=C:\solidangle\ktoadeploy\KtoA-2.3.1.1-kat3.1-windows
 set ARNOLD_PLUGIN_PATH=%GLM_PROCEDURAL_PATH%;%GLM_SHADER_PATH%
 
 ::/***************************************************************************
@@ -76,7 +77,7 @@ set KATANA_TOOLS=%MY_ENVIRONMENT%\katana\tools
 ::***************************************************************************/
 
 set "KATANA_TAGLINE=With Katana %KATANA_VERSION% and Arnold 5.0.1.4 and Renderman %RMAN_VERSION%"
-set KATANA_POST_PYTHONPATH=%KTOG_PATH%/Python
+set KATANA_POST_PYTHONPATH=%KTOG_PATH%/Python;
 set KATANA_RESOURCES=%KTOA_PATH%;%KTOR_PATH%;%KTORS_PATH%;%KTOG_PATH%;%KATANA_TOOLS%
 set PATH=%KTOA_PATH%\bin;%REDSHIFT_BIN%;%GLM_CROWD_BIN%;%PATH%
 

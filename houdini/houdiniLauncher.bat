@@ -1,6 +1,6 @@
 ::/***************************************************************************
 ::*                                                                          *
-::*  Copyright (C) Golaem S.A. & Mikros Image - All Rights Reserved.         *
+::*  Copyright (C) Golaem S.A. - All Rights Reserved.                        *
 ::*                                                                          *
 ::***************************************************************************/
 
@@ -18,8 +18,10 @@ set HOUDINI_VERSION=17.5.293
 :: GOLAEM
 ::***************************************************************************/
 
-set golaem_LICENSE=D:\golaemLayout.lic
-set GLM_INSTALL_PREFIX=D:\Users\chaverou\Developments\Golaem%GLM_MAIN_VERSION%\install2018\GolaemCrowd
+::set golaem_LICENSE=D:\golaemLayout.lic
+::set GLM_INSTALL_PREFIX=D:\Users\chaverou\Developments\Golaem%GLM_MAIN_VERSION%\install2018\GolaemCrowd
+set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-7.1-2019.09.06-PR1879-Houdini
+
 
 ::/***************************************************************************
 :: HOUDINI PROJECT
@@ -28,16 +30,20 @@ set GLM_INSTALL_PREFIX=D:\Users\chaverou\Developments\Golaem%GLM_MAIN_VERSION%\i
 :: Houdini environment 
 set HIP=N:/tests/nicolas
 
+
 ::/***************************************************************************
 :: ENVIRONMENT
 ::***************************************************************************/
 
-
 :: Globals
-set PATH=%GLM_INSTALL_PREFIX%\bin;%PATH%;%SystemRoot%;%SystemRoot%\system;
+set PATH=%GLM_INSTALL_PREFIX%\bin;%PATH%
 
 :: Houdini Custom plugins
-set HOUDINI_DSO_PATH=%GLM_INSTALL_PREFIX%\procedurals\houdini;&
+::set HOUDINI_DSO_ERROR=3
+set HOUDINI_DSO_PATH=%GLM_INSTALL_PREFIX%\procedurals\houdini;^&
+set PYTHONPATH=%GLM_INSTALL_PREFIX%\procedurals\houdini\python;^&
+set HOUDINI_TOOLBAR_PATH=%GLM_INSTALL_PREFIX%\procedurals\houdini\shelf;^&
+set HOUDINI_UI_ICON_PATH=%GLM_INSTALL_PREFIX%\procedurals\houdini\icons;^&
 
 
 ::/***************************************************************************

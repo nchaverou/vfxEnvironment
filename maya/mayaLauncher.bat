@@ -10,7 +10,7 @@
 
 set GLM_MODE=Official
 set GLM_MAIN_VERSION=7
-set GLM_OFFICIAL_VERSION=7.0.2
+set GLM_OFFICIAL_VERSION=7.1-2019.09.06-PR1881
 set MAYA_VERSION=2018
 set RMAN_VERSION=22.5
 
@@ -35,11 +35,11 @@ set MAYA_LICENSE_METHOD=network
 ::***************************************************************************/
 
 :: Customers
-::set MAYA_PROJECT=N:\tests\customers\methodStudios\20190118_furMap
+::set MAYA_PROJECT=N:\tests\customers\dreamworks\20190826_testLayoutScenes
 set MAYA_PROJECT=N:\tests\nicolas
 ::set MAYA_PROJECT=N:\demos\studiosDemos
-::set MAYA_PROJECT=N:\assets\GolaemCharacterPack-6.4.1.1
-::set MAYA_PROJECT=N:\tests\customers\ilion\20190514_groundAdaptation
+::set MAYA_PROJECT=N:\assets\GolaemCharacterPack-7.0.3
+::set MAYA_PROJECT=N:\tests\functionalTests\crowd5.0
 
 
 ::/***************************************************************************
@@ -71,13 +71,13 @@ set RFM_DO_NOT_CREATE_MODULE_FILE=1
 set RMANTREE=C:\Program Files\Pixar\RenderManProServer-%RMAN_VERSION%\
 set RMSTREE=C:\Program Files\Pixar\RenderManForMaya-%RMAN_VERSION%-maya%MAYA_VERSION%\
 set RENDERMAN_MODULE_PATH=%RMSTREE%\etc
-IF %RMAN_VERSION% == 22.5 (
+IF %RMAN_VERSION% == 22.4 (
 	set RFMTREE=C:\Program Files\Pixar\RenderManForMaya-%RMAN_VERSION%\
 	set RENDERMAN_MODULE_PATH=C:\Program Files\Pixar\RenderManForMaya-%RMAN_VERSION%
 )
 
 :: RLM
-::set RLM_DIAGNOSTICS=D:\Temp\RLMDiag.txt
+set RLM_DIAGNOSTICS=D:\Temp\RLMDiag.txt
 
 :: Xgen
 ::set PATH=%MAYA_LOCATION%/bin;%MAYA_LOCATION%/lib;%MAYA_LOCATION%/plug-ins/xgen/bin;%MAYA_LOCATION%/plug-ins/xgen/lib;%RMANTREE%/lib;%PATH%
@@ -116,7 +116,7 @@ if %MAYA_MODE% == Regular (
 	"%MAYA_LOCATION%\%MAYA_EXE%"
 ) 
 if %MAYA_MODE% == Batch (
-	::"%MAYA_LOCATION%\%MAYA_EXE%" -batch -script "something.mel" -log "D:/Users/chaverou/mayaBatch.txt"
+	::"%MAYA_LOCATION%\%MAYA_EXE%" -batch -script "N:/tests/functionalTests/crowd5.0/export/26a-batchExport/cache/26a-batchExport.batch.mel" -log "D:/Users/chaverou/mayaBatch.txt"
 )
 if %MAYA_MODE% == BatchRender (
 	:: http://download.autodesk.com/global/docs/maya2014/en_us/index.html?url=files/Command_line_renderer_Render_from_the_command_line.htm,topicNumber=d30e771764

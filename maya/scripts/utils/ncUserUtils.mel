@@ -75,6 +75,8 @@ global proc ncSetMayaEnvironment()
 	scriptJob -e SceneOpened ncDisableColorManagement;
 	// hotkeys
 	evalDeferred("ncSetHotkeys()");
+	// enable undo queue
+	undoInfo -state on;
 }
 //@}
 
