@@ -8,9 +8,9 @@
 :: GLOBAL VARS
 ::***************************************************************************/
 
-set GLM_MODE=Official
+set GLM_MODE=Release
 set GLM_MAIN_VERSION=7
-set GLM_OFFICIAL_VERSION=7.1-2019.09.06-PR1881
+set GLM_OFFICIAL_VERSION=7.1
 set MAYA_VERSION=2018
 set RMAN_VERSION=22.5
 

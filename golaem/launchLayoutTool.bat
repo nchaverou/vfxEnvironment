@@ -24,4 +24,4 @@ set LAYOUT_TOOL="%GLM_INSTALL_DIR%\scripts\glm\layout\layoutEditorStandAlone.py"
 %PYTHONINTERPRETER% %LAYOUT_TOOL%
 ::%PYTHONINTERPRETER%
 
-::pause
+pause
