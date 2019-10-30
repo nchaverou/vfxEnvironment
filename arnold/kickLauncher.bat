@@ -8,14 +8,14 @@
 :: GLOBAL VARS
 ::***************************************************************************/
 
-set ASS_FILE=C:\Users\chaverou\Desktop\hair.ass
+set ASS_FILE=C:\Users\chaverou\Desktop\here.ass
 
 ::/***************************************************************************
 :: GOLAEM
 ::***************************************************************************/
 
-set MAYA_VERSION=2016
-set GLM_INSTALL_PREFIX=C:
+set MAYA_VERSION=2018
+set GLM_INSTALL_PREFIX=D:\Users\chaverou\Developments\Golaem7\install2018\GolaemCrowdDBG
 
 ::/***************************************************************************
 :: MAYA 

@@ -10,7 +10,7 @@
 
 set GLM_MODE=Release
 set GLM_MAIN_VERSION=7
-set GLM_OFFICIAL_VERSION=7.1
+set GLM_OFFICIAL_VERSION=7.0.3
 set MAYA_VERSION=2018
 set RMAN_VERSION=22.5
 
@@ -35,7 +35,7 @@ set MAYA_LICENSE_METHOD=network
 ::***************************************************************************/
 
 :: Customers
-::set MAYA_PROJECT=N:\tests\customers\dreamworks\20190826_testLayoutScenes
+::set MAYA_PROJECT=N:\tests\customers\Dwarf\20191029_renderIssue
 set MAYA_PROJECT=N:\tests\nicolas
 ::set MAYA_PROJECT=N:\demos\studiosDemos
 ::set MAYA_PROJECT=N:\assets\GolaemCharacterPack-7.0.3

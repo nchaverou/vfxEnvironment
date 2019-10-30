@@ -8,9 +8,9 @@
 :: KATANA VARS
 ::***************************************************************************/
 
-set GLM_MODE=Release
+set GLM_MODE=Official
 set GLM_MAIN_VERSION=7
-set GLM_OFFICIAL_VERSION=7.1.1-2019.09.23-c17ae0f57
+set GLM_OFFICIAL_VERSION=7.1.1
 
 set KATANA_VERSION=3.1v2
 set RMAN_VERSION=22.5
@@ -30,7 +30,7 @@ IF %GLM_MODE% == Official (
 )
 
 set KTOG_PATH=%GLM_INSTALL_PREFIX%\procedurals\katana
-::set KTOG_PATH=D:\Users\chaverou\Developments\GolaemForKatana7\
+::set KTOG_PATH=D:\Users\chaverou\Developments\GolaemForKatana7\install3\GolaemKatana
 set GLM_PROCEDURAL_PATH=%GLM_INSTALL_PREFIX%\procedurals
 set GLM_SHADER_PATH=%GLM_INSTALL_PREFIX%\shaders
 set GLM_CROWD_BIN=%GLM_INSTALL_PREFIX%\bin
@@ -61,6 +61,7 @@ set ARNOLD_PLUGIN_PATH=%GLM_PROCEDURAL_PATH%;%GLM_SHADER_PATH%
 
 set KTORS_PATH=C:\ProgramData\Redshift\Plugins\Katana\3.0v1
 set REDSHIFT_BIN=C:\ProgramData\Redshift\bin
+set REDSHIFT_PROCEDURALSPATH=%GLM_PROCEDURAL_PATH%;%GLM_SHADER_PATH%
 
 
 ::/***************************************************************************
