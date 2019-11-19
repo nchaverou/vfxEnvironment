@@ -8,9 +8,9 @@
 :: GLOBAL VARS
 ::***************************************************************************/
 
-set GLM_MODE=Release
+set GLM_MODE=Official
 set GLM_MAIN_VERSION=7
-set GLM_OFFICIAL_VERSION=7.0.3
+set GLM_OFFICIAL_VERSION=7.2-2019.11.19-PR1955
 set MAYA_VERSION=2018
 set RMAN_VERSION=22.5
 
@@ -39,7 +39,7 @@ set MAYA_LICENSE_METHOD=network
 set MAYA_PROJECT=N:\tests\nicolas
 ::set MAYA_PROJECT=N:\demos\studiosDemos
 ::set MAYA_PROJECT=N:\assets\GolaemCharacterPack-7.0.3
-::set MAYA_PROJECT=N:\tests\functionalTests\crowd5.0
+set MAYA_PROJECT=N:\tests\functionalTests\crowd5.0
 
 
 ::/***************************************************************************
@@ -53,7 +53,7 @@ IF %GLM_MODE% == Debug (
 IF %GLM_MODE% == Official (
 	set GLM_MODULE_PATH=C:\Program Files\Golaem\Golaem-%GLM_OFFICIAL_VERSION%-Maya%MAYA_VERSION%
 )
-set GLMCROWD_ANL_ENABLE=0
+set GLMCROWD_ANL_ENABLE=1
 set GLMCROWD_UNIT=3
 
 ::/***************************************************************************
@@ -79,6 +79,9 @@ IF %RMAN_VERSION% == 22.4 (
 :: RLM
 set RLM_DIAGNOSTICS=D:\Temp\RLMDiag.txt
 
+:: USD
+set USD_MODULE_PATH=D:\Users\chaverou\Developments\USD\usd_maya2018
+
 :: Xgen
 ::set PATH=%MAYA_LOCATION%/bin;%MAYA_LOCATION%/lib;%MAYA_LOCATION%/plug-ins/xgen/bin;%MAYA_LOCATION%/plug-ins/xgen/lib;%RMANTREE%/lib;%PATH%
 
@@ -97,7 +100,7 @@ set MY_ENVIRONMENT=D:\Users\chaverou\Developments\VFXEnvironment\maya
 ::copy "%MY_ENVIRONMENT%\prefs\tools_list_user.yaml" "%APPDATA%\Damage Inc\fxpt\fx_spark\tools_list_user.yaml"
 
 :: Maya
-set MAYA_MODULE_PATH=%GLM_MODULE_PATH%;%MTOA_MODULE_PATH%;%RENDERMAN_MODULE_PATH%;%MAYA_MODULE_PATH%
+set MAYA_MODULE_PATH=%GLM_MODULE_PATH%;%MTOA_MODULE_PATH%;%RENDERMAN_MODULE_PATH%;%USD_MODULE_PATH%;%MAYA_MODULE_PATH%
 set MAYA_PLUG_IN_PATH=%MY_ENVIRONMENT%\plugins\%MAYA_VERSION%
 set MAYA_SCRIPT_PATH=%MY_ENVIRONMENT%\scripts;%MAYA_SCRIPT_PATH%
 set PYTHONPATH=%MY_ENVIRONMENT%\scripts;%FXPT_PATH%;%SKINW_PATH%;%PYTHONPATH%
@@ -108,18 +111,15 @@ set XBMLANGPATH=%MY_ENVIRONMENT%\icons;%XBMLANGPATH%
 :: LAUNCH MAYA
 ::***************************************************************************/
 
-set MAYA_MODE=Regular
 set MAYA_EXE=bin\maya.exe
 set RENDER_EXE=bin\Render.exe
 
-if %MAYA_MODE% == Regular (
-	"%MAYA_LOCATION%\%MAYA_EXE%"
-) 
-if %MAYA_MODE% == Batch (
-	::"%MAYA_LOCATION%\%MAYA_EXE%" -batch -script "N:/tests/functionalTests/crowd5.0/export/26a-batchExport/cache/26a-batchExport.batch.mel" -log "D:/Users/chaverou/mayaBatch.txt"
-)
-if %MAYA_MODE% == BatchRender (
-	:: http://download.autodesk.com/global/docs/maya2014/en_us/index.html?url=files/Command_line_renderer_Render_from_the_command_line.htm,topicNumber=d30e771764
-	::"%MAYA_LOCATION%\%RENDER_EXE%" -r file -s 14 -e 14 -b 1 -rd "N:/tests/nicolas/scenes/images" -proj %MAYA_PROJECT% -cam perspShape -im "batchRender" -fnc name.#.ext -log "C:/Users/chaverou/renderBatch.txt" "N:/tests/nicolas/scenes/prmanTest.ma"
-) 
+:: Regular
+"%MAYA_LOCATION%\%MAYA_EXE%"
+:: Batch
+::"%MAYA_LOCATION%\%MAYA_EXE%" -batch -script "N:/tests/functionalTests/crowd5.0/export/26a-batchExport/cache/26a-batchExport.batch.mel" -log "D:/Users/chaverou/mayaBatch.txt"
+:: Batch Render
+:: http://download.autodesk.com/global/docs/maya2014/en_us/index.html?url=files/Command_line_renderer_Render_from_the_command_line.htm,topicNumber=d30e771764
+::"%MAYA_LOCATION%\%RENDER_EXE%" -r file -s 10 -e 14 -b 1 -rd "N:/tests/nicolas/scenes/images" -proj %MAYA_PROJECT% -cam perspShape -im "batchRender" -fnc name.#.ext -log "D:/Users/chaverou/renderBatch.txt" "N:/tests/functionalTests/crowd5.0/scenes/26a-batchExport-nc.ma" 
 
+::pause

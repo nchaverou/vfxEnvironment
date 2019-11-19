@@ -15,7 +15,8 @@ set ASS_FILE=C:\Users\chaverou\Desktop\here.ass
 ::***************************************************************************/
 
 set MAYA_VERSION=2018
-set GLM_INSTALL_PREFIX=D:\Users\chaverou\Developments\Golaem7\install2018\GolaemCrowdDBG
+::set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-7.1.1-Maya2018
+set GLM_INSTALL_PREFIX=D:\Users\chaverou\Developments\Golaem7\install2018\GolaemCrowd
 
 ::/***************************************************************************
 :: MAYA 
@@ -29,6 +30,7 @@ set XGEN_LOCATION=%MAYA_LOCATION%\plug-ins\xgen
 ::***************************************************************************/
 
 set solidangle_LICENSE=C:\arnold.lic
+set GLMCROWD_ANL_ENABLE=DISABLETHIS
 
 ::/***************************************************************************
 :: ARNOLD

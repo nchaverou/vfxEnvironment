@@ -8,14 +8,16 @@
 :: KATANA VARS
 ::***************************************************************************/
 
-set GLM_MODE=Official
+set GLM_MODE=Debug
 set GLM_MAIN_VERSION=7
-set GLM_OFFICIAL_VERSION=7.1.1
+set GLM_OFFICIAL_VERSION=7.1.1.1
+set golaem_LICENSE=D:\golaemLayout.lic
 
 set KATANA_VERSION=3.1v2
 set RMAN_VERSION=22.5
-set DEFAULT_RENDERER=prman
+set DEFAULT_RENDERER=redshift
 set foundry_LICENSE=D:\foundry.lic
+
 
 ::/***************************************************************************
 :: GOLAEM
@@ -61,7 +63,7 @@ set ARNOLD_PLUGIN_PATH=%GLM_PROCEDURAL_PATH%;%GLM_SHADER_PATH%
 
 set KTORS_PATH=C:\ProgramData\Redshift\Plugins\Katana\3.0v1
 set REDSHIFT_BIN=C:\ProgramData\Redshift\bin
-set REDSHIFT_PROCEDURALSPATH=%GLM_PROCEDURAL_PATH%;%GLM_SHADER_PATH%
+set REDSHIFT_PROCEDURALSPATH=%GLM_PROCEDURAL_PATH%;%GLM_SHADER_PATH%;%REDSHIFT_PROCEDURALSPATH%
 
 
 ::/***************************************************************************
@@ -71,7 +73,7 @@ set REDSHIFT_PROCEDURALSPATH=%GLM_PROCEDURAL_PATH%;%GLM_SHADER_PATH%
 :: My Environment
 set MY_ENVIRONMENT=D:\Users\chaverou\Developments\VFXEnvironment
 set KATANA_TOOLS=%MY_ENVIRONMENT%\katana\tools
-
+set GLMCROWD_ANL_ENABLE=1
 
 ::/***************************************************************************
 :: LAUNCH KATANA

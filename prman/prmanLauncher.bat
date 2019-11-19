@@ -8,7 +8,7 @@
 :: GLOBAL VARS
 ::***************************************************************************/
 
-set RIB_FILE=C:\Temp\out.rib
+set RIB_FILE=C:\Users\chaverou\Desktop\here.rib
 set OUT_RIB_FILE=C:\Temp\outExpand.rib
 
 ::/***************************************************************************
@@ -47,8 +47,8 @@ set PATH=%GLM_INSTALL_PREFIX%\bin;%RMANTREE%\bin\;%MAYA_LOCATION%\bin;%XGEN_LOCA
 ::***************************************************************************/
 
 set PRMAN_EXE=bin\prman.exe
-"%RMANTREE%\%PRMAN_EXE%" -capture "%OUT_RIB_FILE%" "%RIB_FILE%"
-::"%RMANTREE%\%PRMAN_EXE%" "%RIB_FILE%"
+::"%RMANTREE%\%PRMAN_EXE%" -capture "%OUT_RIB_FILE%" "%RIB_FILE%"
+"%RMANTREE%\%PRMAN_EXE%" "%RIB_FILE%"
 ::"%RMANTREE%\%PRMAN_EXE%" %OUT_RIB_FILE%
 
 pause

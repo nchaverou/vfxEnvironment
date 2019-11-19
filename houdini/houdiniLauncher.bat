@@ -20,7 +20,8 @@ set HOUDINI_VERSION=17.5.293
 
 set golaem_LICENSE=D:\golaemLayout.lic
 ::set GLM_INSTALL_PREFIX=D:\Users\chaverou\Developments\Golaem%GLM_MAIN_VERSION%\install2018\GolaemCrowd
-set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-7.1-2019.09.06-PR1879-Houdini
+::set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-7.1-2019.09.06-PR1879-Houdini
+set GLM_INSTALL_PREFIX=C:/software/golaem/7.1.1.1/houdini/17.5
 
 
 ::/***************************************************************************

@@ -1,0 +1,1210 @@
+#usda 1.0
+(
+    endTimeCode = 150
+    startTimeCode = 0
+    upAxis = "Z"
+)
+
+def Xform "main"
+{
+    def Xform "entity_00"
+    {
+        double3 xformOp:translate = (-160.39915277248576, -160.39915277248576, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.walk.usd@ (scale = 0.1946615882119932)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_01"
+    {
+        double3 xformOp:translate = (-185.30410852659918, -85.3041085265992, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.keepAlive.usd@ (scale = 0.6454227107440016)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_02"
+    {
+        double3 xformOp:translate = (-11.287841305073215, 188.71215869492679, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.keepAlive.usd@ (scale = 0.04837819009646516)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_03"
+    {
+        double3 xformOp:translate = (-145.50145008746165, 154.49854991253835, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.keepAlive.usd@ (scale = 0.31632630726301747)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_04"
+    {
+        double3 xformOp:translate = (-117.8696732480981, 282.1303267519019, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.keepAlive.usd@ (scale = 0.6117765247018918)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_05"
+    {
+        double3 xformOp:translate = (-37.025567145558384, 462.9744328544416, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.keepAlive.usd@ (scale = 0.35275013547187606)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_06"
+    {
+        double3 xformOp:translate = (-64.24517279321893, 535.7548272067811, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.keepAlive.usd@ (scale = 0.6117258232351296)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_07"
+    {
+        double3 xformOp:translate = (-193.00306826346858, 506.99693173653145, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.walk.usd@ (scale = 0.46670809338999686)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_08"
+    {
+        double3 xformOp:translate = (-30.915354727721578, 769.0846452722784, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.keepAlive.usd@ (scale = 0.8415138205808794)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_09"
+    {
+        double3 xformOp:translate = (-93.49230587608037, 806.5076941239196, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.keepAlive.usd@ (scale = 0.4325944057709529)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_10"
+    {
+        double3 xformOp:translate = (54.27672441686895, -45.72327558313105, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.keepAlive.usd@ (scale = 0.908124626509595)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_11"
+    {
+        double3 xformOp:translate = (16.51214912951573, 16.51214912951573, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.walk.usd@ (scale = 0.6998714356163948)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_12"
+    {
+        double3 xformOp:translate = (-42.20960902706692, 57.79039097293308, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.keepAlive.usd@ (scale = 0.7124623089980704)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_13"
+    {
+        double3 xformOp:translate = (68.14228745761628, 268.14228745761625, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.walk.usd@ (scale = 0.09890685069199978)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_14"
+    {
+        double3 xformOp:translate = (-5.057959445074189, 294.9420405549258, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.walk.usd@ (scale = 0.29953778006508447)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_15"
+    {
+        double3 xformOp:translate = (-11.993785119287148, 388.00621488071283, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.keepAlive.usd@ (scale = 0.7702888874970633)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_16"
+    {
+        double3 xformOp:translate = (-76.51169875933843, 423.4883012406616, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.walk.usd@ (scale = 0.7901842977596677)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_17"
+    {
+        double3 xformOp:translate = (13.69320341538991, 613.6932034153899, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.walk.usd@ (scale = 0.5062736508208289)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_18"
+    {
+        double3 xformOp:translate = (14.471123184592138, 714.4711231845921, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.walk.usd@ (scale = 0.8650982367012335)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_19"
+    {
+        double3 xformOp:translate = (-14.500151662346461, 785.4998483376536, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.keepAlive.usd@ (scale = 0.8006848285903674)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_20"
+    {
+        double3 xformOp:translate = (111.9007540243704, -88.0992459756296, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.keepAlive.usd@ (scale = 0.25139957953346603)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_21"
+    {
+        double3 xformOp:translate = (77.5352153602298, -22.464784639770198, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.walk.usd@ (scale = 0.2899816263613064)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_22"
+    {
+        double3 xformOp:translate = (24.301362325972804, 24.301362325972804, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.keepAlive.usd@ (scale = 0.2576876865764538)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_23"
+    {
+        double3 xformOp:translate = (139.46807662742677, 239.46807662742677, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.keepAlive.usd@ (scale = 0.8921031520179715)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_24"
+    {
+        double3 xformOp:translate = (151.69399366791032, 351.6939936679103, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.walk.usd@ (scale = 0.5432866661638087)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_25"
+    {
+        double3 xformOp:translate = (102.74382805915072, 402.7438280591507, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.walk.usd@ (scale = 0.0367872387248348)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_26"
+    {
+        double3 xformOp:translate = (103.02328887772948, 503.0232888777295, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.walk.usd@ (scale = 0.7191251090507474)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_27"
+    {
+        double3 xformOp:translate = (152.4520254120434, 652.4520254120434, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.walk.usd@ (scale = 0.09207735936991301)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_28"
+    {
+        double3 xformOp:translate = (60.28755332247155, 660.2875533224716, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.walk.usd@ (scale = 0.003931138397851086)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_29"
+    {
+        double3 xformOp:translate = (30.180856201649135, 730.1808562016491, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.keepAlive.usd@ (scale = 0.13488464048424587)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_30"
+    {
+        double3 xformOp:translate = (188.75671000419203, -111.24328999580797, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.keepAlive.usd@ (scale = 0.16671269774079422)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_31"
+    {
+        double3 xformOp:translate = (241.32132169747695, 41.32132169747693, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.walk.usd@ (scale = 0.2115443537305921)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_32"
+    {
+        double3 xformOp:translate = (220.00029198196893, 120.00029198196893, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.walk.usd@ (scale = 0.23222209824697126)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_33"
+    {
+        double3 xformOp:translate = (132.78168903779687, 132.78168903779687, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.walk.usd@ (scale = 0.3948156627324858)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_34"
+    {
+        double3 xformOp:translate = (108.84626916535183, 208.84626916535183, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.keepAlive.usd@ (scale = 0.6902913794768553)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_35"
+    {
+        double3 xformOp:translate = (151.66988260030226, 351.66988260030223, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.walk.usd@ (scale = 0.4414577352434935)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_36"
+    {
+        double3 xformOp:translate = (287.3820886282357, 587.3820886282357, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.walk.usd@ (scale = 0.8470103193877802)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_37"
+    {
+        double3 xformOp:translate = (268.5052421644258, 668.5052421644258, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.keepAlive.usd@ (scale = 0.4512095828888659)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_38"
+    {
+        double3 xformOp:translate = (258.29755680326656, 758.2975568032665, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.keepAlive.usd@ (scale = 0.3766619497424518)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_39"
+    {
+        double3 xformOp:translate = (142.07610287624289, 742.0761028762429, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.walk.usd@ (scale = 0.7378916838459421)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_40"
+    {
+        double3 xformOp:translate = (299.238027839134, -100.76197216086595, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.walk.usd@ (scale = 0.2710052307098555)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_41"
+    {
+        double3 xformOp:translate = (390.9805225825891, 90.9805225825891, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.keepAlive.usd@ (scale = 0.8212318980711248)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_42"
+    {
+        double3 xformOp:translate = (266.08748012809207, 66.0874801280921, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.walk.usd@ (scale = 0.6152577274467113)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_43"
+    {
+        double3 xformOp:translate = (205.261814475508, 105.26181447550802, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.keepAlive.usd@ (scale = 0.4612344324854737)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_44"
+    {
+        double3 xformOp:translate = (330.5260465978955, 330.5260465978955, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.walk.usd@ (scale = 0.6915270190846164)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_45"
+    {
+        double3 xformOp:translate = (242.28640645877314, 342.2864064587732, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.keepAlive.usd@ (scale = 0.541686453084869)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_46"
+    {
+        double3 xformOp:translate = (292.9138743196223, 492.9138743196223, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.keepAlive.usd@ (scale = 0.912553971873474)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_47"
+    {
+        double3 xformOp:translate = (350.90035478783824, 650.9003547878383, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.walk.usd@ (scale = 0.8249615945325971)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_48"
+    {
+        double3 xformOp:translate = (300.1545395091829, 700.1545395091829, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.walk.usd@ (scale = 0.08403677961345313)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_49"
+    {
+        double3 xformOp:translate = (397.91319750800614, 897.9131975080062, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.keepAlive.usd@ (scale = 0.40281104362763653)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_50"
+    {
+        double3 xformOp:translate = (411.32656209498356, -88.67343790501644, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.walk.usd@ (scale = 0.17832931365681637)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_51"
+    {
+        double3 xformOp:translate = (301.07515746872156, -98.92484253127844, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.walk.usd@ (scale = 0.11024854084293723)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_52"
+    {
+        double3 xformOp:translate = (339.9212731868897, 39.92127318688969, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.walk.usd@ (scale = 0.6358281083534507)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_53"
+    {
+        double3 xformOp:translate = (422.3080048072473, 222.3080048072473, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.walk.usd@ (scale = 0.6442853070918925)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_54"
+    {
+        double3 xformOp:translate = (323.08302009749326, 223.08302009749326, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.keepAlive.usd@ (scale = 0.8829288671303118)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_55"
+    {
+        double3 xformOp:translate = (439.2794878516751, 439.2794878516751, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.keepAlive.usd@ (scale = 0.6931261743359522)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_56"
+    {
+        double3 xformOp:translate = (457.295911759267, 557.295911759267, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.walk.usd@ (scale = 0.8649058720459039)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_57"
+    {
+        double3 xformOp:translate = (495.2796001395107, 695.2796001395106, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.keepAlive.usd@ (scale = 0.5591596857750801)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_58"
+    {
+        double3 xformOp:translate = (468.6296609117115, 768.6296609117115, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.keepAlive.usd@ (scale = 0.07341186445873138)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_59"
+    {
+        double3 xformOp:translate = (453.166136585342, 853.166136585342, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.walk.usd@ (scale = 0.17721474074618182)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_60"
+    {
+        double3 xformOp:translate = (578.307394185676, -21.69260581432397, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.keepAlive.usd@ (scale = 0.09367738802684822)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_61"
+    {
+        double3 xformOp:translate = (506.8827296625907, 6.882729662590692, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.walk.usd@ (scale = 0.5768563370876401)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_62"
+    {
+        double3 xformOp:translate = (421.06419621476243, 21.064196214762433, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.keepAlive.usd@ (scale = 0.9754383287903486)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_63"
+    {
+        double3 xformOp:translate = (593.2852258800666, 293.28522588006655, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.walk.usd@ (scale = 0.441829178826055)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_64"
+    {
+        double3 xformOp:translate = (451.23256081301287, 251.23256081301287, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.keepAlive.usd@ (scale = 0.7364035443843936)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_65"
+    {
+        double3 xformOp:translate = (515.8679385174426, 415.86793851744255, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.keepAlive.usd@ (scale = 0.524378826982084)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_66"
+    {
+        double3 xformOp:translate = (491.32539801936366, 491.32539801936366, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.keepAlive.usd@ (scale = 0.032075923655368044)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_67"
+    {
+        double3 xformOp:translate = (537.2340796291552, 637.2340796291552, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.walk.usd@ (scale = 0.7106484302366017)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_68"
+    {
+        double3 xformOp:translate = (446.99873855778833, 646.9987385577883, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.walk.usd@ (scale = 0.7781702188784108)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_69"
+    {
+        double3 xformOp:translate = (590.8084781982654, 890.8084781982654, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.walk.usd@ (scale = 0.1860007463222526)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_70"
+    {
+        double3 xformOp:translate = (646.2862775120401, -53.71372248795989, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.walk.usd@ (scale = 0.5269687264590837)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_71"
+    {
+        double3 xformOp:translate = (548.2488166826334, -51.75118331736659, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.walk.usd@ (scale = 0.7549302554813669)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_72"
+    {
+        double3 xformOp:translate = (680.9272951700578, 180.92729517005782, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.keepAlive.usd@ (scale = 0.34637885676462854)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_73"
+    {
+        double3 xformOp:translate = (661.8419636309391, 261.841963630939, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.keepAlive.usd@ (scale = 0.6372897000585803)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_74"
+    {
+        double3 xformOp:translate = (689.1610501633379, 389.1610501633379, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.keepAlive.usd@ (scale = 0.9509800896197601)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_75"
+    {
+        double3 xformOp:translate = (542.909483637558, 342.90948363755797, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.walk.usd@ (scale = 0.06277739573217667)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_76"
+    {
+        double3 xformOp:translate = (503.7228148303628, 403.7228148303628, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.keepAlive.usd@ (scale = 0.9428363190837842)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_77"
+    {
+        double3 xformOp:translate = (584.5697665736815, 584.5697665736815, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.keepAlive.usd@ (scale = 0.2808098342044548)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_78"
+    {
+        double3 xformOp:translate = (632.1804725513639, 732.1804725513639, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.keepAlive.usd@ (scale = 0.3932921872237555)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_79"
+    {
+        double3 xformOp:translate = (509.6433870478272, 709.6433870478272, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.walk.usd@ (scale = 0.33026937202763285)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_80"
+    {
+        double3 xformOp:translate = (621.3635661928485, -178.6364338071515, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.keepAlive.usd@ (scale = 0.5768697861872657)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_81"
+    {
+        double3 xformOp:translate = (704.6937552487939, 4.693755248793918, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.keepAlive.usd@ (scale = 0.3366937045017938)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_82"
+    {
+        double3 xformOp:translate = (657.3667537162194, 57.3667537162194, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.walk.usd@ (scale = 0.44808328751875903)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_83"
+    {
+        double3 xformOp:translate = (700.5382741059566, 200.53827410595656, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.keepAlive.usd@ (scale = 0.3652182870507593)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_84"
+    {
+        double3 xformOp:translate = (797.2011883569403, 397.20118835694035, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.keepAlive.usd@ (scale = 0.8305363564142091)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_85"
+    {
+        double3 xformOp:translate = (649.1003967887299, 349.1003967887299, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.keepAlive.usd@ (scale = 0.6746791293960097)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_86"
+    {
+        double3 xformOp:translate = (659.591108586876, 459.591108586876, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.walk.usd@ (scale = 0.22043355871774695)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_87"
+    {
+        double3 xformOp:translate = (648.2158038138213, 548.2158038138213, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.keepAlive.usd@ (scale = 0.3968055753923303)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_88"
+    {
+        double3 xformOp:translate = (605.515912778784, 605.515912778784, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.keepAlive.usd@ (scale = 0.5679255506863414)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_89"
+    {
+        double3 xformOp:translate = (783.2499759935605, 883.2499759935605, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.walk.usd@ (scale = 0.5888724493421231)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_90"
+    {
+        double3 xformOp:translate = (739.0868563763955, -160.91314362360444, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.keepAlive.usd@ (scale = 0.3269044851949239)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_91"
+    {
+        double3 xformOp:translate = (759.5992070747578, -40.40079292524217, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.keepAlive.usd@ (scale = 0.7571044398288544)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_92"
+    {
+        double3 xformOp:translate = (828.8525845121251, 128.85258451212502, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.walk.usd@ (scale = 0.875036570586583)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_93"
+    {
+        double3 xformOp:translate = (732.991467944855, 132.99146794485497, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.walk.usd@ (scale = 0.9572198536634795)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_94"
+    {
+        double3 xformOp:translate = (763.2674658811922, 263.2674658811922, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.walk.usd@ (scale = 0.43183578509601417)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_95"
+    {
+        double3 xformOp:translate = (848.7180492186853, 448.71804921868534, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.walk.usd@ (scale = 0.44684001909582627)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_96"
+    {
+        double3 xformOp:translate = (733.0200411422537, 433.0200411422537, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.keepAlive.usd@ (scale = 0.9351478854729802)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_97"
+    {
+        double3 xformOp:translate = (733.8057311406329, 533.8057311406329, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.walk.usd@ (scale = 0.8937437601686419)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_98"
+    {
+        double3 xformOp:translate = (879.4991820424552, 779.4991820424552, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.walk.usd@ (scale = 0.6336197304792625)
+        )
+        {
+        }
+    }
+
+    def Xform "entity_99"
+    {
+        double3 xformOp:translate = (833.257902413009, 833.257902413009, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def "skeleton" (
+            prepend references = @D:/Users/chaverou/Developments/USD/Samples/UsdSkelExamples/HumanFemale/HumanFemale.keepAlive.usd@ (scale = 0.11995078594447206)
+        )
+        {
+        }
+    }
+}
+
