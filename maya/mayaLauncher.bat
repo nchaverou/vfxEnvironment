@@ -10,7 +10,7 @@
 
 set GLM_MODE=Official
 set GLM_MAIN_VERSION=7
-set GLM_OFFICIAL_VERSION=7.2-2019.11.19-PR1955
+set GLM_OFFICIAL_VERSION=7.2
 set MAYA_VERSION=2018
 set RMAN_VERSION=22.5
 
@@ -39,7 +39,7 @@ set MAYA_LICENSE_METHOD=network
 set MAYA_PROJECT=N:\tests\nicolas
 ::set MAYA_PROJECT=N:\demos\studiosDemos
 ::set MAYA_PROJECT=N:\assets\GolaemCharacterPack-7.0.3
-set MAYA_PROJECT=N:\tests\functionalTests\crowd5.0
+::set MAYA_PROJECT=N:\tests\functionalTests\crowd5.0
 
 
 ::/***************************************************************************

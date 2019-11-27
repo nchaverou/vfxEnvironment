@@ -10,13 +10,21 @@
 
 set GLM_MODE=Debug
 set GLM_MAIN_VERSION=7
-set GLM_OFFICIAL_VERSION=7.1.1.1
-set golaem_LICENSE=D:\golaemLayout.lic
+set GLM_OFFICIAL_VERSION=7.2
 
 set KATANA_VERSION=3.1v2
 set RMAN_VERSION=22.5
-set DEFAULT_RENDERER=redshift
+set DEFAULT_RENDERER=Redshift
 set foundry_LICENSE=D:\foundry.lic
+
+
+::/***************************************************************************
+:: LICENSE
+::***************************************************************************/
+
+::set GLMCROWD_NO_PLE=1
+::set GLMCROWD_NO_LICENSE=1
+set golaem_LICENSE=D:\golaemLayout.lic
 
 
 ::/***************************************************************************

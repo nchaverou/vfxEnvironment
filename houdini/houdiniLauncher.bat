@@ -8,7 +8,6 @@
 :: GLOBAL VARS
 ::***************************************************************************/
 
-set GLM_MODE=Release
 set GLM_MAIN_VERSION=7
 set GLM_OFFICIAL_VERSION=6.4.2
 set HOUDINI_VERSION=17.5.293
@@ -18,10 +17,13 @@ set HOUDINI_VERSION=17.5.293
 :: GOLAEM
 ::***************************************************************************/
 
-set golaem_LICENSE=D:\golaemLayout.lic
+set GLMCROWD_NO_PLE=1
+::set GLMCROWD_NO_LICENSE=1
+::set golaem_LICENSE=D:\golaemLayout.lic
+
 ::set GLM_INSTALL_PREFIX=D:\Users\chaverou\Developments\Golaem%GLM_MAIN_VERSION%\install2018\GolaemCrowd
-::set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-7.1-2019.09.06-PR1879-Houdini
-set GLM_INSTALL_PREFIX=C:/software/golaem/7.1.1.1/houdini/17.5
+set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-7.2-2019.11.19-#1958-Houdini17.5-windows
+::set GLM_INSTALL_PREFIX=C:/software/golaem/7.1.1.1/houdini/17.5
 
 
 ::/***************************************************************************

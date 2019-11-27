@@ -13,8 +13,8 @@ set MAYA_VERSION=2018
 set DCC=Katana
 
 :: Python
-set golaem_LICENSE=D:\golaemFull.lic
-set GLM_INSTALL_DIR=D:\Users\chaverou\Developments\Golaem7\install%MAYA_VERSION%\GolaemCrowd
+set golaem_LICENSE=D:\golaemLayout.lic
+set GLM_INSTALL_DIR=D:\Users\chaverou\Developments\Golaem7\install%MAYA_VERSION%\GolaemCrowdDBG
 set PYTHONPATH=%GLM_INSTALL_DIR%\bin;%GLM_INSTALL_DIR%\scripts;%GLM_INSTALL_DIR%\scripts\glm;%PYTHONPATH%
 set PATH=%GLM_INSTALL_DIR%\bin;%PATH%
 
@@ -34,4 +34,3 @@ set LAYOUT_TOOL="%GLM_INSTALL_DIR%\scripts\glm\layout\layoutEditorStandAlone.py"
 %PYTHONINTERPRETER% %LAYOUT_TOOL%
 ::%PYTHONINTERPRETER%
 
-pause
