@@ -5,16 +5,34 @@
 ::***************************************************************************/
 
 ::/***************************************************************************
-:: ENVIRONMENT
+:: GLOBAL VARS
 ::***************************************************************************/
 
+set GLM_MODE=Official
+set GLM_OFFICIAL_VERSION=7.2.1-2020.01.13-PR1994
 set MAYA_VERSION=2018
-::set DCC=Maya
-set DCC=Katana
-
-:: Python
+::set DCC=Katana
+set DCC=Maya
 set golaem_LICENSE=D:\golaemLayout.lic
-set GLM_INSTALL_DIR=D:\Users\chaverou\Developments\Golaem7\install%MAYA_VERSION%\GolaemCrowdDBG
+
+
+::/***************************************************************************
+:: GOLAEM VARS
+::***************************************************************************/
+
+set GLM_INSTALL_DIR=D:\Users\chaverou\Developments\Golaem7\install%MAYA_VERSION%\GolaemCrowd
+IF %GLM_MODE% == Debug (
+	set GLM_INSTALL_DIR=D:\Users\chaverou\Developments\Golaem7\install%MAYA_VERSION%\GolaemCrowdDBG
+)
+IF %GLM_MODE% == Official (
+	set GLM_MODULE_PATH=C:\Program Files\Golaem\Golaem-%GLM_OFFICIAL_VERSION%-Maya%MAYA_VERSION%
+)
+
+
+::/***************************************************************************
+:: PYTHON
+::***************************************************************************/
+
 set PYTHONPATH=%GLM_INSTALL_DIR%\bin;%GLM_INSTALL_DIR%\scripts;%GLM_INSTALL_DIR%\scripts\glm;%PYTHONPATH%
 set PATH=%GLM_INSTALL_DIR%\bin;%PATH%
 
@@ -30,7 +48,10 @@ IF %DCC% == Katana (
 :: Script
 set LAYOUT_TOOL="%GLM_INSTALL_DIR%\scripts\glm\layout\layoutEditorStandAlone.py"
 
-:: Launch
+
+::/***************************************************************************
+:: LAUNCH
+::***************************************************************************/
+
 %PYTHONINTERPRETER% %LAYOUT_TOOL%
 ::%PYTHONINTERPRETER%
-

@@ -10,7 +10,8 @@
 
 set GLM_MODE=Official
 set GLM_MAIN_VERSION=7
-set GLM_OFFICIAL_VERSION=7.2
+set GLM_OFFICIAL_VERSION=7.2.1-2020.01.14-PR1995
+::set GLM_OFFICIAL_VERSION=7.0.3
 set MAYA_VERSION=2018
 set RMAN_VERSION=22.5
 
@@ -35,10 +36,10 @@ set MAYA_LICENSE_METHOD=network
 ::***************************************************************************/
 
 :: Customers
-::set MAYA_PROJECT=N:\tests\customers\Dwarf\20191029_renderIssue
+::set MAYA_PROJECT=N:\tests\customers\komotion\20200114_crashPP
 set MAYA_PROJECT=N:\tests\nicolas
 ::set MAYA_PROJECT=N:\demos\studiosDemos
-::set MAYA_PROJECT=N:\assets\GolaemCharacterPack-7.0.3
+::set MAYA_PROJECT=N:\assets\GolaemCharacterPack-7.2
 ::set MAYA_PROJECT=N:\tests\functionalTests\crowd5.0
 
 
@@ -69,12 +70,8 @@ set MTOA_MODULE_PATH=C:\solidangle\mtoadeploy\%MAYA_VERSION%\mod
 :: Renderman
 set RFM_DO_NOT_CREATE_MODULE_FILE=1
 set RMANTREE=C:\Program Files\Pixar\RenderManProServer-%RMAN_VERSION%\
-set RMSTREE=C:\Program Files\Pixar\RenderManForMaya-%RMAN_VERSION%-maya%MAYA_VERSION%\
-set RENDERMAN_MODULE_PATH=%RMSTREE%\etc
-IF %RMAN_VERSION% == 22.4 (
-	set RFMTREE=C:\Program Files\Pixar\RenderManForMaya-%RMAN_VERSION%\
-	set RENDERMAN_MODULE_PATH=C:\Program Files\Pixar\RenderManForMaya-%RMAN_VERSION%
-)
+set RFMTREE=C:\Program Files\Pixar\RenderManForMaya-%RMAN_VERSION%\
+set RENDERMAN_MODULE_PATH=C:\Program Files\Pixar\RenderManForMaya-%RMAN_VERSION%
 
 :: RLM
 set RLM_DIAGNOSTICS=D:\Temp\RLMDiag.txt

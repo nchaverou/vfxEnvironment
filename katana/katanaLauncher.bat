@@ -8,12 +8,12 @@
 :: KATANA VARS
 ::***************************************************************************/
 
-set GLM_MODE=Debug
+set GLM_MODE=Official
 set GLM_MAIN_VERSION=7
-set GLM_OFFICIAL_VERSION=7.2
+set GLM_OFFICIAL_VERSION=7.2.1-2020.01.13-PR1994
 
 set KATANA_VERSION=3.1v2
-set RMAN_VERSION=22.5
+set RMAN_VERSION=23.0
 set DEFAULT_RENDERER=Redshift
 set foundry_LICENSE=D:\foundry.lic
 
@@ -51,7 +51,7 @@ set GLM_CROWD_BIN=%GLM_INSTALL_PREFIX%\bin
 ::***************************************************************************/
 
 set RMANTREE=C:\Program Files\Pixar\RenderManProServer-%RMAN_VERSION%
-set KTOR_PATH=C:\Program Files\Pixar\RenderManForKatana-%RMAN_VERSION%-katana3.1\plugins\Resources\PRMan22
+set KTOR_PATH=C:\Program Files\Pixar\RenderManForKatana-%RMAN_VERSION%-katana3.1\plugins\Resources\PRMan23
 ::set RFK_REDIRECT_OUTPUT="C:/katanaLog.txt"
 set RMAN_DSOPATH=%GLM_PROCEDURAL_PATH%
 set RMAN_RIXPLUGINPATH=%GLM_SHADER_PATH%;%RMANTREE%\lib\plugins

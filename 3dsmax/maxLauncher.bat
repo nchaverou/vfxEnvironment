@@ -9,10 +9,9 @@
 ::***************************************************************************/
 
 set MAX_VERSION=2018
-set MAYA_VERSION=2018
-::set GLM_INSTALL_PREFIX=C:\Users\chaverou\Developments\Golaem 5\install%MAYA_VERSION%\GolaemCrowd
-::set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-6.4.3-2019.02.27-PR1699-Maya%MAYA_VERSION%
-set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-7.2-Max2018
+::set GLM_INSTALL_PREFIX=D:\Users\chaverou\Developments\GolaemForMax7\install%MAX_VERSION%\GolaemCrowd
+::set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-6.4.3-2019.02.27-PR1699-Maya%MAX_VERSION%
+set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-7.2.1-2020.01.13-PR1994-Max%MAX_VERSION%
 set GLM_CROWD_BIN=%GLM_INSTALL_PREFIX%\bin
 set GLM_VRAY_PLUGINS_PATH=%GLM_INSTALL_PREFIX%\procedurals
 

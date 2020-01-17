@@ -10,7 +10,7 @@
 
 ::set USD_FILE=D:\Users\chaverou\Developments\USD\Samples\Kitchen_set\Kitchen_set.usd
 ::set USD_FILE=D:\Users\chaverou\Developments\USD\Samples\PointInstancedMedCity\PointInstancedMedCity.usd
-::set USD_FILE=D:\Users\chaverou\Developments\USD\Samples\UsdSkelExamples\HumanFemale\HumanFemale.walk.usd
+set USD_FILE=D:\Users\chaverou\Developments\USD\Samples\UsdSkelExamples\HumanFemale\HumanFemale.walk.usd
 ::set USD_FILE=D:\Users\chaverou\Developments\USD\Samples\UsdSkelExamples\HumanFemale\HumanFemale.keepAlive.usd
 ::set USD_FILE=D:\Users\chaverou\Developments\USD\Samples\UsdSkelExamples\HumanFemale\HumanFemale.usd
 ::set USD_FILE=D:\Users\chaverou\Developments\USD\Samples\atomsCacheToUsd\atomscache.usda
@@ -24,8 +24,8 @@
 :: ENV
 ::***************************************************************************/
 
-set USD_EXAMPLES=D:\Users\chaverou\Developments\USD\usd-win64_py27_release\share\usd\examples\plugin
-set PATH=%USD_EXAMPLES%;%PATH%
+::set USD_EXAMPLES=D:\Users\chaverou\Developments\USD\usd-win64_py27_release\share\usd\examples\plugin
+::set PATH=%USD_EXAMPLES%;%PATH%
 
 ::/***************************************************************************
 :: USD VIEWER
