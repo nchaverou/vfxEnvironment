@@ -19,6 +19,7 @@ set UNREAL_VERSION=4.22
 ::set GLMCROWD_NO_LICENSE=1
 set golaem_LICENSE=D:\golaemLayout.lic
 ::set golaem_LICENSE=2375@gitem
+set GLMCROWD_ANL_ENABLE=1
 
 ::set GLM_INSTALL_PREFIX=D:\Users\chaverou\Developments\GolaemForUnreal%GLM_MAIN_VERSION%
 ::set GLM_PROJECT=GolaemForUnreal.uproject

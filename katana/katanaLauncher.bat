@@ -10,7 +10,8 @@
 
 set GLM_MODE=Official
 set GLM_MAIN_VERSION=7
-set GLM_OFFICIAL_VERSION=7.2.1-2020.01.13-PR1994
+set GLM_OFFICIAL_VERSION=7.2.2-2020.02.05-PR2021
+::set GLM_OFFICIAL_VERSION=7.2.1
 
 set KATANA_VERSION=3.1v2
 set RMAN_VERSION=23.0
@@ -81,7 +82,7 @@ set REDSHIFT_PROCEDURALSPATH=%GLM_PROCEDURAL_PATH%;%GLM_SHADER_PATH%;%REDSHIFT_P
 :: My Environment
 set MY_ENVIRONMENT=D:\Users\chaverou\Developments\VFXEnvironment
 set KATANA_TOOLS=%MY_ENVIRONMENT%\katana\tools
-set GLMCROWD_ANL_ENABLE=1
+::set GLMCROWD_ANL_ENABLE=1
 
 ::/***************************************************************************
 :: LAUNCH KATANA

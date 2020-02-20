@@ -5,29 +5,30 @@
 ::***************************************************************************/
 
 ::/***************************************************************************
-:: CROWD VARIABLES
+:: GOLAEM VARIABLES
 ::***************************************************************************/
 
+set GLM_OFFICIAL_VERSION=7.2.2-2020.02.05-PR2021
 set MAX_VERSION=2018
-::set GLM_INSTALL_PREFIX=D:\Users\chaverou\Developments\GolaemForMax7\install%MAX_VERSION%\GolaemCrowd
-::set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-6.4.3-2019.02.27-PR1699-Maya%MAX_VERSION%
-set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-7.2.1-2020.01.13-PR1994-Max%MAX_VERSION%
-set GLM_CROWD_BIN=%GLM_INSTALL_PREFIX%\bin
-set GLM_VRAY_PLUGINS_PATH=%GLM_INSTALL_PREFIX%\procedurals
-
 set GLMCROWD_UNIT=4
+
 
 ::/***************************************************************************
 :: ENVIRONMENT
 ::***************************************************************************/
 
+:: Golaem
+set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-%GLM_OFFICIAL_VERSION%-Max%MAX_VERSION%
+set GLM_CROWD_BIN=%GLM_INSTALL_PREFIX%\bin
+set GLM_VRAY_PLUGINS_PATH=%GLM_INSTALL_PREFIX%\procedurals
+
 :: Globals
 set PATH=%GLM_CROWD_BIN%;%PATH%;%SystemRoot%;%SystemRoot%\system;
 
 :: VRay
-set VRAY30_RT_FOR_3DSMAX2016_PLUGINS_x64=%GLM_VRAY_PLUGINS_PATH%;%VRAY30_RT_FOR_3DSMAX2016_PLUGINS_x64%;
 set VRAY30_RT_FOR_3DSMAX2018_PLUGINS_x64=%GLM_VRAY_PLUGINS_PATH%;%VRAY30_RT_FOR_3DSMAX2018_PLUGINS_x64%;
 set VRAY4_FOR_3DSMAX2018_PLUGINS=%GLM_VRAY_PLUGINS_PATH%;%VRAY4_FOR_3DSMAX2018_PLUGINS%;
+
 
 ::/***************************************************************************
 :: Launch Max with the right configuration

@@ -10,8 +10,7 @@
 
 set GLM_MODE=Official
 set GLM_MAIN_VERSION=7
-set GLM_OFFICIAL_VERSION=7.2.1-2020.01.14-PR1995
-::set GLM_OFFICIAL_VERSION=7.0.3
+set GLM_OFFICIAL_VERSION=7.2.1
 set MAYA_VERSION=2018
 set RMAN_VERSION=22.5
 
@@ -36,13 +35,14 @@ set MAYA_LICENSE_METHOD=network
 ::***************************************************************************/
 
 :: Customers
-::set MAYA_PROJECT=N:\tests\customers\komotion\20200114_crashPP
+::set MAYA_PROJECT=N:\tests\customers\mikros\20200219_mapping
+::set MAYA_PROJECT=D:\Users\chaverou\Developments\FFDA
 set MAYA_PROJECT=N:\tests\nicolas
 ::set MAYA_PROJECT=N:\demos\studiosDemos
-::set MAYA_PROJECT=N:\assets\GolaemCharacterPack-7.2
+::set MAYA_PROJECT=N:\assets\GolaemCharacterPack-7.2.1
 ::set MAYA_PROJECT=N:\tests\functionalTests\crowd5.0
 
-
+set ENV_MAYA_TEST=N:\tests\nicolas
 ::/***************************************************************************
 :: CROWD VARIABLES
 ::***************************************************************************/
@@ -54,6 +54,7 @@ IF %GLM_MODE% == Debug (
 IF %GLM_MODE% == Official (
 	set GLM_MODULE_PATH=C:\Program Files\Golaem\Golaem-%GLM_OFFICIAL_VERSION%-Maya%MAYA_VERSION%
 )
+
 set GLMCROWD_ANL_ENABLE=1
 set GLMCROWD_UNIT=3
 
@@ -76,8 +77,9 @@ set RENDERMAN_MODULE_PATH=C:\Program Files\Pixar\RenderManForMaya-%RMAN_VERSION%
 :: RLM
 set RLM_DIAGNOSTICS=D:\Temp\RLMDiag.txt
 
-:: USD
-set USD_MODULE_PATH=D:\Users\chaverou\Developments\USD\usd_maya2018
+:: FFDA
+set FFDA_PLUGINS=D:\Users\chaverou\Developments\FFDA\plugins
+set FFDA_SCRIPTS=D:\Users\chaverou\Developments\FFDA\scripts
 
 :: Xgen
 ::set PATH=%MAYA_LOCATION%/bin;%MAYA_LOCATION%/lib;%MAYA_LOCATION%/plug-ins/xgen/bin;%MAYA_LOCATION%/plug-ins/xgen/lib;%RMANTREE%/lib;%PATH%
@@ -97,10 +99,10 @@ set MY_ENVIRONMENT=D:\Users\chaverou\Developments\VFXEnvironment\maya
 ::copy "%MY_ENVIRONMENT%\prefs\tools_list_user.yaml" "%APPDATA%\Damage Inc\fxpt\fx_spark\tools_list_user.yaml"
 
 :: Maya
-set MAYA_MODULE_PATH=%GLM_MODULE_PATH%;%MTOA_MODULE_PATH%;%RENDERMAN_MODULE_PATH%;%USD_MODULE_PATH%;%MAYA_MODULE_PATH%
-set MAYA_PLUG_IN_PATH=%MY_ENVIRONMENT%\plugins\%MAYA_VERSION%
-set MAYA_SCRIPT_PATH=%MY_ENVIRONMENT%\scripts;%MAYA_SCRIPT_PATH%
-set PYTHONPATH=%MY_ENVIRONMENT%\scripts;%FXPT_PATH%;%SKINW_PATH%;%PYTHONPATH%
+set MAYA_MODULE_PATH=%GLM_MODULE_PATH%;%MTOA_MODULE_PATH%;%RENDERMAN_MODULE_PATH%;%MAYA_MODULE_PATH%
+set MAYA_PLUG_IN_PATH=%MY_ENVIRONMENT%\plugins\%MAYA_VERSION%;%FFDA_PLUGINS%
+set MAYA_SCRIPT_PATH=%MY_ENVIRONMENT%\scripts;%FFDA_SCRIPTS%;%MAYA_SCRIPT_PATH%
+set PYTHONPATH=%MY_ENVIRONMENT%\scripts;%FFDA_SCRIPTS%;%FXPT_PATH%;%SKINW_PATH%;%PYTHONPATH%
 set XBMLANGPATH=%MY_ENVIRONMENT%\icons;%XBMLANGPATH%
 
 

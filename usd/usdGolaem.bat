@@ -9,6 +9,9 @@
 ::***************************************************************************/
 
 set GLM_MODE=Official
+set GLM_MAIN_VERSION=7
+set GLM_OFFICIAL_VERSION=7.2.2-2020.02.05-#2021
+set GLM_MODE=Official
 set USD_VERS=0.19.11
 
 
@@ -17,21 +20,21 @@ set USD_VERS=0.19.11
 ::***************************************************************************/
 
 ::set USD_FILE=D:\Users\chaverou\Developments\VFXEnvironment\usd\files\Golaem.usda
-::set USD_FILE=D:\Users\chaverou\Developments\VFXEnvironment\usd\files\GolaemMin.usda
-::set USD_FILE=D:\Users\chaverou\Developments\VFXEnvironment\usd\files\golaemUsd100.renderProxyShape1.usda
-::set USD_FILE=C:\Users\chaverou\Desktop\scenes\golaem721\quickStart721-TODELETE.renderProxyShape1.usda
-set USD_FILE=C:\Users\chaverou\Desktop\scenes\archery\archeryUSD.renderProxyShape1.usda
+set USD_FILE=C:\Users\chaverou\Desktop\scenes\golaem722\quickStart722.renderProxyShape1.usda
 
 
 ::/***************************************************************************
 :: ENV
 ::***************************************************************************/
 
+set GLMCROWD_ANL_ENABLE=1
+
 set USD_INSTALL_DIR=D:\Users\chaverou\Developments\GolaemMisc\golaemExternals\USD\%USD_VERS%\windows
 
 set GLM_INSTALL_DIR=D:\Users\chaverou\Developments\GolaemForUSD7\install19\GolaemCrowd
+set GLM_INSTALL_DIR=D:\Users\chaverou\Developments\GolaemForUSD-StandAlone\install\GolaemForUSD
 IF %GLM_MODE% == Official (
-	set GLM_INSTALL_DIR=C:\Program Files\Golaem\Golaem-7.2.1-2020.01.14-#1995-USD0.19.11-windows
+	set GLM_INSTALL_DIR=C:\Program Files\Golaem\Golaem-%GLM_OFFICIAL_VERSION%-USD%USD_VERS%-windows
 )
 
 set PYTHONPATH=%USD_INSTALL_DIR%/lib/python;%PYTHONPATH%

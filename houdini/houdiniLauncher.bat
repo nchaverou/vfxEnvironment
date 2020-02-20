@@ -8,35 +8,47 @@
 :: GLOBAL VARS
 ::***************************************************************************/
 
+set GLM_MODE=Release
 set GLM_MAIN_VERSION=7
-set GLM_OFFICIAL_VERSION=6.4.2
-set HOUDINI_VERSION=17.5.293
-
-
-::/***************************************************************************
-:: GOLAEM
-::***************************************************************************/
-
-set GLMCROWD_NO_PLE=1
-::set GLMCROWD_NO_LICENSE=1
-set golaem_LICENSE=D:\golaemLayout.lic
-
-::set GLM_INSTALL_PREFIX=D:\Users\chaverou\Developments\Golaem%GLM_MAIN_VERSION%\install2018\GolaemCrowd
-set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-7.2.1-2020.01.13-#1994-Houdini17.5-windows
-::set GLM_INSTALL_PREFIX=C:/software/golaem/7.1.1.1/houdini/17.5
+set GLM_OFFICIAL_VERSION=7.2.2-2020.02.05-#2021
+set HOUDINI_VERSION=18.0.348
+set GLMCROWD_ANL_ENABLE=1
 
 
 ::/***************************************************************************
 :: HOUDINI PROJECT
 ::***************************************************************************/
 
-:: Houdini environment 
 set HIP=N:/tests/nicolas
+
+
+::/***************************************************************************
+:: LICENSE
+::***************************************************************************/
+
+set GLMCROWD_NO_PLE=1
+::set GLMCROWD_NO_LICENSE=1
+set golaem_LICENSE=D:\golaemLayout.lic
+
+::/***************************************************************************
+:: LICENSE
+::***************************************************************************/
+
+set GLM_INSTALL_PREFIX=D:\Users\chaverou\Developments\GolaemForHoudini%GLM_MAIN_VERSION%\install18\GolaemCrowd
+IF %GLM_MODE% == Debug (
+	set GLM_INSTALL_PREFIX=D:\Users\chaverou\Developments\GolaemForHoudini%GLM_MAIN_VERSION%\install18\GolaemCrowdDBG
+)
+IF %GLM_MODE% == Official (
+	set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-%GLM_OFFICIAL_VERSION%-Houdini18.0-windows
+)
 
 
 ::/***************************************************************************
 :: ENVIRONMENT
 ::***************************************************************************/
+
+:: USD
+set PXR_PLUGINPATH_NAME=%GLM_INSTALL_PREFIX%\procedurals\usd;^&
 
 :: Globals
 set PATH=%GLM_INSTALL_PREFIX%\bin;%PATH%
