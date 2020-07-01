@@ -8,7 +8,7 @@
 :: GOLAEM VARIABLES
 ::***************************************************************************/
 
-set GLM_OFFICIAL_VERSION=7.2.2-2020.02.05-PR2021
+set GLM_OFFICIAL_VERSION=7.3-2020.03.03-5c862f1e3
 set MAX_VERSION=2018
 set GLMCROWD_UNIT=4
 

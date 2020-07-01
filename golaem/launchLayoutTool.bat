@@ -9,7 +9,7 @@
 ::***************************************************************************/
 
 set GLM_MODE=Official
-set GLM_OFFICIAL_VERSION=7.2.2-2020.02.05-PR2021
+set GLM_OFFICIAL_VERSION=7.3-2020.03.03-5c862f1e3
 set MAYA_VERSION=2018
 ::set DCC=Katana
 set DCC=Maya
@@ -25,7 +25,7 @@ IF %GLM_MODE% == Debug (
 	set GLM_INSTALL_DIR=D:\Users\chaverou\Developments\Golaem7\install%MAYA_VERSION%\GolaemCrowdDBG
 )
 IF %GLM_MODE% == Official (
-	set GLM_MODULE_PATH=C:\Program Files\Golaem\Golaem-%GLM_OFFICIAL_VERSION%-Maya%MAYA_VERSION%
+	set GLM_INSTALL_DIR=C:\Program Files\Golaem\Golaem-%GLM_OFFICIAL_VERSION%-Maya%MAYA_VERSION%
 )
 
 

@@ -8,8 +8,8 @@
 :: GLOBAL VARS
 ::***************************************************************************/
 
-set RIB_FILE=C:\Users\chaverou\Desktop\here.rib
-set OUT_RIB_FILE=C:\Temp\outExpand.rib
+set RIB_FILE=C:\Users\chaverou\Desktop\crypt.rib
+set OUT_RIB_FILE=C:\Users\chaverou\Desktop\outExpand.rib
 
 ::/***************************************************************************
 :: GOLAEM
@@ -18,7 +18,8 @@ set OUT_RIB_FILE=C:\Temp\outExpand.rib
 set RMAN_VERSION=22.5
 set MAYA_VERSION=2018
 set GLM_MAIN_VERSION=7
-set GLM_INSTALL_PREFIX=D:\Users\chaverou\Developments\Golaem%GLM_MAIN_VERSION%\install%MAYA_VERSION%\GolaemCrowd
+::set GLM_INSTALL_PREFIX=D:\Users\chaverou\Developments\Golaem%GLM_MAIN_VERSION%\install%MAYA_VERSION%\GolaemCrowd
+set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-7.1.1.1-Maya%MAYA_VERSION%
 
 ::/***************************************************************************
 :: MAYA 
@@ -47,8 +48,8 @@ set PATH=%GLM_INSTALL_PREFIX%\bin;%RMANTREE%\bin\;%MAYA_LOCATION%\bin;%XGEN_LOCA
 ::***************************************************************************/
 
 set PRMAN_EXE=bin\prman.exe
-::"%RMANTREE%\%PRMAN_EXE%" -capture "%OUT_RIB_FILE%" "%RIB_FILE%"
-"%RMANTREE%\%PRMAN_EXE%" "%RIB_FILE%"
+"%RMANTREE%\%PRMAN_EXE%" -capture "%OUT_RIB_FILE%" "%RIB_FILE%"
+::"%RMANTREE%\%PRMAN_EXE%" "%RIB_FILE%"
 ::"%RMANTREE%\%PRMAN_EXE%" %OUT_RIB_FILE%
 
 pause

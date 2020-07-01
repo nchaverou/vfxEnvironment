@@ -9,7 +9,7 @@
 ::***************************************************************************/
 
 set GLM_MAIN_VERSION=7
-set UNREAL_VERSION=4.22
+set UNREAL_VERSION=4.24
 
 ::/***************************************************************************
 :: GOLAEM
@@ -26,6 +26,8 @@ set GLMCROWD_ANL_ENABLE=1
 set GLM_INSTALL_PREFIX=D:\Users\chaverou\Documents\UnrealProjects\GolaemPluginTest
 set GLM_PROJECT=GolaemPluginTest.uproject
 ::set GLMCROWD_UNIT=4
+set GLM_INSTALL_PREFIX=D:\Users\chaverou\Documents\Unreal Projects\MyProject
+set GLM_PROJECT=MyProject.uproject
 
 ::/***************************************************************************
 :: LAUNCH UNREAL

@@ -8,12 +8,13 @@
 :: KATANA VARS
 ::***************************************************************************/
 
-set GLM_MODE=Official
+set GLM_MODE=Release
 set GLM_MAIN_VERSION=7
-set GLM_OFFICIAL_VERSION=7.2.2-2020.02.05-PR2021
-::set GLM_OFFICIAL_VERSION=7.2.1
+::set GLM_OFFICIAL_VERSION=7.3.2-2020.05.04-#2092
+set GLM_OFFICIAL_VERSION=7.3.1
 
-set KATANA_VERSION=3.1v2
+set KATANA_VERSION=3.5v2
+::set KATANA_VERSION=3.1v2
 set RMAN_VERSION=23.0
 set DEFAULT_RENDERER=Redshift
 set foundry_LICENSE=D:\foundry.lic
@@ -32,12 +33,12 @@ set golaem_LICENSE=D:\golaemLayout.lic
 :: GOLAEM
 ::***************************************************************************/
 
-set GLM_INSTALL_PREFIX=D:\Users\chaverou\Developments\Golaem%GLM_MAIN_VERSION%\install2018\GolaemCrowd
+set GLM_INSTALL_PREFIX=D:\Users\chaverou\Developments\GolaemForKatana%GLM_MAIN_VERSION%\install3\GolaemCrowd
 IF %GLM_MODE% == Debug (
-	set GLM_INSTALL_PREFIX=D:\Users\chaverou\Developments\Golaem%GLM_MAIN_VERSION%\install2018\GolaemCrowdDBG
+	set GLM_INSTALL_PREFIX=D:\Users\chaverou\Developments\GolaemForKatana%GLM_MAIN_VERSION%\install3\GolaemCrowdDBG
 )
 IF %GLM_MODE% == Official (
-	set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-%GLM_OFFICIAL_VERSION%-Maya2018
+	set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-%GLM_OFFICIAL_VERSION%-Katana3.5-windows
 )
 
 set KTOG_PATH=%GLM_INSTALL_PREFIX%\procedurals\katana
@@ -54,7 +55,7 @@ set GLM_CROWD_BIN=%GLM_INSTALL_PREFIX%\bin
 set RMANTREE=C:\Program Files\Pixar\RenderManProServer-%RMAN_VERSION%
 set KTOR_PATH=C:\Program Files\Pixar\RenderManForKatana-%RMAN_VERSION%-katana3.1\plugins\Resources\PRMan23
 ::set RFK_REDIRECT_OUTPUT="C:/katanaLog.txt"
-set RMAN_DSOPATH=%GLM_PROCEDURAL_PATH%
+set RMAN_DSOPATH=%GLM_PROCEDURAL_PATH%\renderman
 set RMAN_RIXPLUGINPATH=%GLM_SHADER_PATH%;%RMANTREE%\lib\plugins
 
 
@@ -64,7 +65,7 @@ set RMAN_RIXPLUGINPATH=%GLM_SHADER_PATH%;%RMANTREE%\lib\plugins
 
 ::set KTOA_PATH=C:\solidangle\ktoadeploy\KtoA-2.0.4.0-kat2.5-windows
 set KTOA_PATH=C:\solidangle\ktoadeploy\KtoA-2.3.1.1-kat3.1-windows
-set ARNOLD_PLUGIN_PATH=%GLM_PROCEDURAL_PATH%;%GLM_SHADER_PATH%
+set ARNOLD_PLUGIN_PATH=%GLM_PROCEDURAL_PATH%\arnold;%GLM_SHADER_PATH%\arnold
 
 ::/***************************************************************************
 :: REDSHIFT
@@ -72,7 +73,13 @@ set ARNOLD_PLUGIN_PATH=%GLM_PROCEDURAL_PATH%;%GLM_SHADER_PATH%
 
 set KTORS_PATH=C:\ProgramData\Redshift\Plugins\Katana\3.0v1
 set REDSHIFT_BIN=C:\ProgramData\Redshift\bin
-set REDSHIFT_PROCEDURALSPATH=%GLM_PROCEDURAL_PATH%;%GLM_SHADER_PATH%;%REDSHIFT_PROCEDURALSPATH%
+set REDSHIFT_PROCEDURALSPATH=%GLM_PROCEDURAL_PATH%\redshift;%GLM_SHADER_PATH%\redshift;%REDSHIFT_PROCEDURALSPATH%
+
+::/***************************************************************************
+:: USD
+::***************************************************************************/
+
+set FNPXR_PLUGINPATH=C:\Program Files\Golaem\Golaem-%GLM_OFFICIAL_VERSION%-Katana3.5USD-windows\procedurals\usd
 
 
 ::/***************************************************************************
@@ -88,12 +95,12 @@ set KATANA_TOOLS=%MY_ENVIRONMENT%\katana\tools
 :: LAUNCH KATANA
 ::***************************************************************************/
 
+set KATANA_LOCATION=C:\Program Files\Foundry\Katana%KATANA_VERSION%
 set "KATANA_TAGLINE=With Katana %KATANA_VERSION% and Arnold 5.0.1.4 and Renderman %RMAN_VERSION%"
 set KATANA_POST_PYTHONPATH=%KTOG_PATH%/Python;
-set KATANA_RESOURCES=%KTOA_PATH%;%KTOR_PATH%;%KTORS_PATH%;%KTOG_PATH%;%KATANA_TOOLS%
-set PATH=%KTOA_PATH%\bin;%REDSHIFT_BIN%;%GLM_CROWD_BIN%;%PATH%
+set KATANA_RESOURCES=%KTOA_PATH%;%KTOR_PATH%;%KTORS_PATH%;%KTOG_PATH%;%KATANA_TOOLS%;%KATANA_LOCATION%/plugins/Resources/Usd/plugin
+set PATH=%KTOA_PATH%\bin;%REDSHIFT_BIN%;%GLM_CROWD_BIN%;%KATANA_LOCATION%/plugins/Resources/Usd/lib;%PATH%
 
-set KATANA_LOCATION=C:\Program Files\Foundry\Katana%KATANA_VERSION%
 set KATANA_EXE=bin\katanaBin.exe
 "%KATANA_LOCATION%\%KATANA_EXE%"
 
