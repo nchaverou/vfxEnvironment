@@ -8,14 +8,14 @@
 :: KATANA VARS
 ::***************************************************************************/
 
-set GLM_MODE=Release
+set GLM_MODE=Official
 set GLM_MAIN_VERSION=7
-::set GLM_OFFICIAL_VERSION=7.3.2-2020.05.04-#2092
-set GLM_OFFICIAL_VERSION=7.3.1
+set GLM_OFFICIAL_VERSION=7.3.6-2020.10.13-#2215
+::set GLM_OFFICIAL_VERSION=7.3.1
 
 set KATANA_VERSION=3.5v2
 ::set KATANA_VERSION=3.1v2
-set RMAN_VERSION=23.0
+set RMAN_VERSION=23.3
 set DEFAULT_RENDERER=Redshift
 set foundry_LICENSE=D:\foundry.lic
 
@@ -39,6 +39,7 @@ IF %GLM_MODE% == Debug (
 )
 IF %GLM_MODE% == Official (
 	set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-%GLM_OFFICIAL_VERSION%-Katana3.5-windows
+	set GLMUSD_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-%GLM_OFFICIAL_VERSION%-Katana3.5USD-windows
 )
 
 set KTOG_PATH=%GLM_INSTALL_PREFIX%\procedurals\katana
@@ -49,11 +50,19 @@ set GLM_CROWD_BIN=%GLM_INSTALL_PREFIX%\bin
 
 
 ::/***************************************************************************
+:: GOLAEM USD 
+::***************************************************************************/
+
+set GLMUSD_PLUGIN_PATH=%GLMUSD_INSTALL_PREFIX%\procedurals
+set GLMUSD_BIN=%GLMUSD_INSTALL_PREFIX%\bin
+
+
+::/***************************************************************************
 :: RENDERMAN
 ::***************************************************************************/
 
 set RMANTREE=C:\Program Files\Pixar\RenderManProServer-%RMAN_VERSION%
-set KTOR_PATH=C:\Program Files\Pixar\RenderManForKatana-%RMAN_VERSION%-katana3.1\plugins\Resources\PRMan23
+set KTOR_PATH=C:\Program Files\Pixar\RenderManForKatana-%RMAN_VERSION%-katana3.5\plugins\Resources\PRMan23
 ::set RFK_REDIRECT_OUTPUT="C:/katanaLog.txt"
 set RMAN_DSOPATH=%GLM_PROCEDURAL_PATH%\renderman
 set RMAN_RIXPLUGINPATH=%GLM_SHADER_PATH%;%RMANTREE%\lib\plugins
@@ -98,8 +107,8 @@ set KATANA_TOOLS=%MY_ENVIRONMENT%\katana\tools
 set KATANA_LOCATION=C:\Program Files\Foundry\Katana%KATANA_VERSION%
 set "KATANA_TAGLINE=With Katana %KATANA_VERSION% and Arnold 5.0.1.4 and Renderman %RMAN_VERSION%"
 set KATANA_POST_PYTHONPATH=%KTOG_PATH%/Python;
-set KATANA_RESOURCES=%KTOA_PATH%;%KTOR_PATH%;%KTORS_PATH%;%KTOG_PATH%;%KATANA_TOOLS%;%KATANA_LOCATION%/plugins/Resources/Usd/plugin
-set PATH=%KTOA_PATH%\bin;%REDSHIFT_BIN%;%GLM_CROWD_BIN%;%KATANA_LOCATION%/plugins/Resources/Usd/lib;%PATH%
+set KATANA_RESOURCES=%KTOA_PATH%;%KTOR_PATH%;%KTORS_PATH%;%KTOG_PATH%;%GLMUSD_PLUGIN_PATH%;%KATANA_TOOLS%;%KATANA_LOCATION%/plugins/Resources/Usd/plugin
+set PATH=%KTOA_PATH%\bin;%REDSHIFT_BIN%;%GLM_CROWD_BIN%;%GLMUSD_BIN%;%KATANA_LOCATION%/plugins/Resources/Usd/lib;%PATH%
 
 set KATANA_EXE=bin\katanaBin.exe
 "%KATANA_LOCATION%\%KATANA_EXE%"

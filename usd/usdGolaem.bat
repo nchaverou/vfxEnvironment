@@ -10,7 +10,7 @@
 
 set GLM_MODE=Official
 set GLM_MAIN_VERSION=7
-set GLM_OFFICIAL_VERSION=7.3.1
+set GLM_OFFICIAL_VERSION=7.3.6-2020.10.13-#2215
 set GLM_MODE=Official
 set USD_VERS=0.19.11
 
@@ -19,7 +19,9 @@ set USD_VERS=0.19.11
 :: FILE
 ::***************************************************************************/
 
-set USD_FILE=N:\demos\golaem731\export\01-morph\cache\01-morph.renderProxyShape1.usda
+set USD_FILE=N:/tests/nicolas/export/quickstart736/usd/quickstart736.crowdField1_renderProxyShape1.usda
+set USD_FILE=N:/tests/nicolas/export/quickstart736/usd/quickstart736.renderProxyShape1.usda
+::set USD_FILE=C:/Users/chaverou/Desktop/scenes/golaem735/quickstart735.renderProxyShape1.usda
 ::set USD_FILE=C:\Users\chaverou\Desktop\scenes\golaem73\quickstart.renderProxyShape1.usda
 ::set USD_FILE=D:\Users\chaverou\Developments\VFXEnvironment\usd\files\HumanFemale\HumanFemale.walk.usd
 

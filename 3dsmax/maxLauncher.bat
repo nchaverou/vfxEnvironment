@@ -8,7 +8,9 @@
 :: GOLAEM VARIABLES
 ::***************************************************************************/
 
-set GLM_OFFICIAL_VERSION=7.3-2020.03.03-5c862f1e3
+set GLM_MODE=Release
+set GLM_MAIN_VERSION=7
+set GLM_OFFICIAL_VERSION=7.3.6-2020.10.13-#2215
 set MAX_VERSION=2018
 set GLMCROWD_UNIT=4
 
@@ -18,9 +20,15 @@ set GLMCROWD_UNIT=4
 ::***************************************************************************/
 
 :: Golaem
-set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-%GLM_OFFICIAL_VERSION%-Max%MAX_VERSION%
+set GLM_INSTALL_PREFIX=D:\Users\chaverou\Developments\GolaemForMax%GLM_MAIN_VERSION%\install%MAX_VERSION%\GolaemCrowd
+IF %GLM_MODE% == Debug (
+	set GLM_INSTALL_PREFIX=D:\Users\chaverou\Developments\GolaemForMax%GLM_MAIN_VERSION%\install%MAX_VERSION%\GolaemCrowdDBG
+)
+IF %GLM_MODE% == Official (
+	set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-%GLM_OFFICIAL_VERSION%-Max%MAX_VERSION%
+)
 set GLM_CROWD_BIN=%GLM_INSTALL_PREFIX%\bin
-set GLM_VRAY_PLUGINS_PATH=%GLM_INSTALL_PREFIX%\procedurals
+set GLM_VRAY_PLUGINS_PATH=%GLM_INSTALL_PREFIX%\procedurals\vray
 
 :: Globals
 set PATH=%GLM_CROWD_BIN%;%PATH%;%SystemRoot%;%SystemRoot%\system;

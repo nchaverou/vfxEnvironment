@@ -9,7 +9,7 @@
 ::***************************************************************************/
 
 set GLM_MODE=Official
-set GLM_OFFICIAL_VERSION=7.3-2020.03.03-5c862f1e3
+set GLM_OFFICIAL_VERSION=7.3.6-2020.10.13-PR2215
 set MAYA_VERSION=2018
 ::set DCC=Katana
 set DCC=Maya

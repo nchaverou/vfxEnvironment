@@ -10,7 +10,7 @@
 
 set GLM_MODE=Official
 set GLM_MAIN_VERSION=7
-set GLM_OFFICIAL_VERSION=7.3.1
+set GLM_OFFICIAL_VERSION=7.3.6-2020.10.13-#2215
 set HOUDINI_VERSION=18.0.348
 set GLMCROWD_ANL_ENABLE=1
 
@@ -40,7 +40,6 @@ IF %GLM_MODE% == Debug (
 )
 IF %GLM_MODE% == Official (
 	set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-%GLM_OFFICIAL_VERSION%-Houdini18.0-windows
-	set GLM_USD_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-%GLM_OFFICIAL_VERSION%-Houdini18.0USD-windows
 )
 
 
@@ -49,7 +48,7 @@ IF %GLM_MODE% == Official (
 ::***************************************************************************/
 
 :: USD
-set PXR_PLUGINPATH_NAME=%GLM_USD_INSTALL_PREFIX%\procedurals\usd;^&
+set PXR_PLUGINPATH_NAME=%GLM_INSTALL_PREFIX%\procedurals\usd;^&
 
 :: Globals
 set PATH=%GLM_INSTALL_PREFIX%\bin;%PATH%
