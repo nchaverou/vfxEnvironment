@@ -10,8 +10,8 @@
 
 set GLM_MODE=Official
 set GLM_MAIN_VERSION=7
-set GLM_OFFICIAL_VERSION=7.3.6-2020.10.13-#2215
-set HOUDINI_VERSION=18.0.348
+set GLM_OFFICIAL_VERSION=7.3.7-2020.11.13-#2233
+set HOUDINI_VERSION=18.5.351
 set GLMCROWD_ANL_ENABLE=1
 
 
@@ -39,7 +39,7 @@ IF %GLM_MODE% == Debug (
 	set GLM_INSTALL_PREFIX=D:\Users\chaverou\Developments\GolaemForHoudini%GLM_MAIN_VERSION%\install18\GolaemCrowdDBG
 )
 IF %GLM_MODE% == Official (
-	set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-%GLM_OFFICIAL_VERSION%-Houdini18.0-windows
+	set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-%GLM_OFFICIAL_VERSION%-Houdini18.5-windows
 )
 
 

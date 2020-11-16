@@ -39,8 +39,8 @@ set MAYA_ENABLE_LEGACY_VIEWPORT=1
 :: Customers
 ::set MAYA_PROJECT=N:\tests\customers\franceTv\covid
 ::set MAYA_PROJECT=D:\Users\chaverou\Developments\GolaemML\maya
-::set MAYA_PROJECT=N:\tests\nicolas
-set MAYA_PROJECT=N:\demos\golaemEngine8
+set MAYA_PROJECT=N:\tests\nicolas
+::set MAYA_PROJECT=N:\demos\golaemEngine8
 ::set MAYA_PROJECT=N:\assets\GolaemCharacterPack-7.3.2
 ::set MAYA_PROJECT=N:\tests\functionalTests\crowd5.0
 
@@ -84,8 +84,13 @@ set FDDA_PLUGINS=D:\Users\chaverou\Developments\GolaemML\maya\plugins
 set FDDA_SCRIPTS=D:\Users\chaverou\Developments\GolaemML\maya\scripts
 
 :: USD
-set PXR_PLUGINPATH_NAME=C:/Program Files/Golaem/Golaem-7.2.2-USD0.19.11-windows/procedurals/usd
-set MAYA_USD_MODULE=D:\Users\chaverou\Developments\VFXEnvironment\maya\plugins\2018\MayaUSD
+::set PXR_PLUGINPATH_NAME=C:\Program Files\Golaem\Golaem-7.3.6-USD0.19.11-windows\procedurals\usd
+::set PATH=C:\Program Files\Golaem\Golaem-7.3.6-USD0.19.11-windows\bin;%PATH%
+set PXR_PLUGINPATH_NAME=D:\Users\chaverou\Developments\GolaemForNvUSD7\install19\GolaemCrowd\procedurals\usd
+set PATH=D:\Users\chaverou\Developments\GolaemForNvUSD7\install19\GolaemCrowd\bin;D:\Users\chaverou\Developments\GolaemMisc\golaemExternals\USD\0.19.11nv\windows\lib;%PATH%
+set TF_DEBUG=PLUG*
+
+::set MAYA_USD_MODULE=D:\Users\chaverou\Developments\VFXEnvironment\maya\plugins\2018\MayaUSD
 
 :: Xgen
 ::set PATH=%MAYA_LOCATION%/bin;%MAYA_LOCATION%/lib;%MAYA_LOCATION%/plug-ins/xgen/bin;%MAYA_LOCATION%/plug-ins/xgen/lib;%RMANTREE%/lib;%PATH%
@@ -105,7 +110,7 @@ set MY_ENVIRONMENT=D:\Users\chaverou\Developments\VFXEnvironment\maya
 ::copy "%MY_ENVIRONMENT%\prefs\tools_list_user.yaml" "%APPDATA%\Damage Inc\fxpt\fx_spark\tools_list_user.yaml"
 
 :: Maya
-set MAYA_MODULE_PATH=%GLM_MODULE_PATH%;%MTOA_MODULE_PATH%;%MAYA_USD_MODULE%;%MAYA_MODULE_PATH%
+::set MAYA_MODULE_PATH=%GLM_MODULE_PATH%;%MTOA_MODULE_PATH%;%MAYA_USD_MODULE%;%MAYA_MODULE_PATH%
 set MAYA_PLUG_IN_PATH=%MY_ENVIRONMENT%\plugins\%MAYA_VERSION%;%FDDA_PLUGINS%
 set MAYA_SCRIPT_PATH=%MY_ENVIRONMENT%\scripts;%FDDA_SCRIPTS%;%MAYA_SCRIPT_PATH%
 set PYTHONPATH=%MY_ENVIRONMENT%\scripts;%FDDA_SCRIPTS%;%FXPT_PATH%;%SKINW_PATH%;%PYTHONPATH%
@@ -137,3 +142,5 @@ set MAYAPY_EXE=bin\mayapy.exe
 ::"%MAYA_LOCATION%\bin\render" -r arnold -x 960 -y 540 -s 2 -e 2 -cam "persp" -rd C:\Maya\Output\1_frames -im mainSim_render002_RC  -proj C:\Maya\CurrentJob C:\Maya\CurrentJob\scenes\mainSim_render002_RC.mb
 ::"%MAYA_LOCATION%\%MAYA_EXE%" -batch -script "C:\Maya\CurrentJob\scenes\dirMap_golaem.mel" -log "D:/Users/chaverou/mayaBatch.txt"
 ::pause
+
+::D:\Users\chaverou\Software\System\DependencyWalkerx64\depends.exe

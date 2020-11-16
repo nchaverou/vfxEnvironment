@@ -21,6 +21,7 @@ set USD_VERS=0.19.11
 
 set USD_FILE=N:/tests/nicolas/export/quickstart736/usd/quickstart736.crowdField1_renderProxyShape1.usda
 set USD_FILE=N:/tests/nicolas/export/quickstart736/usd/quickstart736.renderProxyShape1.usda
+set USD_FILE=C:/Users/chaverou/Desktop/scenes/demoScene.renderProxyShape1.usda
 ::set USD_FILE=C:/Users/chaverou/Desktop/scenes/golaem735/quickstart735.renderProxyShape1.usda
 ::set USD_FILE=C:\Users\chaverou\Desktop\scenes\golaem73\quickstart.renderProxyShape1.usda
 ::set USD_FILE=D:\Users\chaverou\Developments\VFXEnvironment\usd\files\HumanFemale\HumanFemale.walk.usd
