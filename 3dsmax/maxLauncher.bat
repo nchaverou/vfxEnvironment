@@ -8,9 +8,9 @@
 :: GOLAEM VARIABLES
 ::***************************************************************************/
 
-set GLM_MODE=Release
+set GLM_MODE=Official
 set GLM_MAIN_VERSION=7
-set GLM_OFFICIAL_VERSION=7.3.6-2020.10.13-#2215
+set GLM_OFFICIAL_VERSION=7.3.7-2020.12.01-#2244
 set MAX_VERSION=2018
 set GLMCROWD_UNIT=4
 

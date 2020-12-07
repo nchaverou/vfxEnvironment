@@ -10,7 +10,7 @@
 
 set GLM_MODE=Official
 set GLM_MAIN_VERSION=7
-set GLM_OFFICIAL_VERSION=7.3.6
+set GLM_OFFICIAL_VERSION=7.3.7
 ::set GLM_OFFICIAL_VERSION=7.3.3
 set MAYA_VERSION=2018
 set RMAN_VERSION=23.3
@@ -36,7 +36,7 @@ set MAYA_ENABLE_LEGACY_VIEWPORT=1
 :: MAYA PROJECT
 ::***************************************************************************/
 
-:: Customers
+:: Project
 ::set MAYA_PROJECT=N:\tests\customers\franceTv\covid
 ::set MAYA_PROJECT=D:\Users\chaverou\Developments\GolaemML\maya
 set MAYA_PROJECT=N:\tests\nicolas
@@ -61,6 +61,14 @@ IF %GLM_MODE% == Official (
 set GLMCROWD_ANL_ENABLE=0
 set GLMCROWD_UNIT=3
 
+
+::/***************************************************************************
+:: DEEP VARIABLES
+::***************************************************************************/
+
+set GLMD_MODULE_PATH=D:\Users\chaverou\Developments\GolaemDeep\install%MAYA_VERSION%\GolaemDeep
+
+
 ::/***************************************************************************
 :: PLUGINS / SCRIPTS
 ::***************************************************************************/
@@ -77,7 +85,7 @@ set RMANTREE=C:\Program Files\Pixar\RenderManProServer-%RMAN_VERSION%\
 set RFMTREE=C:\Program Files\Pixar\RenderManForMaya-%RMAN_VERSION%\
 
 :: RLM
-set RLM_DIAGNOSTICS=D:\Temp\RLMDiag.txt
+::set RLM_DIAGNOSTICS=D:\Temp\RLMDiag.txt
 
 :: FDDA
 set FDDA_PLUGINS=D:\Users\chaverou\Developments\GolaemML\maya\plugins
@@ -86,10 +94,9 @@ set FDDA_SCRIPTS=D:\Users\chaverou\Developments\GolaemML\maya\scripts
 :: USD
 ::set PXR_PLUGINPATH_NAME=C:\Program Files\Golaem\Golaem-7.3.6-USD0.19.11-windows\procedurals\usd
 ::set PATH=C:\Program Files\Golaem\Golaem-7.3.6-USD0.19.11-windows\bin;%PATH%
-set PXR_PLUGINPATH_NAME=D:\Users\chaverou\Developments\GolaemForNvUSD7\install19\GolaemCrowd\procedurals\usd
-set PATH=D:\Users\chaverou\Developments\GolaemForNvUSD7\install19\GolaemCrowd\bin;D:\Users\chaverou\Developments\GolaemMisc\golaemExternals\USD\0.19.11nv\windows\lib;%PATH%
-set TF_DEBUG=PLUG*
-
+::set PXR_PLUGINPATH_NAME=D:\Users\chaverou\Developments\GolaemForNvUSD7\install19\GolaemCrowd\procedurals\usd
+::set PATH=D:\Users\chaverou\Developments\GolaemForNvUSD7\install19\GolaemCrowd\bin;D:\Users\chaverou\Developments\GolaemMisc\golaemExternals\USD\0.19.11nv\windows\lib;%PATH%
+::set TF_DEBUG=PLUG*
 ::set MAYA_USD_MODULE=D:\Users\chaverou\Developments\VFXEnvironment\maya\plugins\2018\MayaUSD
 
 :: Xgen
@@ -106,11 +113,10 @@ set SKINW_PATH=D:\Users\chaverou\Developments\skinWrangler
 
 :: My Environment
 set MY_ENVIRONMENT=D:\Users\chaverou\Developments\VFXEnvironment\maya
-
 ::copy "%MY_ENVIRONMENT%\prefs\tools_list_user.yaml" "%APPDATA%\Damage Inc\fxpt\fx_spark\tools_list_user.yaml"
 
 :: Maya
-::set MAYA_MODULE_PATH=%GLM_MODULE_PATH%;%MTOA_MODULE_PATH%;%MAYA_USD_MODULE%;%MAYA_MODULE_PATH%
+set MAYA_MODULE_PATH=%GLM_MODULE_PATH%;%GLMD_MODULE_PATH%;%MTOA_MODULE_PATH%;%MAYA_USD_MODULE%;%MAYA_MODULE_PATH%
 set MAYA_PLUG_IN_PATH=%MY_ENVIRONMENT%\plugins\%MAYA_VERSION%;%FDDA_PLUGINS%
 set MAYA_SCRIPT_PATH=%MY_ENVIRONMENT%\scripts;%FDDA_SCRIPTS%;%MAYA_SCRIPT_PATH%
 set PYTHONPATH=%MY_ENVIRONMENT%\scripts;%FDDA_SCRIPTS%;%FXPT_PATH%;%SKINW_PATH%;%PYTHONPATH%
