@@ -10,7 +10,7 @@
 
 set GLM_MODE=Official
 set GLM_MAIN_VERSION=7
-set GLM_OFFICIAL_VERSION=7.3.7-2020.12.01-PR2244
+set GLM_OFFICIAL_VERSION=7.3.8-2021.01.20-#2269
 ::set GLMCROWD_ANL_ENABLE=1
 
 set KATANA_VERSION=3.5v4
@@ -84,7 +84,7 @@ set _3DL_BIN=C:\Program Files\3Delight\bin
 ::***************************************************************************/
 
 ::set FNPXR_PLUGINPATH=C:\Program Files\Golaem\Golaem-%GLM_OFFICIAL_VERSION%-Katana3.5USD-windows\procedurals\usd
-set FNPXR_PLUGINPATH=%GLM_PROCEDURAL_PATH%\usd
+set FNPXR_PLUGINPATH=%GLM_INSTALL_PREFIX%\procedurals\usd
 ::set USD_KATANA_ALLOW_CUSTOM_MATERIAL_SCOPES=1
 
 

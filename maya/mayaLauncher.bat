@@ -10,8 +10,8 @@
 
 set GLM_MODE=Official
 set GLM_MAIN_VERSION=7
-set GLM_OFFICIAL_VERSION=7.3.7
-::set GLM_OFFICIAL_VERSION=7.3.3
+::set GLM_OFFICIAL_VERSION=7.3.2
+set GLM_OFFICIAL_VERSION=7.3.8
 set MAYA_VERSION=2018
 set RMAN_VERSION=23.3
 
@@ -67,6 +67,7 @@ set GLMCROWD_UNIT=3
 ::***************************************************************************/
 
 set GLMD_MODULE_PATH=D:\Users\chaverou\Developments\GolaemDeep\install%MAYA_VERSION%\GolaemDeep
+::set GLMD_MODULE_PATH=C:\Program Files\Golaem\GolaemDeep-0.0.1-Maya%MAYA_VERSION%
 
 
 ::/***************************************************************************
@@ -90,6 +91,9 @@ set RFMTREE=C:\Program Files\Pixar\RenderManForMaya-%RMAN_VERSION%\
 :: FDDA
 set FDDA_PLUGINS=D:\Users\chaverou\Developments\GolaemML\maya\plugins
 set FDDA_SCRIPTS=D:\Users\chaverou\Developments\GolaemML\maya\scripts
+
+:: Physx
+set PHYSX_MODULE_PATH=C:\Program Files\Golaem\PhysXForMaya2020
 
 :: USD
 ::set PXR_PLUGINPATH_NAME=C:\Program Files\Golaem\Golaem-7.3.6-USD0.19.11-windows\procedurals\usd
@@ -116,7 +120,7 @@ set MY_ENVIRONMENT=D:\Users\chaverou\Developments\VFXEnvironment\maya
 ::copy "%MY_ENVIRONMENT%\prefs\tools_list_user.yaml" "%APPDATA%\Damage Inc\fxpt\fx_spark\tools_list_user.yaml"
 
 :: Maya
-set MAYA_MODULE_PATH=%GLM_MODULE_PATH%;%GLMD_MODULE_PATH%;%MTOA_MODULE_PATH%;%MAYA_USD_MODULE%;%MAYA_MODULE_PATH%
+set MAYA_MODULE_PATH=%GLM_MODULE_PATH%;%PHYSX_MODULE_PATH%;%GLMD_MODULE_PATH%;%MTOA_MODULE_PATH%;%MAYA_USD_MODULE%;%MAYA_MODULE_PATH%
 set MAYA_PLUG_IN_PATH=%MY_ENVIRONMENT%\plugins\%MAYA_VERSION%;%FDDA_PLUGINS%
 set MAYA_SCRIPT_PATH=%MY_ENVIRONMENT%\scripts;%FDDA_SCRIPTS%;%MAYA_SCRIPT_PATH%
 set PYTHONPATH=%MY_ENVIRONMENT%\scripts;%FDDA_SCRIPTS%;%FXPT_PATH%;%SKINW_PATH%;%PYTHONPATH%

@@ -8,7 +8,7 @@
 :: UNREAL VARS
 ::***************************************************************************/
 
-set GLM_MAIN_VERSION=7
+set GLM_MAIN_VERSION=8
 set UNREAL_VERSION=4.25
 
 ::/***************************************************************************
@@ -21,16 +21,12 @@ set golaem_LICENSE=D:\golaemLayout.lic
 ::set golaem_LICENSE=2375@gitem
 ::set GLMCROWD_ANL_ENABLE=1
 
-::set GLM_INSTALL_PREFIX=D:\Users\chaverou\Developments\GolaemForUnreal%GLM_MAIN_VERSION%
-::set GLM_PROJECT=GolaemForUnreal.uproject
-set GLM_INSTALL_PREFIX=D:\Users\chaverou\Documents\UnrealProjects\GolaemPluginTest
-set GLM_PROJECT=GolaemPluginTest.uproject
+set GLM_INSTALL_PREFIX=D:\Users\chaverou\Developments\GolaemForUnreal%GLM_MAIN_VERSION%
+set GLM_PROJECT=GolaemForUnreal.uproject
+::set GLM_INSTALL_PREFIX=D:\Users\chaverou\Documents\UnrealProjects\GolaemPluginTest
+::set GLM_PROJECT=GolaemPluginTest.uproject
 
-::set GLM_INSTALL_PREFIX=D:\Users\chaverou\Developments\ArchersScene
-::set GLM_PROJECT=ArchersScene.uproject
 set GLMCROWD_UNIT=3
-::set GLM_INSTALL_PREFIX=D:\Users\chaverou\Documents\Unreal Projects\MyProject
-::set GLM_PROJECT=MyProject.uproject
 
 ::/***************************************************************************
 :: LAUNCH UNREAL

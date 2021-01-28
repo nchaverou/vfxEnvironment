@@ -10,7 +10,8 @@
 
 set GLM_MODE=Official
 set GLM_MAIN_VERSION=7
-set GLM_OFFICIAL_VERSION=7.3.7-2020.12.01-#2244
+::set GLM_OFFICIAL_VERSION=7.3.7-2020.12.01-#2244
+set GLM_OFFICIAL_VERSION=7.3.8-2021.01.20-#2269
 set GLM_MODE=Official
 set USD_VERS=0.19.11
 
@@ -21,7 +22,8 @@ set USD_VERS=0.19.11
 
 set USD_FILE=N:/tests/nicolas/export/quickStart737/cache/quickStart737.renderProxyShape1.usda
 set USD_FILE=N:/tests/nicolas/export/quickStart737/usd/quickStart737.crowdField1_renderProxyShape1.usda
-set USD_FILE=N:/tests/customers/digic/201120_usdCrash/ghoul_base_motions_C1_v001.golaemCrowd_ghoul_basic_C1_000_renderProxyShape1.usda
+set USD_FILE=N:/tests/nicolas/export/quickStart738/usd/quickStart738.renderProxyShape1.usda
+set USD_FILE=N:/tests/nicolas/export/quickStart738/usdSkel/quickStart738.crowdField1_renderProxyShape1.usdc
 
 
 ::/***************************************************************************
