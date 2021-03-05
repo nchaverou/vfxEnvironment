@@ -8,11 +8,11 @@
 :: GLOBAL VARS
 ::***************************************************************************/
 
-set GLM_MODE=Official
+set GLM_MODE=Release
 set GLM_MAIN_VERSION=7
-set GLM_OFFICIAL_VERSION=7.3.8-2021.01.20-#2269 18
-::set HOUDINI_VERSION=18.5.351
-set HOUDINI_VERSION=18.0.566
+set GLM_OFFICIAL_VERSION=7.3.8-2021.01.20-#2269
+set HOUDINI_VERSION=18.5.462
+::set HOUDINI_VERSION=18.0.566
 set GLMCROWD_ANL_ENABLE=1
 
 
@@ -29,15 +29,15 @@ set HIP=N:/tests/nicolas
 
 set GLMCROWD_NO_PLE=1
 ::set GLMCROWD_NO_LICENSE=1
-set golaem_LICENSE=D:\golaemLayout.lic
+set golaem_LICENSE=C:\Licenses\golaemLayout.lic
 
 ::/***************************************************************************
 :: LICENSE
 ::***************************************************************************/
 
-set GLM_INSTALL_PREFIX=D:\Users\chaverou\Developments\GolaemForHoudini%GLM_MAIN_VERSION%\install18\GolaemCrowd
+set GLM_INSTALL_PREFIX=C:\Users\chaverou\Developments\GolaemForHoudini%GLM_MAIN_VERSION%\install185\GolaemCrowd
 IF %GLM_MODE% == Debug (
-	set GLM_INSTALL_PREFIX=D:\Users\chaverou\Developments\GolaemForHoudini%GLM_MAIN_VERSION%\install18\GolaemCrowdDBG
+	set GLM_INSTALL_PREFIX=C:\Users\chaverou\Developments\GolaemForHoudini%GLM_MAIN_VERSION%\install185\GolaemCrowdDBG
 )
 IF %GLM_MODE% == Official (
 	set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-%GLM_OFFICIAL_VERSION%-Houdini18.0-windows
@@ -69,3 +69,5 @@ set HOUDINI_UI_ICON_PATH=%GLM_INSTALL_PREFIX%\procedurals\houdini\icons;^&
 set HOUDINI_LOCATION=C:\Program Files\Side Effects Software\Houdini %HOUDINI_VERSION%
 set HOUDINI_EXE=bin\houdinifx.exe
 "%HOUDINI_LOCATION%\%HOUDINI_EXE%"
+
+::pause

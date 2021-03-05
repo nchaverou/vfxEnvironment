@@ -11,6 +11,7 @@
 set GLM_GEO_ENGINE_VERSION=1409101264
 
 set MAYA_VERSION=2018
+set 3DSMAX_VERSION=2018
 set GLM_EXTERNALS_HOME=C:\Users\chaverou\Developments\GolaemMisc\golaemExternals
 
 ::/***************************************************************************

@@ -8,7 +8,7 @@
 :: GLOBAL VARS
 ::***************************************************************************/
 
-set GLM_MODE=Official
+set GLM_MODE=Release
 set GLM_MAIN_VERSION=7
 ::set GLM_OFFICIAL_VERSION=7.3.2
 set GLM_OFFICIAL_VERSION=7.3.8
@@ -23,9 +23,9 @@ set RMAN_VERSION=23.3
 ::set GLMCROWD_NO_LICENSE=1
 ::set GLMCROWD_LAYOUT_LICENSE=1
 ::set GLMCROWD_NO_PLE=1
-set golaem_LICENSE=D:\golaemFull.lic
+set golaem_LICENSE=C:\Licenses\golaemFull.lic
 ::set golaem_LICENSE=2375@gitem
-set solidangle_LICENSE=D:\arnold.lic
+set solidangle_LICENSE=C:\Licenses\arnold.lic
 ::set solidangle_LICENSE=5053@gitem
 ::set PIXAR_LICENSE_FILE=9010@GITEM
 set MAYA_LICENSE_METHOD=network
@@ -37,9 +37,9 @@ set MAYA_ENABLE_LEGACY_VIEWPORT=1
 ::***************************************************************************/
 
 :: Project
-::set MAYA_PROJECT=N:\tests\customers\franceTv\covid
+set MAYA_PROJECT=N:\tests\customers\method\210302_cloth
 ::set MAYA_PROJECT=D:\Users\chaverou\Developments\GolaemML\maya
-set MAYA_PROJECT=N:\tests\nicolas
+::set MAYA_PROJECT=N:\tests\nicolas
 ::set MAYA_PROJECT=N:\demos\golaemEngine8
 ::set MAYA_PROJECT=N:\assets\GolaemCharacterPack-7.3.2
 ::set MAYA_PROJECT=N:\tests\functionalTests\crowd5.0
@@ -49,9 +49,9 @@ set MAYA_PROJECT=N:\tests\nicolas
 :: CROWD VARIABLES
 ::***************************************************************************/
 
-set GLM_MODULE_PATH=D:\Users\chaverou\Developments\Golaem%GLM_MAIN_VERSION%\install%MAYA_VERSION%\GolaemCrowd
+set GLM_MODULE_PATH=C:\Users\chaverou\Developments\Golaem%GLM_MAIN_VERSION%\install%MAYA_VERSION%\GolaemCrowd
 IF %GLM_MODE% == Debug (
-	set GLM_MODULE_PATH=D:\Users\chaverou\Developments\Golaem%GLM_MAIN_VERSION%\install%MAYA_VERSION%\GolaemCrowdDBG
+	set GLM_MODULE_PATH=C:\Users\chaverou\Developments\Golaem%GLM_MAIN_VERSION%\install%MAYA_VERSION%\GolaemCrowdDBG
 )
 IF %GLM_MODE% == Official (
 	set GLM_MODULE_PATH=C:\Program Files\Golaem\Golaem-%GLM_OFFICIAL_VERSION%-Maya%MAYA_VERSION%
@@ -66,7 +66,7 @@ set GLMCROWD_UNIT=3
 :: DEEP VARIABLES
 ::***************************************************************************/
 
-set GLMD_MODULE_PATH=D:\Users\chaverou\Developments\GolaemDeep\install%MAYA_VERSION%\GolaemDeep
+set GLMD_MODULE_PATH=C:\Users\chaverou\Developments\GolaemDeep\install%MAYA_VERSION%\GolaemDeep
 ::set GLMD_MODULE_PATH=C:\Program Files\Golaem\GolaemDeep-0.0.1-Maya%MAYA_VERSION%
 
 
@@ -89,11 +89,11 @@ set RFMTREE=C:\Program Files\Pixar\RenderManForMaya-%RMAN_VERSION%\
 ::set RLM_DIAGNOSTICS=D:\Temp\RLMDiag.txt
 
 :: FDDA
-set FDDA_PLUGINS=D:\Users\chaverou\Developments\GolaemML\maya\plugins
-set FDDA_SCRIPTS=D:\Users\chaverou\Developments\GolaemML\maya\scripts
+set FDDA_PLUGINS=C:\Users\chaverou\Developments\GolaemML\maya\plugins
+set FDDA_SCRIPTS=C:\Users\chaverou\Developments\GolaemML\maya\scripts
 
 :: Physx
-set PHYSX_MODULE_PATH=C:\Program Files\Golaem\PhysXForMaya2020
+set PHYSX_MODULE_PATH=C:\Program Files\Golaem\PhysXForMaya%MAYA_VERSION%
 
 :: USD
 ::set PXR_PLUGINPATH_NAME=C:\Program Files\Golaem\Golaem-7.3.6-USD0.19.11-windows\procedurals\usd
@@ -108,7 +108,7 @@ set PHYSX_MODULE_PATH=C:\Program Files\Golaem\PhysXForMaya2020
 
 :: Tools
 ::set FXPT_PATH=C:\Users\chaverou\Developments\fxpt
-set SKINW_PATH=D:\Users\chaverou\Developments\skinWrangler
+set SKINW_PATH=C:\Users\chaverou\Developments\skinWrangler
 
 
 ::/***************************************************************************
@@ -116,12 +116,13 @@ set SKINW_PATH=D:\Users\chaverou\Developments\skinWrangler
 ::***************************************************************************/
 
 :: My Environment
-set MY_ENVIRONMENT=D:\Users\chaverou\Developments\VFXEnvironment\maya
+set MY_ENVIRONMENT=C:\Users\chaverou\Developments\VFXEnvironment\maya
 ::copy "%MY_ENVIRONMENT%\prefs\tools_list_user.yaml" "%APPDATA%\Damage Inc\fxpt\fx_spark\tools_list_user.yaml"
 
 :: Maya
+::set PATH=%GLM_MODULE_PATH%\bin;%PATH%
 set MAYA_MODULE_PATH=%GLM_MODULE_PATH%;%PHYSX_MODULE_PATH%;%GLMD_MODULE_PATH%;%MTOA_MODULE_PATH%;%MAYA_USD_MODULE%;%MAYA_MODULE_PATH%
-set MAYA_PLUG_IN_PATH=%MY_ENVIRONMENT%\plugins\%MAYA_VERSION%;%FDDA_PLUGINS%
+set MAYA_PLUG_IN_PATH=%MY_ENVIRONMENT%\plugins\%MAYA_VERSION%;%VERGE3D_PATH%;%FDDA_PLUGINS%
 set MAYA_SCRIPT_PATH=%MY_ENVIRONMENT%\scripts;%FDDA_SCRIPTS%;%MAYA_SCRIPT_PATH%
 set PYTHONPATH=%MY_ENVIRONMENT%\scripts;%FDDA_SCRIPTS%;%FXPT_PATH%;%SKINW_PATH%;%PYTHONPATH%
 set XBMLANGPATH=%MY_ENVIRONMENT%\icons;%XBMLANGPATH%
@@ -153,4 +154,4 @@ set MAYAPY_EXE=bin\mayapy.exe
 ::"%MAYA_LOCATION%\%MAYA_EXE%" -batch -script "C:\Maya\CurrentJob\scenes\dirMap_golaem.mel" -log "D:/Users/chaverou/mayaBatch.txt"
 ::pause
 
-::D:\Users\chaverou\Software\System\DependencyWalkerx64\depends.exe
+::C:\Users\chaverou\Software\System\DependencyWalkerx64\depends.exe

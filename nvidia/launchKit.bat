@@ -10,8 +10,8 @@
 
 :: USD
 set USD_DLL=C:\Omniverse\Library\collaboration\nucleus-workstation 2020.3.0\Nucleus\usd_release\lib
-set PXR_PLUGINPATH_NAME=C:\Users\chaverou\Developments\GolaemForNvUSD7\install19\GolaemCrowd\procedurals\usd
-set PATH=C:\Users\chaverou\Developments\GolaemForNvUSD7\install19\GolaemCrowd\bin;%USD_DLL%;%PATH%
+set PXR_PLUGINPATH_NAME=C:\Users\chaverou\Developments\GolaemForNvUSD7\install20\GolaemCrowd\procedurals\usd
+set PATH=C:\Users\chaverou\Developments\GolaemForNvUSD7\install20\GolaemCrowd\bin;%USD_DLL%;%PATH%
 
 
 ::/***************************************************************************
@@ -27,4 +27,4 @@ set KIT_EXE=release\kit.exe
 ::setlocal
 "%KIT_LOCATION%\%KIT_EXE%" "%KIT_CONFIG%" --ext-folder "%EXT_CONFIG%\exts" --ext-folder "%EXT_CONFIG%\apps"
 
-C:\Users\chaverou\Software\System\DependencyWalkerx64\depends.exe
+::C:\Users\chaverou\Software\System\DependencyWalkerx64\depends.exe

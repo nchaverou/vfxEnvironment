@@ -10,13 +10,13 @@
 
 set GLM_MODE=Official
 set GLM_MAIN_VERSION=7
-set GLM_OFFICIAL_VERSION=7.3.8-2021.01.20-#2269
+set GLM_OFFICIAL_VERSION=7.3.8
 ::set GLMCROWD_ANL_ENABLE=1
 
-set KATANA_VERSION=3.5v4
+set KATANA_VERSION=4.0v2
 set RMAN_VERSION=23.3
 set DEFAULT_RENDERER=Arnold
-set foundry_LICENSE=D:\foundry.lic
+set foundry_LICENSE=C:\Licenses\foundry.lic
 
 
 ::/***************************************************************************
@@ -25,16 +25,16 @@ set foundry_LICENSE=D:\foundry.lic
 
 ::set GLMCROWD_NO_PLE=1
 ::set GLMCROWD_NO_LICENSE=1
-set golaem_LICENSE=D:\golaemLayout.lic
+set golaem_LICENSE=C:\Licenses\golaemLayout.lic
 
 
 ::/***************************************************************************
 :: GOLAEM
 ::***************************************************************************/
 
-set GLM_INSTALL_PREFIX=D:\Users\chaverou\Developments\GolaemForKatana%GLM_MAIN_VERSION%\install3\GolaemCrowd
+set GLM_INSTALL_PREFIX=C:\Users\chaverou\Developments\GolaemForKatana%GLM_MAIN_VERSION%\install3\GolaemCrowd
 IF %GLM_MODE% == Debug (
-	set GLM_INSTALL_PREFIX=D:\Users\chaverou\Developments\GolaemForKatana%GLM_MAIN_VERSION%\install3\GolaemCrowdDBG
+	set GLM_INSTALL_PREFIX=C:\Users\chaverou\Developments\GolaemForKatana%GLM_MAIN_VERSION%\install3\GolaemCrowdDBG
 )
 IF %GLM_MODE% == Official (
 	set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-%GLM_OFFICIAL_VERSION%-Katana3.5-windows
@@ -101,7 +101,7 @@ set KATANA_TOOLS=%MY_ENVIRONMENT%\katana\tools
 :: LAUNCH KATANA
 ::***************************************************************************/
 
-set KATANA_LOCATION=C:\Program Files\Katana%KATANA_VERSION%
+set KATANA_LOCATION=C:\Program Files\Foundry\Katana%KATANA_VERSION%
 set "KATANA_TAGLINE=With Katana %KATANA_VERSION% - kToA 2.3.1.1 and Renderman %RMAN_VERSION%"
 set KATANA_POST_PYTHONPATH=%KTOG_PATH%\Python;
 set KATANA_RESOURCES=%KTOA_PATH%;%KTOR_PATH%;%KTORS_PATH%;%KTO3DL_PATH%;%KTOG_PATH%;%KATANA_TOOLS%;%KATANA_LOCATION%\plugins\Resources\Usd\plugin
@@ -111,4 +111,4 @@ set KATANA_EXE=bin\katanaBin.exe
 "%KATANA_LOCATION%\%KATANA_EXE%"
 
 ::C:\Users\chaverou\Software\System\DependencyWalker64\depends.exe
-::pause
+pause

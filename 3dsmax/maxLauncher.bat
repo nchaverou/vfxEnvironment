@@ -8,11 +8,12 @@
 :: GOLAEM VARIABLES
 ::***************************************************************************/
 
-set GLM_MODE=Official
+set GLM_MODE=Release
 set GLM_MAIN_VERSION=7
-set GLM_OFFICIAL_VERSION=7.3.8-2021.01.20-#2269
-set MAX_VERSION=2018
-set GLMCROWD_UNIT=4
+::set GLM_OFFICIAL_VERSION=7.3.8
+set GLM_OFFICIAL_VERSION=7.3.9-2021.03.04-64fe781f7
+set MAX_VERSION=2020
+::set GLMCROWD_UNIT=3
 
 
 ::/***************************************************************************
@@ -20,9 +21,9 @@ set GLMCROWD_UNIT=4
 ::***************************************************************************/
 
 :: Golaem
-set GLM_INSTALL_PREFIX=D:\Users\chaverou\Developments\GolaemForMax%GLM_MAIN_VERSION%\install%MAX_VERSION%\GolaemCrowd
+set GLM_INSTALL_PREFIX=C:\Users\chaverou\Developments\GolaemForMax%GLM_MAIN_VERSION%\install%MAX_VERSION%\GolaemCrowd
 IF %GLM_MODE% == Debug (
-	set GLM_INSTALL_PREFIX=D:\Users\chaverou\Developments\GolaemForMax%GLM_MAIN_VERSION%\install%MAX_VERSION%\GolaemCrowdDBG
+	set GLM_INSTALL_PREFIX=C:\Users\chaverou\Developments\GolaemForMax%GLM_MAIN_VERSION%\install%MAX_VERSION%\GolaemCrowdDBG
 )
 IF %GLM_MODE% == Official (
 	set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-%GLM_OFFICIAL_VERSION%-Max%MAX_VERSION%
@@ -34,8 +35,11 @@ set GLM_VRAY_PLUGINS_PATH=%GLM_INSTALL_PREFIX%\procedurals\vray
 set PATH=%GLM_CROWD_BIN%;%PATH%;%SystemRoot%;%SystemRoot%\system;
 
 :: VRay
-set VRAY30_RT_FOR_3DSMAX2018_PLUGINS_x64=%GLM_VRAY_PLUGINS_PATH%;%VRAY30_RT_FOR_3DSMAX2018_PLUGINS_x64%;
 set VRAY4_FOR_3DSMAX2018_PLUGINS=%GLM_VRAY_PLUGINS_PATH%;%VRAY4_FOR_3DSMAX2018_PLUGINS%;
+set VRAY5_FOR_3DSMAX2018_PLUGINS=%GLM_VRAY_PLUGINS_PATH%;%VRAY5_FOR_3DSMAX2018_PLUGINS%;
+
+set VRAY4_FOR_3DSMAX2020_PLUGINS=%GLM_VRAY_PLUGINS_PATH%;%VRAY4_FOR_3DSMAX2020_PLUGINS%;
+set VRAY5_FOR_3DSMAX2020_PLUGINS=%GLM_VRAY_PLUGINS_PATH%;%VRAY5_FOR_3DSMAX2020_PLUGINS%;
 
 
 ::/***************************************************************************
