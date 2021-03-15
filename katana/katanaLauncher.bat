@@ -10,13 +10,12 @@
 
 set GLM_MODE=Official
 set GLM_MAIN_VERSION=7
-set GLM_OFFICIAL_VERSION=7.3.8
+set GLM_OFFICIAL_VERSION=7.3.9-2021.03.08-#2300
 ::set GLMCROWD_ANL_ENABLE=1
 
-set KATANA_VERSION=4.0v2
+set KATANA_VERSION=3.5v4
 set RMAN_VERSION=23.3
 set DEFAULT_RENDERER=Arnold
-set foundry_LICENSE=C:\Licenses\foundry.lic
 
 
 ::/***************************************************************************
@@ -25,6 +24,7 @@ set foundry_LICENSE=C:\Licenses\foundry.lic
 
 ::set GLMCROWD_NO_PLE=1
 ::set GLMCROWD_NO_LICENSE=1
+set foundry_LICENSE=C:\Licenses\foundry.lic
 set golaem_LICENSE=C:\Licenses\golaemLayout.lic
 
 
@@ -60,7 +60,7 @@ set RMAN_RIXPLUGINPATH=%GLM_INSTALL_PREFIX%\shaders\renderman;%RMANTREE%\lib\plu
 ::***************************************************************************/
 
 pushd C:
-set KTOA_PATH=C:\solidangle\ktoadeploy\KtoA-3.1.1.1-kat3.5-windows
+set KTOA_PATH=C:\solidangle\ktoadeploy\3.5-3.1.1.2
 set ARNOLD_PLUGIN_PATH=%GLM_INSTALL_PREFIX%\procedurals\arnold;%GLM_INSTALL_PREFIX%\shaders\arnold
 
 ::/***************************************************************************
@@ -83,8 +83,8 @@ set _3DL_BIN=C:\Program Files\3Delight\bin
 :: USD
 ::***************************************************************************/
 
-::set FNPXR_PLUGINPATH=C:\Program Files\Golaem\Golaem-%GLM_OFFICIAL_VERSION%-Katana3.5USD-windows\procedurals\usd
-set FNPXR_PLUGINPATH=%GLM_INSTALL_PREFIX%\procedurals\usd
+set FNPXR_PLUGINPATH=C:\Program Files\Golaem\Golaem-%GLM_OFFICIAL_VERSION%-Katana3.5USD-windows\procedurals\usd
+::set FNPXR_PLUGINPATH=%GLM_INSTALL_PREFIX%\procedurals\usd
 ::set USD_KATANA_ALLOW_CUSTOM_MATERIAL_SCOPES=1
 
 
@@ -93,7 +93,7 @@ set FNPXR_PLUGINPATH=%GLM_INSTALL_PREFIX%\procedurals\usd
 ::***************************************************************************/
 
 :: My Environment
-set MY_ENVIRONMENT=D:\Users\chaverou\Developments\VFXEnvironment
+set MY_ENVIRONMENT=C:\Users\chaverou\Developments\VFXEnvironment
 set KATANA_TOOLS=%MY_ENVIRONMENT%\katana\tools
 
 
@@ -111,4 +111,4 @@ set KATANA_EXE=bin\katanaBin.exe
 "%KATANA_LOCATION%\%KATANA_EXE%"
 
 ::C:\Users\chaverou\Software\System\DependencyWalker64\depends.exe
-pause
+::pause

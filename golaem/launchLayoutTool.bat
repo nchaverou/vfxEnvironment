@@ -9,20 +9,21 @@
 ::***************************************************************************/
 
 set GLM_MODE=Official
-set GLM_OFFICIAL_VERSION=7.3.8-2021.01.20-PR2269
+set GLM_OFFICIAL_VERSION=7.3.9-2021.03.08-PR2300
 set MAYA_VERSION=2018
+set KATANA_VERSION=3.5v4
 ::set DCC=Katana
 set DCC=Maya
-set golaem_LICENSE=D:\golaemLayout.lic
+set golaem_LICENSE=C:\Licenses\golaemLayout.lic
 
 
 ::/***************************************************************************
 :: GOLAEM VARS
 ::***************************************************************************/
 
-set GLM_INSTALL_DIR=D:\Users\chaverou\Developments\Golaem7\install%MAYA_VERSION%\GolaemCrowd
+set GLM_INSTALL_DIR=C:\Users\chaverou\Developments\Golaem7\install%MAYA_VERSION%\GolaemCrowd
 IF %GLM_MODE% == Debug (
-	set GLM_INSTALL_DIR=D:\Users\chaverou\Developments\Golaem7\install%MAYA_VERSION%\GolaemCrowdDBG
+	set GLM_INSTALL_DIR=C:\Users\chaverou\Developments\Golaem7\install%MAYA_VERSION%\GolaemCrowdDBG
 )
 IF %GLM_MODE% == Official (
 	set GLM_INSTALL_DIR=C:\Program Files\Golaem\Golaem-%GLM_OFFICIAL_VERSION%-Maya%MAYA_VERSION%
@@ -41,8 +42,8 @@ IF %DCC% == Maya (
 	set PYTHONINTERPRETER="C:\Program Files\Autodesk\Maya%MAYA_VERSION%\bin\mayapy.exe"
 )
 IF %DCC% == Katana (
-	set foundry_LICENSE=D:\foundry.lic
-	set PYTHONINTERPRETER="C:\Program Files\Foundry\Katana3.1v2\bin\katanaPython.exe"
+	set foundry_LICENSE=C:\Licenses\foundry.lic
+	set PYTHONINTERPRETER="C:\Program Files\Foundry\Katana%KATANA_VERSION%\bin\katanaPython.exe"
 )
 
 :: Script
@@ -55,3 +56,4 @@ set LAYOUT_TOOL="%GLM_INSTALL_DIR%\scripts\glm\layout\layoutEditorStandAlone.py"
 
 %PYTHONINTERPRETER% %LAYOUT_TOOL%
 ::%PYTHONINTERPRETER%
+pause

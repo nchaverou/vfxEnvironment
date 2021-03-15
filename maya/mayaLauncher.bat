@@ -8,11 +8,11 @@
 :: GLOBAL VARS
 ::***************************************************************************/
 
-set GLM_MODE=Release
-set GLM_MAIN_VERSION=7
-::set GLM_OFFICIAL_VERSION=7.3.2
+set GLM_MODE=Official
+set GLM_MAIN_VERSION=8
 set GLM_OFFICIAL_VERSION=7.3.8
-set MAYA_VERSION=2018
+::set GLM_OFFICIAL_VERSION=7.3.9-2021.03.08-PR2300
+set MAYA_VERSION=2020
 set RMAN_VERSION=23.3
 
 
@@ -37,9 +37,9 @@ set MAYA_ENABLE_LEGACY_VIEWPORT=1
 ::***************************************************************************/
 
 :: Project
-set MAYA_PROJECT=N:\tests\customers\method\210302_cloth
+::set MAYA_PROJECT=N:\tests\customers\method\210302_cloth
 ::set MAYA_PROJECT=D:\Users\chaverou\Developments\GolaemML\maya
-::set MAYA_PROJECT=N:\tests\nicolas
+set MAYA_PROJECT=N:\tests\nicolas
 ::set MAYA_PROJECT=N:\demos\golaemEngine8
 ::set MAYA_PROJECT=N:\assets\GolaemCharacterPack-7.3.2
 ::set MAYA_PROJECT=N:\tests\functionalTests\crowd5.0
