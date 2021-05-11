@@ -8,8 +8,8 @@
 :: UNREAL VARS
 ::***************************************************************************/
 
-set GLM_MAIN_VERSION=8
-set UNREAL_VERSION=4.25
+set GLM_MAIN_VERSION=7
+set UNREAL_VERSION=4.26
 
 ::/***************************************************************************
 :: GOLAEM
@@ -21,11 +21,11 @@ set golaem_LICENSE=C:\Licenses\golaemLayout.lic
 ::set golaem_LICENSE=2375@gitem
 ::set GLMCROWD_ANL_ENABLE=1
 
-::set GLM_INSTALL_PREFIX=C:\Users\chaverou\Developments\GolaemForUnreal%GLM_MAIN_VERSION%
-::set GLM_PROJECT=GolaemForUnreal.uproject
-set GLM_INSTALL_PREFIX=C:\Users\chaverou\Documents\UnrealProjects\GolaemReleaseTest
+set GLM_INSTALL_PREFIX=C:\Users\chaverou\Developments\GolaemForUnreal%GLM_MAIN_VERSION%
+set GLM_PROJECT=GolaemForUnreal.uproject
+::set GLM_INSTALL_PREFIX=C:\Users\chaverou\Documents\UnrealProjects\GolaemReleaseTest%UNREAL_VERSION%
 
-set GLMCROWD_UNIT=3
+set GLMCROWD_UNIT=1
 
 ::/***************************************************************************
 :: LAUNCH UNREAL

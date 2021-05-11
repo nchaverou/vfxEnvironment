@@ -10,7 +10,7 @@
 
 set GLM_MODE=Official
 set GLM_MAIN_VERSION=7
-set GLM_OFFICIAL_VERSION=7.3.9-2021.03.08-#2300
+set GLM_OFFICIAL_VERSION=8-2021.04.28-#2333
 ::set GLMCROWD_ANL_ENABLE=1
 
 set KATANA_VERSION=3.5v4
@@ -51,8 +51,8 @@ set GLM_CROWD_BIN=%GLM_INSTALL_PREFIX%\bin
 set RMANTREE=C:\Program Files\Pixar\RenderManProServer-%RMAN_VERSION%
 set KTOR_PATH=C:\Program Files\Pixar\RenderManForKatana-%RMAN_VERSION%-katana3.5\plugins\Resources\PRMan23
 ::set RFK_REDIRECT_OUTPUT="C:/katanaLog.txt"
-set RMAN_DSOPATH=%GLM_INSTALL_PREFIX%\procedurals\renderman
-set RMAN_RIXPLUGINPATH=%GLM_INSTALL_PREFIX%\shaders\renderman;%RMANTREE%\lib\plugins
+set RMAN_DSOPATH=%GLM_INSTALL_PREFIX%\procedurals\renderman\23
+set RMAN_RIXPLUGINPATH=%GLM_INSTALL_PREFIX%\shaders\renderman\23;%RMANTREE%\lib\plugins
 
 
 ::/***************************************************************************
@@ -61,7 +61,7 @@ set RMAN_RIXPLUGINPATH=%GLM_INSTALL_PREFIX%\shaders\renderman;%RMANTREE%\lib\plu
 
 pushd C:
 set KTOA_PATH=C:\solidangle\ktoadeploy\3.5-3.1.1.2
-set ARNOLD_PLUGIN_PATH=%GLM_INSTALL_PREFIX%\procedurals\arnold;%GLM_INSTALL_PREFIX%\shaders\arnold
+set ARNOLD_PLUGIN_PATH=%GLM_INSTALL_PREFIX%\procedurals\arnold\60;%GLM_INSTALL_PREFIX%\shaders\arnold\60
 
 ::/***************************************************************************
 :: REDSHIFT
@@ -69,7 +69,7 @@ set ARNOLD_PLUGIN_PATH=%GLM_INSTALL_PREFIX%\procedurals\arnold;%GLM_INSTALL_PREF
 
 set KTORS_PATH=C:\ProgramData\Redshift\Plugins\Katana\3.0v1
 set REDSHIFT_BIN=C:\ProgramData\Redshift\bin
-set REDSHIFT_PROCEDURALSPATH=%GLM_INSTALL_PREFIX%\procedurals\redshift;%GLM_INSTALL_PREFIX%\procedurals\redshift;%REDSHIFT_PROCEDURALSPATH%
+set REDSHIFT_PROCEDURALSPATH=%GLM_INSTALL_PREFIX%\procedurals\redshift\3036;%REDSHIFT_PROCEDURALSPATH%
 
 ::/***************************************************************************
 :: 3DELIGHT

@@ -18,8 +18,8 @@ set PATH=C:\Users\chaverou\Developments\GolaemForNvUSD7\install20\GolaemCrowd\bi
 :: LAUNCH KIT
 ::***************************************************************************/
 
-set KIT_CONFIG=C:\Omniverse\Library\create 2020.3.2\_build\windows-x86_64\release\apps\omni.create.launcher.kit
-set EXT_CONFIG=C:\Omniverse\Library\create 2020.3.2\_build\windows-x86_64\release\
+set KIT_CONFIG=C:\Omniverse\Library\create 2021.1.0\_build\windows-x86_64\release\apps\omni.create.launcher.kit
+set EXT_CONFIG=C:\Omniverse\Library\create 2021.1.0\_build\windows-x86_64\release\
 set KIT_LOCATION=C:\Omniverse\Library\kit 100.1.0\_build\windows-x86_64
 set KIT_EXE=release\kit.exe
 

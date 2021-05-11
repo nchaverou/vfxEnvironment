@@ -10,7 +10,8 @@
 
 set GLM_MODE=Official
 set GLM_MAIN_VERSION=7
-set GLM_OFFICIAL_VERSION=7.3.9-2021.03.08-#2300
+set GLM_OFFICIAL_VERSION=8-2021.04.28-#2333
+set GLM_OFFICIAL_VERSION=7.3.10-2021.04.21-#2329
 set HOUDINI_VERSION=18.5.462
 ::set HOUDINI_VERSION=18.0.566
 set GLMCROWD_ANL_ENABLE=1
@@ -27,7 +28,7 @@ set HIP=N:/tests/nicolas
 :: LICENSE
 ::***************************************************************************/
 
-set GLMCROWD_NO_PLE=1
+::set GLMCROWD_NO_PLE=1
 ::set GLMCROWD_NO_LICENSE=1
 set golaem_LICENSE=C:\Licenses\golaemLayout.lic
 

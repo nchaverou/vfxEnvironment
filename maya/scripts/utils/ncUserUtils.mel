@@ -103,7 +103,6 @@ global proc ncLoadDependencies()
 	ncLoadPlugin("fbxmaya");
 	ncLoadPlugin("CharcoalEditor");
 	
-	ncLoadPlugin("Mayatomr");
 	ncLoadPlugin("mtoa");
 	evalDeferred("setCurrentRenderer arnold;");
 

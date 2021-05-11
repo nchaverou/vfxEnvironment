@@ -8,11 +8,12 @@
 :: GLOBAL VARS
 ::***************************************************************************/
 
-set GLM_MODE=Official
-set GLM_MAIN_VERSION=8
-set GLM_OFFICIAL_VERSION=7.3.8
-::set GLM_OFFICIAL_VERSION=7.3.9-2021.03.08-PR2300
-set MAYA_VERSION=2020
+set GLM_MODE=Debug
+set GLM_MAIN_VERSION=7
+::set GLM_OFFICIAL_VERSION=7.3.9
+set GLM_OFFICIAL_VERSION=7.3.10-2021.04.21-PR2329
+::set GLM_OFFICIAL_VERSION=8-2021.04.28-PR2333
+set MAYA_VERSION=2018
 set RMAN_VERSION=23.3
 
 
@@ -30,6 +31,7 @@ set solidangle_LICENSE=C:\Licenses\arnold.lic
 ::set PIXAR_LICENSE_FILE=9010@GITEM
 set MAYA_LICENSE_METHOD=network
 set MAYA_ENABLE_LEGACY_VIEWPORT=1
+::set MAYA_APP_DIR=C:/Shared/
 
 
 ::/***************************************************************************
@@ -40,7 +42,7 @@ set MAYA_ENABLE_LEGACY_VIEWPORT=1
 ::set MAYA_PROJECT=N:\tests\customers\method\210302_cloth
 ::set MAYA_PROJECT=D:\Users\chaverou\Developments\GolaemML\maya
 set MAYA_PROJECT=N:\tests\nicolas
-::set MAYA_PROJECT=N:\demos\golaemEngine8
+::set MAYA_PROJECT=N:\demos\academy2021
 ::set MAYA_PROJECT=N:\assets\GolaemCharacterPack-7.3.2
 ::set MAYA_PROJECT=N:\tests\functionalTests\crowd5.0
 
@@ -117,7 +119,7 @@ set SKINW_PATH=C:\Users\chaverou\Developments\skinWrangler
 
 :: My Environment
 set MY_ENVIRONMENT=C:\Users\chaverou\Developments\VFXEnvironment\maya
-::copy "%MY_ENVIRONMENT%\prefs\tools_list_user.yaml" "%APPDATA%\Damage Inc\fxpt\fx_spark\tools_list_user.yaml"
+copy "%MY_ENVIRONMENT%\prefs\tools_list_user.yaml" "%APPDATA%\Damage Inc\fxpt\fx_spark\tools_list_user.yaml"
 
 :: Maya
 ::set PATH=%GLM_MODULE_PATH%\bin;%PATH%

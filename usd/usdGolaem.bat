@@ -10,7 +10,7 @@
 
 set GLM_MODE=Official
 set GLM_MAIN_VERSION=7
-set GLM_OFFICIAL_VERSION=7.3.9-2021.03.08-#2300
+set GLM_OFFICIAL_VERSION=8-2021.04.28-#2333
 set USD_VERS=0.20.02
 
 
@@ -18,8 +18,10 @@ set USD_VERS=0.20.02
 :: FILE
 ::***************************************************************************/
 
-set USD_FILE=N:/tests/nicolas/usd/quickstart739.renderProxyShape1.usda
-set USD_FILE=N:/tests/nicolas/usd/quickstart739.crowdField1_renderProxyShape1.usda
+::set USD_FILE=N:/tests/nicolas/usd/quickstart739.renderProxyShape1.usda
+set USD_FILE=N:/tests/nicolas/export/quickStart7310/usd/quickStart7310.renderProxyShape1.usda
+set USD_FILE=N:/tests/nicolas/export/quickstart80/usdProc/quickstart80.renderProxyShape1.usda
+::set USD_FILE=N:/tests/nicolas/export/redshiftMax/usd/redshiftMax.crowdField1_renderProxyShape1.usdc
 
 
 ::/***************************************************************************
