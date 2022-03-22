@@ -11,10 +11,10 @@
 set GLM_MODE=Official
 set GLM_MAIN_VERSION=7
 ::set GLM_OFFICIAL_VERSION=7.3.8
-set GLM_OFFICIAL_VERSION=7.3.10-2021.04.21-#2329
-set GLM_OFFICIAL_VERSION=8-2021.04.28-#2333
+::set GLM_OFFICIAL_VERSION=7.3.12-2021.08.17-#2422
+set GLM_OFFICIAL_VERSION=8.0.3-2021.11.02-#2468
 set MAX_VERSION=2020
-::set GLMCROWD_UNIT=3
+::set GLMCROWD_UNIT=1
 
 
 ::/***************************************************************************

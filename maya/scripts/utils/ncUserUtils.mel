@@ -53,6 +53,9 @@ global proc ncSetHotkeys()
 	// Alt + x => Spark
 	nameCommand -annotation "spark" -command "ncLoadSpark;" glmSpark;
 	hotkey -alt -k "x" -name "glmSpark";
+	// Ctrl + l => Layout Editor
+	nameCommand -annotation "layoutE" -command "glmSimulationCacheLayoutCmdWithFocus;" glmLayoutEditor;
+	hotkey -ctl -k "l" -name "glmLayoutEditor";
 }
 
 //------------------------------------------------------------

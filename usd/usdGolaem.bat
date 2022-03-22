@@ -9,8 +9,8 @@
 ::***************************************************************************/
 
 set GLM_MODE=Official
-set GLM_MAIN_VERSION=7
-set GLM_OFFICIAL_VERSION=8-2021.04.28-#2333
+set GLM_MAIN_VERSION=8
+set GLM_OFFICIAL_VERSION=8.1.1
 set USD_VERS=0.20.02
 
 
@@ -19,8 +19,12 @@ set USD_VERS=0.20.02
 ::***************************************************************************/
 
 ::set USD_FILE=N:/tests/nicolas/usd/quickstart739.renderProxyShape1.usda
-set USD_FILE=N:/tests/nicolas/export/quickStart7310/usd/quickStart7310.renderProxyShape1.usda
-set USD_FILE=N:/tests/nicolas/export/quickstart80/usdProc/quickstart80.renderProxyShape1.usda
+set USD_FILE=N:/tests/nicolas/export/quickStart803/usdProc/quickStart803.renderProxyShape1.usda
+set USD_FILE=N:/tests/nicolas/export/quickStart803/usdSkel/quickStart803.crowdField1_renderProxyShape1.usda
+::set USD_FILE=N:/tests/nicolas/export/usdExport/usd/usdExport.crowdField1_renderProxyShape1.usda
+set USD_FILE=N:/tests/nicolas/export/usdExport/usd/usdExport.renderProxyShape1.usda
+::set USD_FILE=N:/demos/golaem8PR/export/19-usdDisplay/20-usdDisplay.renderProxyShape.usda
+::set USD_FILE=N:/tests/nicolas/export/quickstart80/usdProc/quickstart80.renderProxyShape1.usda
 ::set USD_FILE=N:/tests/nicolas/export/redshiftMax/usd/redshiftMax.crowdField1_renderProxyShape1.usdc
 
 

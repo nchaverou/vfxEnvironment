@@ -9,7 +9,8 @@
 ::***************************************************************************/
 
 set GLM_MODE=Official
-set GLM_OFFICIAL_VERSION=8-2021.04.28-PR2333
+set GLM_MAIN_VERSION=7
+set GLM_OFFICIAL_VERSION=8.0.3-2021.11.02-PR2468
 set MAYA_VERSION=2018
 set KATANA_VERSION=3.5v4
 ::set DCC=Katana
@@ -21,9 +22,9 @@ set golaem_LICENSE=C:\Licenses\golaemLayout.lic
 :: GOLAEM VARS
 ::***************************************************************************/
 
-set GLM_INSTALL_DIR=C:\Users\chaverou\Developments\Golaem7\install%MAYA_VERSION%\GolaemCrowd
+set GLM_INSTALL_DIR=C:\Users\chaverou\Developments\Golaem%GLM_MAIN_VERSION%\install%MAYA_VERSION%\GolaemCrowd
 IF %GLM_MODE% == Debug (
-	set GLM_INSTALL_DIR=C:\Users\chaverou\Developments\Golaem7\install%MAYA_VERSION%\GolaemCrowdDBG
+	set GLM_INSTALL_DIR=C:\Users\chaverou\Developments\Golaem%GLM_MAIN_VERSION%\install%MAYA_VERSION%\GolaemCrowdDBG
 )
 IF %GLM_MODE% == Official (
 	set GLM_INSTALL_DIR=C:\Program Files\Golaem\Golaem-%GLM_OFFICIAL_VERSION%-Maya%MAYA_VERSION%

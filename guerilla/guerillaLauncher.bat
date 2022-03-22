@@ -9,10 +9,10 @@
 ::***************************************************************************/
 
 set MAYA_VERSION=2018
-set GLM_MAIN_VERSION=7
+set GLM_MAIN_VERSION=8
 set GLM_MODE=Release
 
-set GLM_INSTALL_PREFIX=D:\Users\chaverou\Developments\Golaem%GLM_MAIN_VERSION%\install%MAYA_VERSION%\GolaemCrowd
+set GLM_INSTALL_PREFIX=C:\Users\chaverou\Developments\Golaem%GLM_MAIN_VERSION%\install%MAYA_VERSION%\GolaemCrowd
 IF %GLM_MODE% == Debug (
 	set GLM_INSTALL_PREFIX=D:\Users\chaverou\Developments\Golaem%GLM_MAIN_VERSION%\install%MAYA_VERSION%\GolaemCrowdDBG
 )
@@ -21,7 +21,7 @@ IF %GLM_MODE% == Official (
 )
 
 set GLM_CROWD_BIN=%GLM_INSTALL_PREFIX%\bin
-set GLM_GUERILLA_PLUGIN_PATH=%GLM_INSTALL_PREFIX%\procedurals
+set GLM_GUERILLA_PLUGIN_PATH=%GLM_INSTALL_PREFIX%\procedurals\guerilla
 
 
 ::/***************************************************************************

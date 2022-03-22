@@ -10,7 +10,7 @@
 
 set GLM_MODE=Official
 set GLM_MAIN_VERSION=7
-set GLM_OFFICIAL_VERSION=8-2021.04.28-#2333
+set GLM_OFFICIAL_VERSION=8.0.3-2021.11.02-#2468
 ::set GLMCROWD_ANL_ENABLE=1
 
 set KATANA_VERSION=3.5v4
@@ -25,7 +25,7 @@ set DEFAULT_RENDERER=Arnold
 ::set GLMCROWD_NO_PLE=1
 ::set GLMCROWD_NO_LICENSE=1
 set foundry_LICENSE=C:\Licenses\foundry.lic
-set golaem_LICENSE=C:\Licenses\golaemLayout.lic
+set golaem_LICENSE=C:\Licenses\golaemLite.lic
 
 
 ::/***************************************************************************
@@ -60,8 +60,8 @@ set RMAN_RIXPLUGINPATH=%GLM_INSTALL_PREFIX%\shaders\renderman\23;%RMANTREE%\lib\
 ::***************************************************************************/
 
 pushd C:
-set KTOA_PATH=C:\solidangle\ktoadeploy\3.5-3.1.1.2
-set ARNOLD_PLUGIN_PATH=%GLM_INSTALL_PREFIX%\procedurals\arnold\60;%GLM_INSTALL_PREFIX%\shaders\arnold\60
+set KTOA_PATH=C:\solidangle\ktoadeploy\3.5-3.2.2.1
+set ARNOLD_PLUGIN_PATH=%GLM_INSTALL_PREFIX%\procedurals\arnold\62;%GLM_INSTALL_PREFIX%\shaders\arnold\62
 
 ::/***************************************************************************
 :: REDSHIFT
@@ -69,7 +69,7 @@ set ARNOLD_PLUGIN_PATH=%GLM_INSTALL_PREFIX%\procedurals\arnold\60;%GLM_INSTALL_P
 
 set KTORS_PATH=C:\ProgramData\Redshift\Plugins\Katana\3.0v1
 set REDSHIFT_BIN=C:\ProgramData\Redshift\bin
-set REDSHIFT_PROCEDURALSPATH=%GLM_INSTALL_PREFIX%\procedurals\redshift\3036;%REDSHIFT_PROCEDURALSPATH%
+set REDSHIFT_PROCEDURALSPATH=%GLM_INSTALL_PREFIX%\procedurals\redshift\3046;%REDSHIFT_PROCEDURALSPATH%
 
 ::/***************************************************************************
 :: 3DELIGHT

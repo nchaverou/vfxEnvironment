@@ -8,13 +8,17 @@
 :: GLOBAL VARS
 ::***************************************************************************/
 
-set GLM_MODE=Debug
-set GLM_MAIN_VERSION=7
-::set GLM_OFFICIAL_VERSION=7.3.9
-set GLM_OFFICIAL_VERSION=7.3.10-2021.04.21-PR2329
-::set GLM_OFFICIAL_VERSION=8-2021.04.28-PR2333
-set MAYA_VERSION=2018
-set RMAN_VERSION=23.3
+set GLM_MODE=Release
+set GLM_MAIN_VERSION=8
+::set GLM_OFFICIAL_VERSION=8.0.1
+::set GLM_OFFICIAL_VERSION=8
+set GLM_OFFICIAL_VERSION=7.3.12-2021.06.14-PR2371
+set GLM_OFFICIAL_VERSION=8.1.1
+::set GLM_OFFICIAL_VERSION=8.0.3-2021.11.02-PR2469
+set MAYA_VERSION=2020
+
+:: Edit Renderman version
+:: C:\Program Files\Common Files\Autodesk Shared\Modules\Maya
 
 
 ::/***************************************************************************
@@ -23,7 +27,8 @@ set RMAN_VERSION=23.3
 
 ::set GLMCROWD_NO_LICENSE=1
 ::set GLMCROWD_LAYOUT_LICENSE=1
-::set GLMCROWD_NO_PLE=1
+::set GLMCROWD_LITE_LICENSE=1
+set GLMCROWD_NO_PLE=1
 set golaem_LICENSE=C:\Licenses\golaemFull.lic
 ::set golaem_LICENSE=2375@gitem
 set solidangle_LICENSE=C:\Licenses\arnold.lic
@@ -39,9 +44,10 @@ set MAYA_ENABLE_LEGACY_VIEWPORT=1
 ::***************************************************************************/
 
 :: Project
-::set MAYA_PROJECT=N:\tests\customers\method\210302_cloth
-::set MAYA_PROJECT=D:\Users\chaverou\Developments\GolaemML\maya
+::set MAYA_PROJECT=N:\tests\customers\freelance\210512_stadium
+::set MAYA_PROJECT=C:\Users\chaverou\Developments\GolaemML\maya
 set MAYA_PROJECT=N:\tests\nicolas
+::set MAYA_PROJECT=N:\demos\adobe2022
 ::set MAYA_PROJECT=N:\demos\academy2021
 ::set MAYA_PROJECT=N:\assets\GolaemCharacterPack-7.3.2
 ::set MAYA_PROJECT=N:\tests\functionalTests\crowd5.0
@@ -82,13 +88,12 @@ set MAYA_LOCATION=C:\Program Files\Autodesk\Maya%MAYA_VERSION%
 :: MTOA_VERSION
 set MTOA_MODULE_PATH=C:\solidangle\mtoadeploy\%MAYA_VERSION%\mod
 
-:: Renderman
-set RFM_DO_NOT_CREATE_MODULE_FILE=1
-set RMANTREE=C:\Program Files\Pixar\RenderManProServer-%RMAN_VERSION%\
-set RFMTREE=C:\Program Files\Pixar\RenderManForMaya-%RMAN_VERSION%\
 
 :: RLM
 ::set RLM_DIAGNOSTICS=D:\Temp\RLMDiag.txt
+
+:: Renderman
+set RFM_DO_NOT_CREATE_MODULE_FILE=1
 
 :: FDDA
 set FDDA_PLUGINS=C:\Users\chaverou\Developments\GolaemML\maya\plugins
@@ -110,7 +115,8 @@ set PHYSX_MODULE_PATH=C:\Program Files\Golaem\PhysXForMaya%MAYA_VERSION%
 
 :: Tools
 ::set FXPT_PATH=C:\Users\chaverou\Developments\fxpt
-set SKINW_PATH=C:\Users\chaverou\Developments\skinWrangler
+set SKINW_PATH=C:\Users\chaverou\Developments\
+set MGEAR_PATH=C:\Users\chaverou\Developments\VFXEnvironment\maya\plugins
 
 
 ::/***************************************************************************
@@ -123,8 +129,8 @@ copy "%MY_ENVIRONMENT%\prefs\tools_list_user.yaml" "%APPDATA%\Damage Inc\fxpt\fx
 
 :: Maya
 ::set PATH=%GLM_MODULE_PATH%\bin;%PATH%
-set MAYA_MODULE_PATH=%GLM_MODULE_PATH%;%PHYSX_MODULE_PATH%;%GLMD_MODULE_PATH%;%MTOA_MODULE_PATH%;%MAYA_USD_MODULE%;%MAYA_MODULE_PATH%
-set MAYA_PLUG_IN_PATH=%MY_ENVIRONMENT%\plugins\%MAYA_VERSION%;%VERGE3D_PATH%;%FDDA_PLUGINS%
+set MAYA_MODULE_PATH=%GLM_MODULE_PATH%;%PHYSX_MODULE_PATH%;%GLMD_MODULE_PATH%;%MTOA_MODULE_PATH%;%MGEAR_PATH%;%MAYA_USD_MODULE%;%MAYA_MODULE_PATH%
+set MAYA_PLUG_IN_PATH=%MY_ENVIRONMENT%\plugins\%MAYA_VERSION%;%FDDA_PLUGINS%
 set MAYA_SCRIPT_PATH=%MY_ENVIRONMENT%\scripts;%FDDA_SCRIPTS%;%MAYA_SCRIPT_PATH%
 set PYTHONPATH=%MY_ENVIRONMENT%\scripts;%FDDA_SCRIPTS%;%FXPT_PATH%;%SKINW_PATH%;%PYTHONPATH%
 set XBMLANGPATH=%MY_ENVIRONMENT%\icons;%XBMLANGPATH%
