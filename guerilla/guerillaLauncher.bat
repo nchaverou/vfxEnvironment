@@ -8,13 +8,14 @@
 :: GOLAEM VARIABLES
 ::***************************************************************************/
 
-set MAYA_VERSION=2018
+set MAYA_VERSION=2020
 set GLM_MAIN_VERSION=8
-set GLM_MODE=Release
+set GLM_MODE=Official
+set GLM_OFFICIAL_VERSION=8.1.2-2022.03.28-PR2556
 
 set GLM_INSTALL_PREFIX=C:\Users\chaverou\Developments\Golaem%GLM_MAIN_VERSION%\install%MAYA_VERSION%\GolaemCrowd
 IF %GLM_MODE% == Debug (
-	set GLM_INSTALL_PREFIX=D:\Users\chaverou\Developments\Golaem%GLM_MAIN_VERSION%\install%MAYA_VERSION%\GolaemCrowdDBG
+	set GLM_INSTALL_PREFIX=C:\Users\chaverou\Developments\Golaem%GLM_MAIN_VERSION%\install%MAYA_VERSION%\GolaemCrowdDBG
 )
 IF %GLM_MODE% == Official (
 	set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-%GLM_OFFICIAL_VERSION%-Maya%MAYA_VERSION%

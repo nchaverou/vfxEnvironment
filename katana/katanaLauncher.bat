@@ -9,11 +9,12 @@
 ::***************************************************************************/
 
 set GLM_MODE=Official
-set GLM_MAIN_VERSION=7
-set GLM_OFFICIAL_VERSION=8.0.3-2021.11.02-#2468
+set GLM_MAIN_VERSION=8
+set GLM_OFFICIAL_VERSION=8.2.2-2023.02.03-#2715
 ::set GLMCROWD_ANL_ENABLE=1
 
 set KATANA_VERSION=3.5v4
+set KATANA_VERSION=4.0v2
 set RMAN_VERSION=23.3
 set DEFAULT_RENDERER=Arnold
 
@@ -60,16 +61,16 @@ set RMAN_RIXPLUGINPATH=%GLM_INSTALL_PREFIX%\shaders\renderman\23;%RMANTREE%\lib\
 ::***************************************************************************/
 
 pushd C:
-set KTOA_PATH=C:\solidangle\ktoadeploy\3.5-3.2.2.1
-set ARNOLD_PLUGIN_PATH=%GLM_INSTALL_PREFIX%\procedurals\arnold\62;%GLM_INSTALL_PREFIX%\shaders\arnold\62
+set KTOA_PATH=C:\solidangle\ktoadeploy\4.0-4.1.3.2
+set ARNOLD_PLUGIN_PATH=%GLM_INSTALL_PREFIX%\procedurals\arnold\71;%GLM_INSTALL_PREFIX%\shaders\arnold\71
 
 ::/***************************************************************************
 :: REDSHIFT
 ::***************************************************************************/
 
-set KTORS_PATH=C:\ProgramData\Redshift\Plugins\Katana\3.0v1
+set KTORS_PATH=C:\ProgramData\Redshift\Plugins\Katana\4.0v1
 set REDSHIFT_BIN=C:\ProgramData\Redshift\bin
-set REDSHIFT_PROCEDURALSPATH=%GLM_INSTALL_PREFIX%\procedurals\redshift\3046;%REDSHIFT_PROCEDURALSPATH%
+set REDSHIFT_PROCEDURALSPATH=%GLM_INSTALL_PREFIX%\procedurals\redshift\3501;%REDSHIFT_PROCEDURALSPATH%
 
 ::/***************************************************************************
 :: 3DELIGHT
@@ -83,8 +84,7 @@ set _3DL_BIN=C:\Program Files\3Delight\bin
 :: USD
 ::***************************************************************************/
 
-set FNPXR_PLUGINPATH=C:\Program Files\Golaem\Golaem-%GLM_OFFICIAL_VERSION%-Katana3.5USD-windows\procedurals\usd
-::set FNPXR_PLUGINPATH=%GLM_INSTALL_PREFIX%\procedurals\usd
+set FNPXR_PLUGINPATH=C:\Program Files\Golaem\Golaem-%GLM_OFFICIAL_VERSION%-Katana3.5-USD-windows\procedurals\usd
 ::set USD_KATANA_ALLOW_CUSTOM_MATERIAL_SCOPES=1
 
 

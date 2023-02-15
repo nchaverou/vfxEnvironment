@@ -8,15 +8,13 @@
 :: GLOBAL VARS
 ::***************************************************************************/
 
-set GLM_MODE=Release
+set GLM_MODE=Debug
 set GLM_MAIN_VERSION=8
 ::set GLM_OFFICIAL_VERSION=8.0.1
-::set GLM_OFFICIAL_VERSION=8
-set GLM_OFFICIAL_VERSION=7.3.12-2021.06.14-PR2371
-set GLM_OFFICIAL_VERSION=8.1.1
-::set GLM_OFFICIAL_VERSION=8.0.3-2021.11.02-PR2469
+set GLM_OFFICIAL_VERSION=8.2.1
+set GLM_OFFICIAL_VERSION=8.2.2-2023.02.08-PR2720
+::set GLM_OFFICIAL_VERSION=9-2022.12.12-1537a3d7a
 set MAYA_VERSION=2020
-
 :: Edit Renderman version
 :: C:\Program Files\Common Files\Autodesk Shared\Modules\Maya
 
@@ -36,7 +34,9 @@ set solidangle_LICENSE=C:\Licenses\arnold.lic
 ::set PIXAR_LICENSE_FILE=9010@GITEM
 set MAYA_LICENSE_METHOD=network
 set MAYA_ENABLE_LEGACY_VIEWPORT=1
+::set FLEXLM_TIMEOUT=10000000
 ::set MAYA_APP_DIR=C:/Shared/
+::set GLMCROWD_CHARAMAKER_AUTOLAYOUT=0
 
 
 ::/***************************************************************************
@@ -47,10 +47,12 @@ set MAYA_ENABLE_LEGACY_VIEWPORT=1
 ::set MAYA_PROJECT=N:\tests\customers\freelance\210512_stadium
 ::set MAYA_PROJECT=C:\Users\chaverou\Developments\GolaemML\maya
 set MAYA_PROJECT=N:\tests\nicolas
+::set MAYA_PROJECT=N:\tests\customers\tmefx\20221117_fur
 ::set MAYA_PROJECT=N:\demos\adobe2022
 ::set MAYA_PROJECT=N:\demos\academy2021
 ::set MAYA_PROJECT=N:\assets\GolaemCharacterPack-7.3.2
 ::set MAYA_PROJECT=N:\tests\functionalTests\crowd5.0
+::set MAYA_PROJECT=N:\demos\eventByEleven
 
 
 ::/***************************************************************************

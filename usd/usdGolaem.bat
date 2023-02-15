@@ -10,7 +10,7 @@
 
 set GLM_MODE=Official
 set GLM_MAIN_VERSION=8
-set GLM_OFFICIAL_VERSION=8.1.1
+set GLM_OFFICIAL_VERSION=8.2.2-2023.02.03-#2715
 set USD_VERS=0.20.02
 
 
@@ -18,14 +18,10 @@ set USD_VERS=0.20.02
 :: FILE
 ::***************************************************************************/
 
-::set USD_FILE=N:/tests/nicolas/usd/quickstart739.renderProxyShape1.usda
-set USD_FILE=N:/tests/nicolas/export/quickStart803/usdProc/quickStart803.renderProxyShape1.usda
-set USD_FILE=N:/tests/nicolas/export/quickStart803/usdSkel/quickStart803.crowdField1_renderProxyShape1.usda
-::set USD_FILE=N:/tests/nicolas/export/usdExport/usd/usdExport.crowdField1_renderProxyShape1.usda
-set USD_FILE=N:/tests/nicolas/export/usdExport/usd/usdExport.renderProxyShape1.usda
-::set USD_FILE=N:/demos/golaem8PR/export/19-usdDisplay/20-usdDisplay.renderProxyShape.usda
-::set USD_FILE=N:/tests/nicolas/export/quickstart80/usdProc/quickstart80.renderProxyShape1.usda
-::set USD_FILE=N:/tests/nicolas/export/redshiftMax/usd/redshiftMax.crowdField1_renderProxyShape1.usdc
+::set USD_FILE=N:/tests/nicolas/export/quickStart822/usdProc/quickStart822.renderProxyShape1.usda
+set USD_FILE=N:/tests/nicolas/export/quickStart822/usdSkel/quickStart822.crowdField1_renderProxyShape1.usda
+::set USD_FILE=C:/N/tests/nicolas/export/quickStart813/usdSkel/quickStart813.crowdField1_renderProxyShape1.usda
+::set USD_FILE=C:/N/tests/nicolas/export/usdAttr/DEMO_cityLocomotion.crowdField1_renderProxyShape1.usda
 
 
 ::/***************************************************************************
@@ -39,7 +35,7 @@ IF %GLM_MODE% == Official (
 )
 
 set USD_INSTALL_DIR=C:\Users\chaverou\Developments\GolaemMisc\golaemExternals\USD\%USD_VERS%\windows
-set PYTHONPATH=%USD_INSTALL_DIR%\lib\python;%PYTHONPATH%
+set PYTHONPATH=%USD_INSTALL_DIR%\lib\python
 set PATH=%GLM_INSTALL_DIR%/bin;%USD_INSTALL_DIR%/bin;%USD_INSTALL_DIR%/lib;%PATH%
 set PXR_PLUGINPATH_NAME=%GLM_INSTALL_DIR%/procedurals/usd
 

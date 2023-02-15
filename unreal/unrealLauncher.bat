@@ -8,10 +8,11 @@
 :: UNREAL VARS
 ::***************************************************************************/
 
-set GLM_MODE=Release
+set GLM_MODE=Official
 set GLM_MAIN_VERSION=8
-set UNREAL_VERSION=4.26
-set GLMCROWD_UNIT=2
+set UNREAL_VERSION=4.27
+set UNREAL_VERSION=5.1
+::set GLMCROWD_UNIT=2
 
 
 ::/***************************************************************************
@@ -34,6 +35,7 @@ set GLM_INSTALL_PREFIX=C:\Users\chaverou\Developments\GolaemForUnreal%GLM_MAIN_V
 IF %GLM_MODE% == Official (
 	set GLM_INSTALL_PREFIX=C:\Users\chaverou\Documents\UnrealProjects\GolaemReleaseTest%UNREAL_VERSION%
 )
+::set GLM_INSTALL_PREFIX=C:\Users\chaverou\Developments\GolaemForUnreal%GLM_MAIN_VERSION%
 
 
 ::/***************************************************************************
@@ -41,7 +43,8 @@ IF %GLM_MODE% == Official (
 ::***************************************************************************/
 
 set UNREAL_LOCATION=C:\Program Files\Epic Games\UE_%UNREAL_VERSION%\
-set UNREAL_EXE=Engine\Binaries\Win64\UE4Editor-Cmd.exe
+set UNREAL_EXE=Engine\Binaries\Win64\UnrealEditor.exe
+::set UNREAL_EXE=Engine\Binaries\Win64\UE4Editor.exe
 "%UNREAL_LOCATION%\%UNREAL_EXE%" "%GLM_INSTALL_PREFIX%\%GLM_PROJECT%"
 
 ::C:\Users\chaverou\Software\System\DependencyWalker64\depends.exe

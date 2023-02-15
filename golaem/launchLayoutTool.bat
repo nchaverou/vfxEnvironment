@@ -9,13 +9,13 @@
 ::***************************************************************************/
 
 set GLM_MODE=Official
-set GLM_MAIN_VERSION=7
-set GLM_OFFICIAL_VERSION=8.0.3-2021.11.02-PR2468
-set MAYA_VERSION=2018
+set GLM_MAIN_VERSION=8
+set GLM_OFFICIAL_VERSION=8.2.2-2023.02.03-PR2715
+set MAYA_VERSION=2020
 set KATANA_VERSION=3.5v4
 ::set DCC=Katana
 set DCC=Maya
-set golaem_LICENSE=C:\Licenses\golaemLayout.lic
+set golaem_LICENSE=C:\Licenses\golaemLite.lic
 
 
 ::/***************************************************************************
