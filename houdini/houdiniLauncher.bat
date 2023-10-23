@@ -11,7 +11,7 @@
 set GLM_MODE=Official
 set GLM_MAIN_VERSION=8
 ::set GLM_OFFICIAL_VERSION=8.2.1
-set GLM_OFFICIAL_VERSION=8.2.2-2023.02.03-#2715
+set GLM_OFFICIAL_VERSION=8.2.5-2023.09.25-#2846
 set HOUDINI_VERSION=19.5.435
 set HOUDINI_BVERSION=19
 set HOUDINI_IVERSION=19.5
@@ -34,6 +34,7 @@ set HOUDINI_LMINFO_VERBOSE=1
 ::set GLMCROWD_NO_PLE=1
 ::set GLMCROWD_NO_LICENSE=1
 set golaem_LICENSE=C:\Licenses\golaemLite.lic
+::set golaem_LICENSE=.lic
 set solidangle_LICENSE=C:\Licenses\arnold.lic
 
 ::/***************************************************************************
@@ -64,8 +65,8 @@ set PATH=%GLM_INSTALL_PREFIX%\bin;%PATH%
 
 :: Arnold
 set PATH=C:\Program Files\Golaem\Golaem-%GLM_OFFICIAL_VERSION%-Maya2020\bin;%PATH%
-set ARNOLD_PLUGIN_PATH=C:\Program Files\Golaem\Golaem-8.2.2-2023.02.03-PR2715-Maya2020\procedurals\arnold\71;%ARNOLD_PLUGIN_PATH%
-set ARNOLD_PLUGIN_PATH=C:\Program Files\Golaem\Golaem-8.2.2-2023.02.03-PR2715-Maya2020\shaders\arnold\71;%ARNOLD_PLUGIN_PATH%
+::set ARNOLD_PLUGIN_PATH=C:\Program Files\Golaem\Golaem-8.2.2-2023.02.03-PR2715-Maya2020\procedurals\arnold\71;%ARNOLD_PLUGIN_PATH%
+::set ARNOLD_PLUGIN_PATH=C:\Program Files\Golaem\Golaem-8.2.2-2023.02.03-PR2715-Maya2020\shaders\arnold\71;%ARNOLD_PLUGIN_PATH%
 
 :: Houdini Custom plugins
 ::set HOUDINI_DSO_ERROR=3

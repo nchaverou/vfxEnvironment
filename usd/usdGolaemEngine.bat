@@ -10,19 +10,19 @@
 
 set GLM_MODE=Official
 set GLM_MAIN_VERSION=8
-set GLM_OFFICIAL_VERSION=9-2023.10.16-PR2863
-set USD_VERS=0.23.08
-::set USD_VERS=0.20.02
+set GLM_OFFICIAL_VERSION=8.1.3-2022.05.03-5a716305c-Engine
+set USD_VERS=0.20.02
+set golaem_LICENSE=C:\Licenses\golaemLite.lic
 
 
 ::/***************************************************************************
 :: FILE
 ::***************************************************************************/
 
-::set USD_FILE=N:/tests/nicolas/export/quickStart825/usdProc/quickStart825.renderProxyShape1.usda
-set USD_FILE=N:/tests/nicolas/export/quickStart825/usdSkel9/quickStart825.crowdField1_renderProxyShape1.usda
-set USD_FILE=N:/tests/nicolas/export/playMotionTODELETE/usdSkel/playMotionTODELETE.crowdField1_renderProxyShape1.usda
-::set USD_FILE=N:/tests/nicolas/export/usdSkelExport-forPaul/usd/usdSkelExport-forPaul.crowdField1_renderProxyShape2.usda
+set USD_FILE=N:/tests/nicolas/usd/quickstart739.renderProxyShape1.usda
+set USD_FILE=N:/tests/nicolas/export/engineA/engineA/engineA.usda
+set USD_FILE=N:/demos/golaemEngineForUSD/usd/masterScene.usda
+
 
 ::/***************************************************************************
 :: ENV
@@ -45,10 +45,9 @@ set PXR_PLUGINPATH_NAME=%GLM_INSTALL_DIR%/procedurals/usd
 ::***************************************************************************/
 
 :: Launch Conda environment Python 2.7
-:: env also avail usd_py310 / usd_py27
 echo off
 call C:\ProgramData\Miniconda3\Scripts\activate.bat
-call conda activate usd_py310
+call conda activate usd_py27
 echo on
 
 :: Conda environment creation
@@ -58,7 +57,6 @@ echo on
 :: pip install PySide
 :: pip install PyOpenGL
 
-
 ::/***************************************************************************
 :: LAUNCH
 ::***************************************************************************/
@@ -66,4 +64,4 @@ echo on
 set USD_VIEWER=bin\usdview
 "%USD_INSTALL_DIR%\%USD_VIEWER%" "%USD_FILE%"
 
-pause
+::pause

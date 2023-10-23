@@ -10,9 +10,9 @@
 
 set GLM_MODE=Official
 set GLM_MAIN_VERSION=8
-set UNREAL_VERSION=4.27
-set UNREAL_VERSION=5.1
-::set GLMCROWD_UNIT=2
+set UNREAL_VERSION=5.2
+::set UNREAL_VERSION=5.0
+set GLMCROWD_UNIT=3
 
 
 ::/***************************************************************************
@@ -36,7 +36,8 @@ IF %GLM_MODE% == Official (
 	set GLM_INSTALL_PREFIX=C:\Users\chaverou\Documents\UnrealProjects\GolaemReleaseTest%UNREAL_VERSION%
 )
 ::set GLM_INSTALL_PREFIX=C:\Users\chaverou\Developments\GolaemForUnreal%GLM_MAIN_VERSION%
-
+::set GLM_PROJECT=ROD01UE5.uproject
+::set GLM_INSTALL_PREFIX=C:\Users\chaverou\Documents\UnrealProjects\Polywink%UNREAL_VERSION%
 
 ::/***************************************************************************
 :: LAUNCH UNREAL

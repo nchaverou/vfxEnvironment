@@ -1,5 +1,6 @@
-set MAYA_VERSION=2020
-set MTOA_VERSION=5.1.3.3
+set MAYA_VERSION=2022
+set MTOA_VERSION=5.2.2.3
+set MTOA_VERSION=5.3.0.0
 ::set MTOA_VERSION=4.2.0
 
 :: remove Uninstall registry entry

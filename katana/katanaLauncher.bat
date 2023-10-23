@@ -10,12 +10,18 @@
 
 set GLM_MODE=Official
 set GLM_MAIN_VERSION=8
-set GLM_OFFICIAL_VERSION=8.2.2-2023.02.03-#2715
+set GLM_OFFICIAL_VERSION=8.2.5-2023.09.25-#2846
 ::set GLMCROWD_ANL_ENABLE=1
 
-set KATANA_VERSION=3.5v4
 set KATANA_VERSION=4.0v2
-set RMAN_VERSION=23.3
+set KATANA_BVERSION=4
+set KATANA_IVERSION=3.5
+
+::set KATANA_VERSION=6.0v2
+::set KATANA_BVERSION=6
+::set KATANA_IVERSION=6.0
+
+set RMAN_VERSION=25.0
 set DEFAULT_RENDERER=Arnold
 
 
@@ -33,12 +39,12 @@ set golaem_LICENSE=C:\Licenses\golaemLite.lic
 :: GOLAEM
 ::***************************************************************************/
 
-set GLM_INSTALL_PREFIX=C:\Users\chaverou\Developments\GolaemForKatana%GLM_MAIN_VERSION%\install3\GolaemCrowd
+set GLM_INSTALL_PREFIX=C:\Users\chaverou\Developments\GolaemForKatana%GLM_MAIN_VERSION%\install%KATANA_BVERSION%\GolaemCrowd
 IF %GLM_MODE% == Debug (
-	set GLM_INSTALL_PREFIX=C:\Users\chaverou\Developments\GolaemForKatana%GLM_MAIN_VERSION%\install3\GolaemCrowdDBG
+	set GLM_INSTALL_PREFIX=C:\Users\chaverou\Developments\GolaemForKatana%GLM_MAIN_VERSION%\install3%KATANA_BVERSION%\GolaemCrowdDBG
 )
 IF %GLM_MODE% == Official (
-	set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-%GLM_OFFICIAL_VERSION%-Katana3.5-windows
+	set GLM_INSTALL_PREFIX=C:\Program Files\Golaem\Golaem-%GLM_OFFICIAL_VERSION%-Katana%KATANA_IVERSION%-windows
 )
 
 set KTOG_PATH=%GLM_INSTALL_PREFIX%\procedurals\katana
@@ -50,10 +56,11 @@ set GLM_CROWD_BIN=%GLM_INSTALL_PREFIX%\bin
 ::***************************************************************************/
 
 set RMANTREE=C:\Program Files\Pixar\RenderManProServer-%RMAN_VERSION%
-set KTOR_PATH=C:\Program Files\Pixar\RenderManForKatana-%RMAN_VERSION%-katana3.5\plugins\Resources\PRMan23
+::set KTOR_PATH=C:\Program Files\Pixar\RenderManForKatana-%RMAN_VERSION%-katana3.5\plugins\Resources\PRMan23
+set KTOR_PATH=C:\Program Files\Pixar\RenderManForKatana-%RMAN_VERSION%\plugins\katana4.0\
 ::set RFK_REDIRECT_OUTPUT="C:/katanaLog.txt"
-set RMAN_DSOPATH=%GLM_INSTALL_PREFIX%\procedurals\renderman\23
-set RMAN_RIXPLUGINPATH=%GLM_INSTALL_PREFIX%\shaders\renderman\23;%RMANTREE%\lib\plugins
+set RMAN_DSOPATH=%GLM_INSTALL_PREFIX%\procedurals\renderman\24
+set RMAN_RIXPLUGINPATH=%GLM_INSTALL_PREFIX%\shaders\renderman\24;%RMANTREE%\lib\plugins
 
 
 ::/***************************************************************************
@@ -61,8 +68,8 @@ set RMAN_RIXPLUGINPATH=%GLM_INSTALL_PREFIX%\shaders\renderman\23;%RMANTREE%\lib\
 ::***************************************************************************/
 
 pushd C:
-set KTOA_PATH=C:\solidangle\ktoadeploy\4.0-4.1.3.2
-set ARNOLD_PLUGIN_PATH=%GLM_INSTALL_PREFIX%\procedurals\arnold\71;%GLM_INSTALL_PREFIX%\shaders\arnold\71
+set KTOA_PATH=C:\solidangle\ktoadeploy\4.0-4.2.1.1
+set ARNOLD_PLUGIN_PATH=%GLM_INSTALL_PREFIX%\procedurals\arnold\72;%GLM_INSTALL_PREFIX%\shaders\arnold\72
 
 ::/***************************************************************************
 :: REDSHIFT
@@ -70,7 +77,7 @@ set ARNOLD_PLUGIN_PATH=%GLM_INSTALL_PREFIX%\procedurals\arnold\71;%GLM_INSTALL_P
 
 set KTORS_PATH=C:\ProgramData\Redshift\Plugins\Katana\4.0v1
 set REDSHIFT_BIN=C:\ProgramData\Redshift\bin
-set REDSHIFT_PROCEDURALSPATH=%GLM_INSTALL_PREFIX%\procedurals\redshift\3501;%REDSHIFT_PROCEDURALSPATH%
+set REDSHIFT_PROCEDURALSPATH=%GLM_INSTALL_PREFIX%\procedurals\redshift\3514;%REDSHIFT_PROCEDURALSPATH%
 
 ::/***************************************************************************
 :: 3DELIGHT

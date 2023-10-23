@@ -8,11 +8,10 @@
 :: GLOBAL VARS
 ::***************************************************************************/
 
-set GLM_MODE=Debug
-set GLM_MAIN_VERSION=8
-::set GLM_OFFICIAL_VERSION=8.0.1
-set GLM_OFFICIAL_VERSION=8.2.1
-set GLM_OFFICIAL_VERSION=8.2.2-2023.02.08-PR2720
+set GLM_MODE=Release
+set GLM_MAIN_VERSION=9
+set GLM_OFFICIAL_VERSION=8.2.5
+::set GLM_OFFICIAL_VERSION=8.2.5-2023.09.25-PR2846
 ::set GLM_OFFICIAL_VERSION=9-2022.12.12-1537a3d7a
 set MAYA_VERSION=2020
 :: Edit Renderman version
@@ -37,22 +36,20 @@ set MAYA_ENABLE_LEGACY_VIEWPORT=1
 ::set FLEXLM_TIMEOUT=10000000
 ::set MAYA_APP_DIR=C:/Shared/
 ::set GLMCROWD_CHARAMAKER_AUTOLAYOUT=0
-
+::set GLMCROWD_CUSTOMBEHAVIOR_DIR=C:/Users/golaem/Music
+::set GLMCROWD_CUSTOMTRIGGER_DIR=C:/Users/golaem/Desktop
 
 ::/***************************************************************************
 :: MAYA PROJECT
 ::***************************************************************************/
 
 :: Project
-::set MAYA_PROJECT=N:\tests\customers\freelance\210512_stadium
 ::set MAYA_PROJECT=C:\Users\chaverou\Developments\GolaemML\maya
 set MAYA_PROJECT=N:\tests\nicolas
-::set MAYA_PROJECT=N:\tests\customers\tmefx\20221117_fur
-::set MAYA_PROJECT=N:\demos\adobe2022
+::set MAYA_PROJECT=N:\demos\montpellier2023
 ::set MAYA_PROJECT=N:\demos\academy2021
 ::set MAYA_PROJECT=N:\assets\GolaemCharacterPack-7.3.2
 ::set MAYA_PROJECT=N:\tests\functionalTests\crowd5.0
-::set MAYA_PROJECT=N:\demos\eventByEleven
 
 
 ::/***************************************************************************
@@ -78,6 +75,7 @@ set GLMCROWD_UNIT=3
 
 set GLMD_MODULE_PATH=C:\Users\chaverou\Developments\GolaemDeep\install%MAYA_VERSION%\GolaemDeep
 ::set GLMD_MODULE_PATH=C:\Program Files\Golaem\GolaemDeep-0.0.1-Maya%MAYA_VERSION%
+set GLMP_MODULE_PATH=C:\Users\chaverou\Developments\GolaemProtores\plugins\maya
 
 
 ::/***************************************************************************
@@ -131,7 +129,7 @@ copy "%MY_ENVIRONMENT%\prefs\tools_list_user.yaml" "%APPDATA%\Damage Inc\fxpt\fx
 
 :: Maya
 ::set PATH=%GLM_MODULE_PATH%\bin;%PATH%
-set MAYA_MODULE_PATH=%GLM_MODULE_PATH%;%PHYSX_MODULE_PATH%;%GLMD_MODULE_PATH%;%MTOA_MODULE_PATH%;%MGEAR_PATH%;%MAYA_USD_MODULE%;%MAYA_MODULE_PATH%
+set MAYA_MODULE_PATH=%GLM_MODULE_PATH%;%PHYSX_MODULE_PATH%;%GLMD_MODULE_PATH%;%GLMP_MODULE_PATH%;%MTOA_MODULE_PATH%;%MGEAR_PATH%;%MAYA_USD_MODULE%;%MAYA_MODULE_PATH%
 set MAYA_PLUG_IN_PATH=%MY_ENVIRONMENT%\plugins\%MAYA_VERSION%;%FDDA_PLUGINS%
 set MAYA_SCRIPT_PATH=%MY_ENVIRONMENT%\scripts;%FDDA_SCRIPTS%;%MAYA_SCRIPT_PATH%
 set PYTHONPATH=%MY_ENVIRONMENT%\scripts;%FDDA_SCRIPTS%;%FXPT_PATH%;%SKINW_PATH%;%PYTHONPATH%
