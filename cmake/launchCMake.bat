@@ -9,13 +9,13 @@
 ::***************************************************************************/
 
 set CMAKE_PROJECT=Golaem9-Maya2020
-::set CMAKE_PROJECT=Golaem8-Houdini19
+::set CMAKE_PROJECT=Golaem8-Houdini195
 ::set CMAKE_PROJECT=Golaem8-Katana6-Py3
-::set CMAKE_PROJECT=Golaem8-Katana3-Py2
+::set CMAKE_PROJECT=Golaem8-Max24
 
 set GLM_GEO_ENGINE_VERSION=1409101264
 set GLM_SOURCE_HOME=C:\Users\chaverou\Developments
-set GLM_EXTERNALS_HOME=C:\Users\chaverou\Developments\GolaemMisc\golaemExternals
+set GLM_EXTERNALS_HOME=C:\Users\chaverou\Developments\GolaemExternals
 
 
 ::/***************************************************************************
@@ -83,6 +83,16 @@ IF %CMAKE_PROJECT% == Golaem8-Houdini19-Py2 (
 	set COMPILER=Visual Studio 16 2019
 )
 
+:: Golaem8 Houdini19 Py39
+IF %CMAKE_PROJECT% == Golaem8-Houdini195 (
+	set DCC_VERSION=195
+	set PYTHON_VERSION=3
+	set HOUDINI_VERSION=19.5
+	set DIR_NAME=GolaemForHoudini
+	set BUILD_HOUDINI=ON
+	set COMPILER=Visual Studio 16 2019
+)
+
 :: Golaem8 Katana 3 (Python2)
 IF %CMAKE_PROJECT% == Golaem8-Katana3-Py2 (
 	set DCC_VERSION=3
@@ -114,6 +124,14 @@ IF %CMAKE_PROJECT% == Golaem8-Max22 (
 :: Golaem8 Max 2023
 IF %CMAKE_PROJECT% == Golaem8-Max23 (
 	set DCC_VERSION=2023
+	set DIR_NAME=GolaemForMax
+	set BUILD_MAX=ON
+	set COMPILER=Visual Studio 16 2019
+)
+
+:: Golaem8 Max 2024
+IF %CMAKE_PROJECT% == Golaem8-Max24 (
+	set DCC_VERSION=2024
 	set DIR_NAME=GolaemForMax
 	set BUILD_MAX=ON
 	set COMPILER=Visual Studio 16 2019

@@ -13,6 +13,7 @@ set GLM_MAIN_VERSION=8
 set UNREAL_VERSION=5.2
 ::set UNREAL_VERSION=5.0
 set GLMCROWD_UNIT=3
+set GLM_DIRMAP=N:/tests/;N:/tests2/
 
 
 ::/***************************************************************************
@@ -22,6 +23,7 @@ set GLMCROWD_UNIT=3
 ::set GLMCROWD_NO_PLE=1
 ::set GLMCROWD_NO_LICENSE=1
 set golaem_LICENSE=C:\Licenses\golaemLite.lic
+::set golaem_LICENSE=C:\Licenses\golaemRuntime.lic
 ::set golaem_LICENSE=2375@gitem
 ::set GLMCROWD_ANL_ENABLE=1
 
@@ -33,7 +35,7 @@ set golaem_LICENSE=C:\Licenses\golaemLite.lic
 set GLM_PROJECT=GolaemForUnreal.uproject
 set GLM_INSTALL_PREFIX=C:\Users\chaverou\Developments\GolaemForUnreal%GLM_MAIN_VERSION%
 IF %GLM_MODE% == Official (
-	set GLM_INSTALL_PREFIX=C:\Users\chaverou\Documents\UnrealProjects\GolaemReleaseTest%UNREAL_VERSION%
+	set GLM_INSTALL_PREFIX=C:\Users\chaverou\Documents\UnrealProjects\GolaemReleaseTest%UNREAL_VERSION%-%GLM_MAIN_VERSION%
 )
 ::set GLM_INSTALL_PREFIX=C:\Users\chaverou\Developments\GolaemForUnreal%GLM_MAIN_VERSION%
 ::set GLM_PROJECT=ROD01UE5.uproject

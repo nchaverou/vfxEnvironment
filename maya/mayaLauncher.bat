@@ -10,9 +10,8 @@
 
 set GLM_MODE=Release
 set GLM_MAIN_VERSION=9
-set GLM_OFFICIAL_VERSION=8.2.5
-::set GLM_OFFICIAL_VERSION=8.2.5-2023.09.25-PR2846
-::set GLM_OFFICIAL_VERSION=9-2022.12.12-1537a3d7a
+set GLM_OFFICIAL_VERSION=8.2.6-2023.12.14-PR2925
+::set GLM_OFFICIAL_VERSION=9
 set MAYA_VERSION=2020
 :: Edit Renderman version
 :: C:\Program Files\Common Files\Autodesk Shared\Modules\Maya
@@ -32,12 +31,13 @@ set solidangle_LICENSE=C:\Licenses\arnold.lic
 ::set solidangle_LICENSE=5053@gitem
 ::set PIXAR_LICENSE_FILE=9010@GITEM
 set MAYA_LICENSE_METHOD=network
-set MAYA_ENABLE_LEGACY_VIEWPORT=1
+::set MAYA_ENABLE_LEGACY_VIEWPORT=1
 ::set FLEXLM_TIMEOUT=10000000
 ::set MAYA_APP_DIR=C:/Shared/
 ::set GLMCROWD_CHARAMAKER_AUTOLAYOUT=0
 ::set GLMCROWD_CUSTOMBEHAVIOR_DIR=C:/Users/golaem/Music
 ::set GLMCROWD_CUSTOMTRIGGER_DIR=C:/Users/golaem/Desktop
+
 
 ::/***************************************************************************
 :: MAYA PROJECT
@@ -46,10 +46,8 @@ set MAYA_ENABLE_LEGACY_VIEWPORT=1
 :: Project
 ::set MAYA_PROJECT=C:\Users\chaverou\Developments\GolaemML\maya
 set MAYA_PROJECT=N:\tests\nicolas
-::set MAYA_PROJECT=N:\demos\montpellier2023
+::set MAYA_PROJECT=N:\demos\grst2023
 ::set MAYA_PROJECT=N:\demos\academy2021
-::set MAYA_PROJECT=N:\assets\GolaemCharacterPack-7.3.2
-::set MAYA_PROJECT=N:\tests\functionalTests\crowd5.0
 
 
 ::/***************************************************************************
@@ -87,7 +85,6 @@ set MAYA_LOCATION=C:\Program Files\Autodesk\Maya%MAYA_VERSION%
 
 :: MTOA_VERSION
 set MTOA_MODULE_PATH=C:\solidangle\mtoadeploy\%MAYA_VERSION%\mod
-
 
 :: RLM
 ::set RLM_DIAGNOSTICS=D:\Temp\RLMDiag.txt
