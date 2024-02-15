@@ -8,9 +8,10 @@
 :: GLOBAL VARS
 ::***************************************************************************/
 
-set GLM_MODE=Release
+set GLM_MODE=Debug
 set GLM_MAIN_VERSION=9
-set GLM_OFFICIAL_VERSION=8.2.6-2023.12.14-PR2925
+set GLM_OFFICIAL_VERSION=8.2.7-2024.02.05-PR2946
+::set GLM_OFFICIAL_VERSION=8.2.6
 ::set GLM_OFFICIAL_VERSION=9
 set MAYA_VERSION=2020
 :: Edit Renderman version
@@ -37,6 +38,7 @@ set MAYA_LICENSE_METHOD=network
 ::set GLMCROWD_CHARAMAKER_AUTOLAYOUT=0
 ::set GLMCROWD_CUSTOMBEHAVIOR_DIR=C:/Users/golaem/Music
 ::set GLMCROWD_CUSTOMTRIGGER_DIR=C:/Users/golaem/Desktop
+set GLM_MOTIONBLUR_MAKEARRAYS=1
 
 
 ::/***************************************************************************
