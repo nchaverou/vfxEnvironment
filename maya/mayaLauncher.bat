@@ -8,13 +8,13 @@
 :: GLOBAL VARS
 ::***************************************************************************/
 
-set GLM_MODE=Debug
+set GLM_MODE=Official
 set GLM_MAIN_VERSION=9
-set GLM_OFFICIAL_VERSION=8.2.7-2024.02.05-PR2946
+::set GLM_OFFICIAL_VERSION=8.2.7
 ::set GLM_OFFICIAL_VERSION=8.2.6
-::set GLM_OFFICIAL_VERSION=9
+set GLM_OFFICIAL_VERSION=9.0.1-2024.02.20-PR2957
 set MAYA_VERSION=2020
-:: Edit Renderman version
+:: Edit Renderman version(.mod file lives here)
 :: C:\Program Files\Common Files\Autodesk Shared\Modules\Maya
 
 
@@ -48,6 +48,7 @@ set GLM_MOTIONBLUR_MAKEARRAYS=1
 :: Project
 ::set MAYA_PROJECT=C:\Users\chaverou\Developments\GolaemML\maya
 set MAYA_PROJECT=N:\tests\nicolas
+::set MAYA_PROJECT=N:\demos\lila2\maya
 ::set MAYA_PROJECT=N:\demos\grst2023
 ::set MAYA_PROJECT=N:\demos\academy2021
 
@@ -129,7 +130,7 @@ copy "%MY_ENVIRONMENT%\prefs\tools_list_user.yaml" "%APPDATA%\Damage Inc\fxpt\fx
 :: Maya
 ::set PATH=%GLM_MODULE_PATH%\bin;%PATH%
 set MAYA_MODULE_PATH=%GLM_MODULE_PATH%;%PHYSX_MODULE_PATH%;%GLMD_MODULE_PATH%;%GLMP_MODULE_PATH%;%MTOA_MODULE_PATH%;%MGEAR_PATH%;%MAYA_USD_MODULE%;%MAYA_MODULE_PATH%
-set MAYA_PLUG_IN_PATH=%MY_ENVIRONMENT%\plugins\%MAYA_VERSION%;%FDDA_PLUGINS%
+set MAYA_PLUG_IN_PATH=%MY_ENVIRONMENT%\plugins\%MAYA_VERSION%;%FDDA_PLUGINS%;
 set MAYA_SCRIPT_PATH=%MY_ENVIRONMENT%\scripts;%FDDA_SCRIPTS%;%MAYA_SCRIPT_PATH%
 set PYTHONPATH=%MY_ENVIRONMENT%\scripts;%FDDA_SCRIPTS%;%FXPT_PATH%;%SKINW_PATH%;%PYTHONPATH%
 set XBMLANGPATH=%MY_ENVIRONMENT%\icons;%XBMLANGPATH%

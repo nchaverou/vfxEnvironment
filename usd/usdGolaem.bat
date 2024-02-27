@@ -10,26 +10,23 @@
 
 set GLM_MODE=Official
 set GLM_MAIN_VERSION=8
-set GLM_OFFICIAL_VERSION=9-2023.10.27-#2873
-set GLM_OFFICIAL_VERSION=8.2.7-2024.02.05-#2946
+set GLM_OFFICIAL_VERSION=9.0.1-2024.02.20-#2957
+::set GLM_OFFICIAL_VERSION=8.2.7-2024.02.05-#2946
 
-set USD_VERS=0.23.08
-set CONDA_ENV=usd_py38
+set USD_VERS=0.23.11.py310
+set CONDA_ENV=usd_py310
 
-set USD_VERS=0.20.02
-set CONDA_ENV=usd_py27
+::set USD_VERS=0.20.02
+::set CONDA_ENV=usd_py27
 
 ::/***************************************************************************
 :: FILE
 ::***************************************************************************/
 
-set USD_FILE=N:/tests/nicolas/export/quickStart826/usdProc/quickStart826.renderProxyShape1.usda
-::set USD_FILE=N:/tests/nicolas/export/quickStart826/usdSkel/quickStart826.crowdField1_renderProxyShape1.usda
+::set USD_FILE=N:/tests/nicolas/export/quickStart826/usdProc/quickStart826.renderProxyShape1.usda
+set USD_FILE=N:/tests/nicolas/export/quickStart826/usdSkel/quickStart826.crowdField1_renderProxyShape1.usda
 ::set USD_FILE=N:/tests/nicolas/export/quickstart90/usdProc/quickstart90.renderProxyShape1.usda
-::set USD_FILE=N:/tests/nicolas/export/primVarTD/usd/primVarTD.crowdField1_renderProxyShape1.usda
-::set USD_FILE=N:/tests/nicolas/export/quickstart90/usdSkel/quickstart90.crowdField1_renderProxyShape1.usda
-::set USD_FILE=N:/tests/nicolas/export/usdAttr/usd/usdAttr.crowdField1_renderProxyShape1.usda
-::set USD_FILE=N:/tests/nicolas/export/usdSkelExport-forPaul/usd/usdSkelExport-forPaul.crowdField1_renderProxyShape2.usda
+set USD_FILE=N:/tests/nicolas/export/usdTD/usdProc/usdTD.renderProxyShape1.usda
 
 ::/***************************************************************************
 :: ENV

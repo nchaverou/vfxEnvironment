@@ -9,11 +9,11 @@
 ::***************************************************************************/
 
 set GLM_MODE=Official
-set GLM_MAIN_VERSION=8
+set GLM_MAIN_VERSION=9
 set UNREAL_VERSION=5.2
 ::set UNREAL_VERSION=5.0
 set GLMCROWD_UNIT=3
-set GLM_DIRMAP=N:/tests/;N:/tests2/
+::set GLM_DIRMAP=N:/tests/;N:/tests2/
 
 
 ::/***************************************************************************
