@@ -128,6 +128,16 @@ global proc ncDisableColorManagement()
 }
 
 //------------------------------------------------------------
+//! Set Color Management
+//------------------------------------------------------------
+global proc ncSetColorManagement()
+{
+	colorManagementPrefs -e -cmEnabled true;
+	colorManagementPrefs -e -cmConfigFileEnabled true;
+	colorManagementPrefs -e -configFilePath "C:/Users/chaverou/Developments/VFXEnvironment/maya/plugins/OpenColorIO-Config-ACES-1.2/aces_1.2/config.ocio";
+}
+
+//------------------------------------------------------------
 //! Set Grid and Background prefs
 //------------------------------------------------------------
 global proc ncSetViewportAndGridDisplay(int $gradient, int $gridId, int $gridAxis, int $gridHighlight)

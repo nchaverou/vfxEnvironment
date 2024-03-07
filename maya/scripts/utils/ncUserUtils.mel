@@ -74,8 +74,8 @@ global proc ncSetMayaEnvironment()
 	//catch(ncOpenCommandPort(7001, 7002));
 	// shaded
 	evalDeferred("ncSetShadedDisplay();");
-	// disable color management
-	scriptJob -e SceneOpened ncDisableColorManagement;
+	// set color management
+	scriptJob -e SceneOpened ncSetColorManagement;
 	// hotkeys
 	evalDeferred("ncSetHotkeys()");
 	// enable undo queue

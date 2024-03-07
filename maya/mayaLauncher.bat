@@ -10,10 +10,10 @@
 
 set GLM_MODE=Official
 set GLM_MAIN_VERSION=9
-::set GLM_OFFICIAL_VERSION=8.2.7
-::set GLM_OFFICIAL_VERSION=8.2.6
-set GLM_OFFICIAL_VERSION=9.0.1-2024.02.20-PR2957
-set MAYA_VERSION=2020
+set GLM_OFFICIAL_VERSION=8.2.5
+set GLM_OFFICIAL_VERSION=9.0.1-2024.03.06-PR2972
+::set GLM_OFFICIAL_VERSION=9
+set MAYA_VERSION=2024
 :: Edit Renderman version(.mod file lives here)
 :: C:\Program Files\Common Files\Autodesk Shared\Modules\Maya
 
@@ -32,13 +32,15 @@ set solidangle_LICENSE=C:\Licenses\arnold.lic
 ::set solidangle_LICENSE=5053@gitem
 ::set PIXAR_LICENSE_FILE=9010@GITEM
 set MAYA_LICENSE_METHOD=network
+set MAYA_CM_DISABLE_ERROR_POPUPS=1
+set MAYA_COLOR_MGT_NO_LOGGING=1
 ::set MAYA_ENABLE_LEGACY_VIEWPORT=1
 ::set FLEXLM_TIMEOUT=10000000
 ::set MAYA_APP_DIR=C:/Shared/
 ::set GLMCROWD_CHARAMAKER_AUTOLAYOUT=0
 ::set GLMCROWD_CUSTOMBEHAVIOR_DIR=C:/Users/golaem/Music
 ::set GLMCROWD_CUSTOMTRIGGER_DIR=C:/Users/golaem/Desktop
-set GLM_MOTIONBLUR_MAKEARRAYS=1
+::set GLM_MOTIONBLUR_MAKEARRAYS=1
 
 
 ::/***************************************************************************
@@ -116,7 +118,7 @@ set PHYSX_MODULE_PATH=C:\Program Files\Golaem\PhysXForMaya%MAYA_VERSION%
 :: Tools
 ::set FXPT_PATH=C:\Users\chaverou\Developments\fxpt
 set SKINW_PATH=C:\Users\chaverou\Developments\
-set MGEAR_PATH=C:\Users\chaverou\Developments\VFXEnvironment\maya\plugins
+set MGEAR_PATH=C:\Users\chaverou\Developments\VFXEnvironment\maya\plugins\mgear-4.2.2
 
 
 ::/***************************************************************************
