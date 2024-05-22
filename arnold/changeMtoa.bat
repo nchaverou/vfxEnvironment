@@ -1,5 +1,5 @@
 set MAYA_VERSION=2024
-set MTOA_VERSION=5.3.5.2
+set MTOA_VERSION=5.4.0.0
 
 :: remove Uninstall registry entry
 reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Uninstall\MtoA%MAYA_VERSION%" /f

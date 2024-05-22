@@ -8,11 +8,10 @@
 :: GLOBAL VARS
 ::***************************************************************************/
 
-set GLM_MODE=Official
+set GLM_MODE=Release
 set GLM_MAIN_VERSION=9
-set GLM_OFFICIAL_VERSION=8.2.5
-set GLM_OFFICIAL_VERSION=9.0.1-2024.03.06-PR2972
-::set GLM_OFFICIAL_VERSION=9
+set GLM_OFFICIAL_VERSION=8.1
+set GLM_OFFICIAL_VERSION=9.0.1
 set MAYA_VERSION=2024
 :: Edit Renderman version(.mod file lives here)
 :: C:\Program Files\Common Files\Autodesk Shared\Modules\Maya
@@ -34,13 +33,14 @@ set solidangle_LICENSE=C:\Licenses\arnold.lic
 set MAYA_LICENSE_METHOD=network
 set MAYA_CM_DISABLE_ERROR_POPUPS=1
 set MAYA_COLOR_MGT_NO_LOGGING=1
-::set MAYA_ENABLE_LEGACY_VIEWPORT=1
 ::set FLEXLM_TIMEOUT=10000000
 ::set MAYA_APP_DIR=C:/Shared/
 ::set GLMCROWD_CHARAMAKER_AUTOLAYOUT=0
 ::set GLMCROWD_CUSTOMBEHAVIOR_DIR=C:/Users/golaem/Music
 ::set GLMCROWD_CUSTOMTRIGGER_DIR=C:/Users/golaem/Desktop
 ::set GLM_MOTIONBLUR_MAKEARRAYS=1
+::set GLMCROWD_DIRMAP_ENABLE=0
+set GLMCROWD_UNIT=3
 
 
 ::/***************************************************************************
@@ -50,9 +50,11 @@ set MAYA_COLOR_MGT_NO_LOGGING=1
 :: Project
 ::set MAYA_PROJECT=C:\Users\chaverou\Developments\GolaemML\maya
 set MAYA_PROJECT=N:\tests\nicolas
+::set MAYA_PROJECT=N:\tests\customers\nintendo\20240307_training\240306_trainingData
 ::set MAYA_PROJECT=N:\demos\lila2\maya
 ::set MAYA_PROJECT=N:\demos\grst2023
 ::set MAYA_PROJECT=N:\demos\academy2021
+::set MAYA_PROJECT=N:\demos\tiles
 
 
 ::/***************************************************************************
@@ -67,17 +69,12 @@ IF %GLM_MODE% == Official (
 	set GLM_MODULE_PATH=C:\Program Files\Golaem\Golaem-%GLM_OFFICIAL_VERSION%-Maya%MAYA_VERSION%
 )
 
-::set GLMCROWD_DIRMAP_ENABLE=0
-set GLMCROWD_ANL_ENABLE=0
-set GLMCROWD_UNIT=3
-
 
 ::/***************************************************************************
 :: DEEP VARIABLES
 ::***************************************************************************/
 
 set GLMD_MODULE_PATH=C:\Users\chaverou\Developments\GolaemDeep\install%MAYA_VERSION%\GolaemDeep
-::set GLMD_MODULE_PATH=C:\Program Files\Golaem\GolaemDeep-0.0.1-Maya%MAYA_VERSION%
 set GLMP_MODULE_PATH=C:\Users\chaverou\Developments\GolaemProtores\plugins\maya
 
 
@@ -116,7 +113,6 @@ set PHYSX_MODULE_PATH=C:\Program Files\Golaem\PhysXForMaya%MAYA_VERSION%
 ::set PATH=%MAYA_LOCATION%/bin;%MAYA_LOCATION%/lib;%MAYA_LOCATION%/plug-ins/xgen/bin;%MAYA_LOCATION%/plug-ins/xgen/lib;%RMANTREE%/lib;%PATH%
 
 :: Tools
-::set FXPT_PATH=C:\Users\chaverou\Developments\fxpt
 set SKINW_PATH=C:\Users\chaverou\Developments\
 set MGEAR_PATH=C:\Users\chaverou\Developments\VFXEnvironment\maya\plugins\mgear-4.2.2
 
@@ -127,14 +123,13 @@ set MGEAR_PATH=C:\Users\chaverou\Developments\VFXEnvironment\maya\plugins\mgear-
 
 :: My Environment
 set MY_ENVIRONMENT=C:\Users\chaverou\Developments\VFXEnvironment\maya
-copy "%MY_ENVIRONMENT%\prefs\tools_list_user.yaml" "%APPDATA%\Damage Inc\fxpt\fx_spark\tools_list_user.yaml"
 
 :: Maya
 ::set PATH=%GLM_MODULE_PATH%\bin;%PATH%
 set MAYA_MODULE_PATH=%GLM_MODULE_PATH%;%PHYSX_MODULE_PATH%;%GLMD_MODULE_PATH%;%GLMP_MODULE_PATH%;%MTOA_MODULE_PATH%;%MGEAR_PATH%;%MAYA_USD_MODULE%;%MAYA_MODULE_PATH%
 set MAYA_PLUG_IN_PATH=%MY_ENVIRONMENT%\plugins\%MAYA_VERSION%;%FDDA_PLUGINS%;
 set MAYA_SCRIPT_PATH=%MY_ENVIRONMENT%\scripts;%FDDA_SCRIPTS%;%MAYA_SCRIPT_PATH%
-set PYTHONPATH=%MY_ENVIRONMENT%\scripts;%FDDA_SCRIPTS%;%FXPT_PATH%;%SKINW_PATH%;%PYTHONPATH%
+set PYTHONPATH=%MY_ENVIRONMENT%\scripts;%FDDA_SCRIPTS%;%SKINW_PATH%;%PYTHONPATH%
 set XBMLANGPATH=%MY_ENVIRONMENT%\icons;%XBMLANGPATH%
 
 

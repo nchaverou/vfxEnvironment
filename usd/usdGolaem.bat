@@ -8,7 +8,7 @@
 :: USD VARS
 ::***************************************************************************/
 
-set GLM_MODE=Official
+set GLM_MODE=Release
 set GLM_MAIN_VERSION=8
 set GLM_OFFICIAL_VERSION=9.0.1-2024.02.20-#2957
 ::set GLM_OFFICIAL_VERSION=8.2.7-2024.02.05-#2946
@@ -24,9 +24,9 @@ set CONDA_ENV=usd_py310
 ::***************************************************************************/
 
 ::set USD_FILE=N:/tests/nicolas/export/quickStart826/usdProc/quickStart826.renderProxyShape1.usda
-set USD_FILE=N:/tests/nicolas/export/quickStart826/usdSkel/quickStart826.crowdField1_renderProxyShape1.usda
-::set USD_FILE=N:/tests/nicolas/export/quickstart90/usdProc/quickstart90.renderProxyShape1.usda
-set USD_FILE=N:/tests/nicolas/export/usdTD/usdProc/usdTD.renderProxyShape1.usda
+::set USD_FILE=N:/tests/nicolas/export/quickStart826/usdSkel/quickStart826.crowdField1_renderProxyShape1.usda
+set USD_FILE=N:/tests/nicolas/export/quickstart901/usdProc/quickstart901.renderProxyShape1.usda
+::set USD_FILE=N:/tests/nicolas/export/usdTD/usdProc/usdTD.renderProxyShape1.usda
 
 ::/***************************************************************************
 :: ENV

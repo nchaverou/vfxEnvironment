@@ -48,7 +48,7 @@ global proc ncSetHotkeys()
 	nameCommand -annotation "RenderIntoNewWindow" -command "renderIntoNewWindow render" glmRender;
 	hotkey -alt -k "r" -name "glmRender";
 	// Alt + s => Script Editor
-	nameCommand -annotation "CharcoalEditor" -command "charcoalEditor;" glmScriptEditor;
+	nameCommand -annotation "CharcoalEditor" -command "charcoalEditor2;" glmScriptEditor;
 	hotkey -alt -k "s" -name "glmScriptEditor";
 	// Alt + x => Spark
 	nameCommand -annotation "spark" -command "ncLoadSpark;" glmSpark;
@@ -75,7 +75,7 @@ global proc ncSetMayaEnvironment()
 	// shaded
 	evalDeferred("ncSetShadedDisplay();");
 	// set color management
-	scriptJob -e SceneOpened ncSetColorManagement;
+	//scriptJob -e SceneOpened ncSetColorManagement;
 	// hotkeys
 	evalDeferred("ncSetHotkeys()");
 	// enable undo queue
@@ -104,7 +104,7 @@ global proc ncLoadGolaem()
 global proc ncLoadDependencies()
 {
 	ncLoadPlugin("fbxmaya");
-	ncLoadPlugin("CharcoalEditor");
+	ncLoadPlugin("CharcoalEditor2");
 	
 	ncLoadPlugin("mtoa");
 	evalDeferred("setCurrentRenderer arnold;");

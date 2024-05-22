@@ -8,8 +8,8 @@
 :: GLOBAL VARS
 ::***************************************************************************/
 
-set CMAKE_PROJECT=Golaem9-Maya2020
-set CMAKE_PROJECT=Golaem9-Houdini20
+set CMAKE_PROJECT=Golaem9-Maya2024
+::set CMAKE_PROJECT=Golaem9-Houdini20
 ::set CMAKE_PROJECT=Golaem8-Katana6-Py3
 ::set CMAKE_PROJECT=Golaem8-Max24
 ::set CMAKE_PROJECT=Golaem9-USD2308
@@ -62,6 +62,15 @@ IF %CMAKE_PROJECT% == Golaem9-Maya2022 (
 	set DCC_VERSION=2022
 	set DIR_NAME=Golaem
 	set BUILD_CROWD=ON
+)
+
+:: Golaem9 Maya2020
+IF %CMAKE_PROJECT% == Golaem9-Maya2024 (
+	set GOLAEM_VERSION=9
+	set DCC_VERSION=2024
+	set DIR_NAME=Golaem
+	set BUILD_CROWD=ON
+	set COMPILER=Visual Studio 17 2022
 )
 
 :: Golaem8 Houdini19 Py39
