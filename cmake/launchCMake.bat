@@ -8,10 +8,10 @@
 :: GLOBAL VARS
 ::***************************************************************************/
 
-set CMAKE_PROJECT=Golaem9-Maya2024
+::set CMAKE_PROJECT=Golaem9-Maya2024
 ::set CMAKE_PROJECT=Golaem9-Houdini20
 ::set CMAKE_PROJECT=Golaem8-Katana6-Py3
-::set CMAKE_PROJECT=Golaem8-Max24
+set CMAKE_PROJECT=Golaem9-Max23
 ::set CMAKE_PROJECT=Golaem9-USD2308
 
 set GLM_GEO_ENGINE_VERSION=1409101264
@@ -33,13 +33,6 @@ set BUILD_SAMPLES=OFF
 set BUILD_TESTS=OFF
 set COMPILER=Visual Studio 15 2017
 
-:: Golaem8 Maya2020
-IF %CMAKE_PROJECT% == Golaem8-Maya2020 (
-	set DCC_VERSION=2020
-	set DIR_NAME=Golaem
-	set BUILD_CROWD=ON
-)
-
 :: Golaem8 Maya2022
 IF %CMAKE_PROJECT% == Golaem8-Maya2022 (
 	set DCC_VERSION=2022
@@ -48,15 +41,16 @@ IF %CMAKE_PROJECT% == Golaem8-Maya2022 (
 	set COMPILER=Visual Studio 16 2019
 )
 
-:: Golaem9 Maya2020
-IF %CMAKE_PROJECT% == Golaem9-Maya2020 (
-	set GOLAEM_VERSION=9
-	set DCC_VERSION=2020
+:: Golaem8 Maya2024
+IF %CMAKE_PROJECT% == Golaem8-Maya2024 (
+	set GOLAEM_VERSION=8
+	set DCC_VERSION=2024
 	set DIR_NAME=Golaem
 	set BUILD_CROWD=ON
+	set COMPILER=Visual Studio 17 2022
 )
 
-:: Golaem9 Maya2020
+:: Golaem9 Maya2022
 IF %CMAKE_PROJECT% == Golaem9-Maya2022 (
 	set GOLAEM_VERSION=9
 	set DCC_VERSION=2022
@@ -64,7 +58,7 @@ IF %CMAKE_PROJECT% == Golaem9-Maya2022 (
 	set BUILD_CROWD=ON
 )
 
-:: Golaem9 Maya2020
+:: Golaem9 Maya2024
 IF %CMAKE_PROJECT% == Golaem9-Maya2024 (
 	set GOLAEM_VERSION=9
 	set DCC_VERSION=2024
@@ -88,7 +82,7 @@ IF %CMAKE_PROJECT% == Golaem9-Houdini20 (
 	set GOLAEM_VERSION=9
 	set DCC_VERSION=20
 	set PYTHON_VERSION=3
-	set PYTHON_SUBVERSION=9
+	set PYTHON_SUBVERSION=10
 	set HOUDINI_VERSION=20.0
 	set DIR_NAME=GolaemForHoudini
 	set BUILD_HOUDINI=ON
@@ -111,31 +105,6 @@ IF %CMAKE_PROJECT% == Golaem8-Katana6-Py3 (
 	set KATANA_VERSION=6.0
 	set DIR_NAME=GolaemForKatana
 	set BUILD_KATANA=ON
-	set COMPILER=Visual Studio 16 2019
-)
-
-:: Golaem8 Max 2022 (Python2)
-IF %CMAKE_PROJECT% == Golaem8-Max22 (
-	set DCC_VERSION=2022
-	set PYTHON_VERSION=2
-	set DIR_NAME=GolaemForMax
-	set BUILD_MAX=ON
-	set COMPILER=Visual Studio 16 2019
-)
-
-:: Golaem8 Max 2023
-IF %CMAKE_PROJECT% == Golaem8-Max23 (
-	set DCC_VERSION=2023
-	set DIR_NAME=GolaemForMax
-	set BUILD_MAX=ON
-	set COMPILER=Visual Studio 16 2019
-)
-
-:: Golaem8 Max 2024
-IF %CMAKE_PROJECT% == Golaem8-Max24 (
-	set DCC_VERSION=2024
-	set DIR_NAME=GolaemForMax
-	set BUILD_MAX=ON
 	set COMPILER=Visual Studio 16 2019
 )
 

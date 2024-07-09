@@ -8,10 +8,11 @@
 :: GLOBAL VARS
 ::***************************************************************************/
 
-set GLM_MODE=Release
+set GLM_MODE=Official
 set GLM_MAIN_VERSION=9
-set GLM_OFFICIAL_VERSION=8.1
-set GLM_OFFICIAL_VERSION=9.0.1
+set GLM_OFFICIAL_VERSION=8.2.7
+::set GLM_OFFICIAL_VERSION=9.0.2
+set GLM_OFFICIAL_VERSION=9.1
 set MAYA_VERSION=2024
 :: Edit Renderman version(.mod file lives here)
 :: C:\Program Files\Common Files\Autodesk Shared\Modules\Maya
