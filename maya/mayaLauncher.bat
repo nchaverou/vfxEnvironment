@@ -8,11 +8,11 @@
 :: GLOBAL VARS
 ::***************************************************************************/
 
-set GLM_MODE=Official
+set GLM_MODE=Release
 set GLM_MAIN_VERSION=9
-set GLM_OFFICIAL_VERSION=8.2.7
+::set GLM_OFFICIAL_VERSION=8.2.4
 ::set GLM_OFFICIAL_VERSION=9.0.2
-set GLM_OFFICIAL_VERSION=9.1
+set GLM_OFFICIAL_VERSION=9.1.1
 set MAYA_VERSION=2024
 :: Edit Renderman version(.mod file lives here)
 :: C:\Program Files\Common Files\Autodesk Shared\Modules\Maya
@@ -116,7 +116,7 @@ set PHYSX_MODULE_PATH=C:\Program Files\Golaem\PhysXForMaya%MAYA_VERSION%
 :: Tools
 set SKINW_PATH=C:\Users\chaverou\Developments\
 set MGEAR_PATH=C:\Users\chaverou\Developments\VFXEnvironment\maya\plugins\mgear-4.2.2
-
+set DPKBC_PATH=C:\Users\chaverou\Developments\VFXEnvironment\maya\plugins\DPK_bcs-1.4.8
 
 ::/***************************************************************************
 :: ENVIRONMENT
@@ -127,7 +127,7 @@ set MY_ENVIRONMENT=C:\Users\chaverou\Developments\VFXEnvironment\maya
 
 :: Maya
 ::set PATH=%GLM_MODULE_PATH%\bin;%PATH%
-set MAYA_MODULE_PATH=%GLM_MODULE_PATH%;%PHYSX_MODULE_PATH%;%GLMD_MODULE_PATH%;%GLMP_MODULE_PATH%;%MTOA_MODULE_PATH%;%MGEAR_PATH%;%MAYA_USD_MODULE%;%MAYA_MODULE_PATH%
+set MAYA_MODULE_PATH=%GLM_MODULE_PATH%;%PHYSX_MODULE_PATH%;%GLMD_MODULE_PATH%;%GLMP_MODULE_PATH%;%MTOA_MODULE_PATH%;%MGEAR_PATH%;%DPKBC_PATH%;%MAYA_USD_MODULE%;%MAYA_MODULE_PATH%
 set MAYA_PLUG_IN_PATH=%MY_ENVIRONMENT%\plugins\%MAYA_VERSION%;%FDDA_PLUGINS%;
 set MAYA_SCRIPT_PATH=%MY_ENVIRONMENT%\scripts;%FDDA_SCRIPTS%;%MAYA_SCRIPT_PATH%
 set PYTHONPATH=%MY_ENVIRONMENT%\scripts;%FDDA_SCRIPTS%;%SKINW_PATH%;%PYTHONPATH%

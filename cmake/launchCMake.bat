@@ -8,10 +8,10 @@
 :: GLOBAL VARS
 ::***************************************************************************/
 
-::set CMAKE_PROJECT=Golaem9-Maya2024
+set CMAKE_PROJECT=Golaem9-Maya2024
 ::set CMAKE_PROJECT=Golaem9-Houdini20
 ::set CMAKE_PROJECT=Golaem8-Katana6-Py3
-set CMAKE_PROJECT=Golaem9-Max23
+rem :set CMAKE_PROJECT=Golaem9-Max23
 ::set CMAKE_PROJECT=Golaem9-USD2308
 
 set GLM_GEO_ENGINE_VERSION=1409101264

@@ -72,7 +72,9 @@ set PATH=%GLM_INSTALL_PREFIX%\bin;%PATH%
 ::set ARNOLD_PLUGIN_PATH=C:\Program Files\Golaem\Golaem-8.2.2-2023.02.03-PR2715-Maya2020\shaders\arnold\71;%ARNOLD_PLUGIN_PATH%
 
 :: Houdini Custom plugins
-::set HOUDINI_DSO_ERROR=3
+::set HOUDINI_DSO_ERROR=2
+::set HOUDINI_DISABLE_CONSOLE=1
+set HOUDINI_DSO_EXCLUDE_PATTERN=**
 set HOUDINI_DSO_PATH=%GLM_INSTALL_PREFIX%\procedurals\houdini;^&
 set PYTHONPATH=%GLM_INSTALL_PREFIX%\procedurals\houdini\python;^&
 set HOUDINI_TOOLBAR_PATH=%GLM_INSTALL_PREFIX%\procedurals\houdini\shelf;^&
