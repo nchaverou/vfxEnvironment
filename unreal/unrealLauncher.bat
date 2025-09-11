@@ -10,7 +10,7 @@
 
 set GLM_MODE=Official
 set GLM_MAIN_VERSION=9
-set UNREAL_VERSION=5.2
+set UNREAL_VERSION=5.4
 ::set UNREAL_VERSION=5.0
 set GLMCROWD_UNIT=3
 ::set GLM_DIRMAP=N:/tests/;N:/tests2/
@@ -35,7 +35,7 @@ set golaem_LICENSE=C:\Licenses\golaemLite.lic
 set GLM_PROJECT=GolaemForUnreal.uproject
 set GLM_INSTALL_PREFIX=C:\Users\chaverou\Developments\GolaemForUnreal%GLM_MAIN_VERSION%
 IF %GLM_MODE% == Official (
-	set GLM_INSTALL_PREFIX=C:\Users\chaverou\Documents\UnrealProjects\GolaemReleaseTest%UNREAL_VERSION%-%GLM_MAIN_VERSION%
+	set GLM_INSTALL_PREFIX=C:\Users\chavern\OneDrive - Autodesk\Documents\Unreal Projects\GolaemReleaseTest%UNREAL_VERSION%-%GLM_MAIN_VERSION%
 )
 ::set GLM_INSTALL_PREFIX=C:\Users\chaverou\Developments\GolaemForUnreal%GLM_MAIN_VERSION%
 ::set GLM_PROJECT=ROD01UE5.uproject
@@ -51,4 +51,4 @@ set UNREAL_EXE=Engine\Binaries\Win64\UnrealEditor.exe
 "%UNREAL_LOCATION%\%UNREAL_EXE%" "%GLM_INSTALL_PREFIX%\%GLM_PROJECT%"
 
 ::C:\Users\chaverou\Software\System\DependencyWalker64\depends.exe
-::pause
+pause

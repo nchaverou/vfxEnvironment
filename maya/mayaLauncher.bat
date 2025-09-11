@@ -8,11 +8,10 @@
 :: GLOBAL VARS
 ::***************************************************************************/
 
-set GLM_MODE=Release
+set GLM_MODE=Official
 set GLM_MAIN_VERSION=9
-::set GLM_OFFICIAL_VERSION=8.2.4
-::set GLM_OFFICIAL_VERSION=9.0.2
-set GLM_OFFICIAL_VERSION=9.1.1
+set GLM_OFFICIAL_VERSION=9.2.2
+::set GLM_OFFICIAL_VERSION=9.2.1-2025.03.17-PR92
 set MAYA_VERSION=2024
 :: Edit Renderman version(.mod file lives here)
 :: C:\Program Files\Common Files\Autodesk Shared\Modules\Maya
@@ -22,19 +21,10 @@ set MAYA_VERSION=2024
 :: LICENSE
 ::***************************************************************************/
 
-::set GLMCROWD_NO_LICENSE=1
-::set GLMCROWD_LAYOUT_LICENSE=1
-::set GLMCROWD_LITE_LICENSE=1
-set GLMCROWD_NO_PLE=1
-set golaem_LICENSE=C:\Licenses\golaemFull.lic
-::set golaem_LICENSE=2375@gitem
-set solidangle_LICENSE=C:\Licenses\arnold.lic
-::set solidangle_LICENSE=5053@gitem
-::set PIXAR_LICENSE_FILE=9010@GITEM
 set MAYA_LICENSE_METHOD=network
 set MAYA_CM_DISABLE_ERROR_POPUPS=1
 set MAYA_COLOR_MGT_NO_LOGGING=1
-::set FLEXLM_TIMEOUT=10000000
+set ADSKFLEX_LICENSE_FILE=@sussclpdbuvsg001
 ::set MAYA_APP_DIR=C:/Shared/
 ::set GLMCROWD_CHARAMAKER_AUTOLAYOUT=0
 ::set GLMCROWD_CUSTOMBEHAVIOR_DIR=C:/Users/golaem/Music
@@ -49,22 +39,17 @@ set GLMCROWD_UNIT=3
 ::***************************************************************************/
 
 :: Project
-::set MAYA_PROJECT=C:\Users\chaverou\Developments\GolaemML\maya
 set MAYA_PROJECT=N:\tests\nicolas
-::set MAYA_PROJECT=N:\tests\customers\nintendo\20240307_training\240306_trainingData
 ::set MAYA_PROJECT=N:\demos\lila2\maya
-::set MAYA_PROJECT=N:\demos\grst2023
-::set MAYA_PROJECT=N:\demos\academy2021
-::set MAYA_PROJECT=N:\demos\tiles
 
 
 ::/***************************************************************************
 :: CROWD VARIABLES
 ::***************************************************************************/
 
-set GLM_MODULE_PATH=C:\Users\chaverou\Developments\Golaem%GLM_MAIN_VERSION%\install%MAYA_VERSION%\GolaemCrowd
+set GLM_MODULE_PATH=D:\Developments\Golaem%GLM_MAIN_VERSION%\install%MAYA_VERSION%\GolaemCrowd
 IF %GLM_MODE% == Debug (
-	set GLM_MODULE_PATH=C:\Users\chaverou\Developments\Golaem%GLM_MAIN_VERSION%\install%MAYA_VERSION%\GolaemCrowdDBG
+	set GLM_MODULE_PATH=D:\Developments\Golaem%GLM_MAIN_VERSION%\install%MAYA_VERSION%\GolaemCrowdDBG
 )
 IF %GLM_MODE% == Official (
 	set GLM_MODULE_PATH=C:\Program Files\Golaem\Golaem-%GLM_OFFICIAL_VERSION%-Maya%MAYA_VERSION%
@@ -75,8 +60,8 @@ IF %GLM_MODE% == Official (
 :: DEEP VARIABLES
 ::***************************************************************************/
 
-set GLMD_MODULE_PATH=C:\Users\chaverou\Developments\GolaemDeep\install%MAYA_VERSION%\GolaemDeep
-set GLMP_MODULE_PATH=C:\Users\chaverou\Developments\GolaemProtores\plugins\maya
+set GLMD_MODULE_PATH=D:\Developments\GolaemDeep\install%MAYA_VERSION%\GolaemDeep
+set GLMP_MODULE_PATH=D:\Developments\GolaemProtores\plugins\maya
 
 
 ::/***************************************************************************
@@ -87,17 +72,13 @@ set GLMP_MODULE_PATH=C:\Users\chaverou\Developments\GolaemProtores\plugins\maya
 set MAYA_LOCATION=C:\Program Files\Autodesk\Maya%MAYA_VERSION%
 
 :: MTOA_VERSION
-set MTOA_MODULE_PATH=C:\solidangle\mtoadeploy\%MAYA_VERSION%\mod
+set MTOA_MODULE_PATH=C:\Program Files\Autodesk\Arnold\maya%MAYA_VERSION%
 
 :: RLM
 ::set RLM_DIAGNOSTICS=D:\Temp\RLMDiag.txt
 
 :: Renderman
 set RFM_DO_NOT_CREATE_MODULE_FILE=1
-
-:: FDDA
-set FDDA_PLUGINS=C:\Users\chaverou\Developments\GolaemML\maya\plugins
-set FDDA_SCRIPTS=C:\Users\chaverou\Developments\GolaemML\maya\scripts
 
 :: Physx
 set PHYSX_MODULE_PATH=C:\Program Files\Golaem\PhysXForMaya%MAYA_VERSION%
@@ -110,27 +91,24 @@ set PHYSX_MODULE_PATH=C:\Program Files\Golaem\PhysXForMaya%MAYA_VERSION%
 ::set TF_DEBUG=PLUG*
 ::set MAYA_USD_MODULE=D:\Users\chaverou\Developments\VFXEnvironment\maya\plugins\2018\MayaUSD
 
-:: Xgen
-::set PATH=%MAYA_LOCATION%/bin;%MAYA_LOCATION%/lib;%MAYA_LOCATION%/plug-ins/xgen/bin;%MAYA_LOCATION%/plug-ins/xgen/lib;%RMANTREE%/lib;%PATH%
-
 :: Tools
-set SKINW_PATH=C:\Users\chaverou\Developments\
-set MGEAR_PATH=C:\Users\chaverou\Developments\VFXEnvironment\maya\plugins\mgear-4.2.2
-set DPKBC_PATH=C:\Users\chaverou\Developments\VFXEnvironment\maya\plugins\DPK_bcs-1.4.8
+set SKINW_PATH=D:\Developments\
+set DPKBC_PATH=D:\Developments\VFXEnvironment\maya\plugins\DPK_bcs-1.4.8
 
 ::/***************************************************************************
 :: ENVIRONMENT
 ::***************************************************************************/
 
 :: My Environment
-set MY_ENVIRONMENT=C:\Users\chaverou\Developments\VFXEnvironment\maya
+set MY_ENVIRONMENT=D:\Developments\VFXEnvironment\maya
+set GLM_ENVIRONMENT=N:\scripts\GolaemUtils\maya
 
 :: Maya
 ::set PATH=%GLM_MODULE_PATH%\bin;%PATH%
-set MAYA_MODULE_PATH=%GLM_MODULE_PATH%;%PHYSX_MODULE_PATH%;%GLMD_MODULE_PATH%;%GLMP_MODULE_PATH%;%MTOA_MODULE_PATH%;%MGEAR_PATH%;%DPKBC_PATH%;%MAYA_USD_MODULE%;%MAYA_MODULE_PATH%
+set MAYA_MODULE_PATH=%GLM_MODULE_PATH%;%PHYSX_MODULE_PATH%;%MTOA_MODULE_PATH%;%DPKBC_PATH%;%MAYA_USD_MODULE%;%MAYA_MODULE_PATH%
 set MAYA_PLUG_IN_PATH=%MY_ENVIRONMENT%\plugins\%MAYA_VERSION%;%FDDA_PLUGINS%;
-set MAYA_SCRIPT_PATH=%MY_ENVIRONMENT%\scripts;%FDDA_SCRIPTS%;%MAYA_SCRIPT_PATH%
-set PYTHONPATH=%MY_ENVIRONMENT%\scripts;%FDDA_SCRIPTS%;%SKINW_PATH%;%PYTHONPATH%
+set MAYA_SCRIPT_PATH=%GLM_ENVIRONMENT%\scripts\MEL;%MY_ENVIRONMENT%\scripts;%MAYA_SCRIPT_PATH%
+set PYTHONPATH=%MY_ENVIRONMENT%\scripts;%SKINW_PATH%;%PYTHONPATH%
 set XBMLANGPATH=%MY_ENVIRONMENT%\icons;%XBMLANGPATH%
 
 

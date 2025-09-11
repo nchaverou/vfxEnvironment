@@ -13,11 +13,11 @@ set GLM_MAIN_VERSION=9
 ::set GLM_OFFICIAL_VERSION=8.2.1
 ::set GLM_OFFICIAL_VERSION=8.2.7-2024.02.05-#2946
 set GLM_OFFICIAL_VERSION=9.1-2024.06.20-#3020
-set HOUDINI_IVERSION=20.0
+set HOUDINI_IVERSION=20.5
 
 :: Houdini version
-IF %HOUDINI_IVERSION% == 20.0 (
-	set HOUDINI_VERSION=20.0.688
+IF %HOUDINI_IVERSION% == 20.5 (
+	set HOUDINI_VERSION=20.5.550
 	set HOUDINI_BVERSION=20
 	set HOUDINI_PYTHON=310
 )
@@ -74,8 +74,8 @@ set PATH=%GLM_INSTALL_PREFIX%\bin;%PATH%
 :: Houdini Custom plugins
 ::set HOUDINI_DSO_ERROR=2
 ::set HOUDINI_DISABLE_CONSOLE=1
-set HOUDINI_DSO_EXCLUDE_PATTERN=**
-set HOUDINI_DSO_PATH=%GLM_INSTALL_PREFIX%\procedurals\houdini;^&
+::set HOUDINI_DSO_EXCLUDE_PATTERN=**
+::set HOUDINI_DSO_PATH=%GLM_INSTALL_PREFIX%\procedurals\houdini;^&
 set PYTHONPATH=%GLM_INSTALL_PREFIX%\procedurals\houdini\python;^&
 set HOUDINI_TOOLBAR_PATH=%GLM_INSTALL_PREFIX%\procedurals\houdini\shelf;^&
 set HOUDINI_UI_ICON_PATH=%GLM_INSTALL_PREFIX%\procedurals\houdini\icons;^&
@@ -89,5 +89,5 @@ set HOUDINI_LOCATION=C:\Program Files\Side Effects Software\Houdini %HOUDINI_VER
 set HOUDINI_EXE=bin\houdinifx.exe
 "%HOUDINI_LOCATION%\%HOUDINI_EXE%"
 
-::pause
+pause
 ::C:\Users\chaverou\Software\System\DependencyWalkerx64\depends.exe
